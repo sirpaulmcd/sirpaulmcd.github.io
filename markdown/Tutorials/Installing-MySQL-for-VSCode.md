@@ -5,7 +5,7 @@ permalink: /tutorials/installing-mysql-for-vscode/
 parent: Tutorials
 # grand_parent: Blog
 has_children: false
-nav_order: 1
+nav_order: 4
 ---
 
 There have been a few times that I needed to use a MySQL database for my projects. 

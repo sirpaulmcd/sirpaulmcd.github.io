@@ -5,7 +5,7 @@ permalink: /projects/elite-gardening-squad/
 parent: Projects
 # grand_parent: Blog
 has_children: false
-nav_order: 1
+nav_order: 3
 ---
 
 # Elite-Gardening-Squad-Open

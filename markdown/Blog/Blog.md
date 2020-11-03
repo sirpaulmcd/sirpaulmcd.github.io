@@ -5,7 +5,7 @@ permalink: /blog/
 # parent: 
 # grand_parent: 
 has_children: true
-nav_order: 1
+nav_order: 2
 ---
 
 # Blog

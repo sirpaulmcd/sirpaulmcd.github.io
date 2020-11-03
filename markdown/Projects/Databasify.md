@@ -5,7 +5,7 @@ permalink: /projects/databasify/
 parent: Projects
 # grand_parent: Blog
 has_children: false
-nav_order: 1
+nav_order: 2
 ---
 
 # Databasify

@@ -5,7 +5,7 @@ permalink: /cheat-sheets/markdown/
 parent: Cheat Sheets
 # grand_parent: Blog
 has_children: false
-nav_order: 1
+nav_order: 2
 ---
 
 # Markdown Cheat Sheet

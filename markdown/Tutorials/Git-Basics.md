@@ -5,7 +5,7 @@ permalink: /tutorials/git-basics/
 parent: Tutorials
 # grand_parent: Blog
 has_children: false
-nav_order: 1
+nav_order: 2
 ---
 
 This tutorial is designed to teach a complete beginner the fundamentals of using Git. 

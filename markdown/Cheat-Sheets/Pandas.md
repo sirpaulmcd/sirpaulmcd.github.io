@@ -5,7 +5,7 @@ permalink: /cheat-sheets/pandas/
 parent: Cheat Sheets
 # grand_parent: Blog
 has_children: false
-nav_order: 1
+nav_order: 3
 ---
 
 Pandas is my favorite tabular data engineering tool. However, I find it hard to remember all the commands so I made this cheat sheet.

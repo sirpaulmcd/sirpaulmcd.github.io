@@ -5,7 +5,7 @@ permalink: /tutorials/installing-c++-for-vscode/
 parent: Tutorials
 # grand_parent: Blog
 has_children: false
-nav_order: 1
+nav_order: 3
 ---
 
 I prefer to do all my coding within a single IDE. That's why I'm such a fan of VSCode. 
