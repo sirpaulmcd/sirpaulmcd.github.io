@@ -16,9 +16,8 @@ I have received very positive feedback for this cheat sheet from my peers so hop
 <p align="center">
     <object data="https://drive.google.com/viewerng/viewer?embedded=true&url=https://raw.githubusercontent.com/sirpaulmcd/Software-Cheat-Sheets/master/Git/Git-Cheat-Sheet.pdf" type="application/pdf" width="700px" height="700px">
         <p>
-            This browser does not support PDFs. Please follow this
-            <a href="https://drive.google.com/viewerng/viewer?embedded=true&url=https://raw.githubusercontent.com/sirpaulmcd/Software-Cheat-Sheets/master/Git/Git-Cheat-Sheet.pdf">link</a> 
-            instead.
+            This browser may not support PDFs. Please refresh or follow this
+            <a href="https://drive.google.com/viewerng/viewer?embedded=true&url=https://raw.githubusercontent.com/sirpaulmcd/Software-Cheat-Sheets/master/Git/Git-Cheat-Sheet.pdf">link</a>.
         </p>
     </object>
 </p>

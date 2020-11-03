@@ -14,9 +14,8 @@ A majority of the class had trouble with the installation process so I made this
 <p align="center">
     <object data="https://drive.google.com/viewerng/viewer?embedded=true&url=https://raw.githubusercontent.com/sirpaulmcd/Software-Cheat-Sheets/master/Hadoop/Creating-A-Cybera-Cluster-With-Hadoop.pdf" type="application/pdf" width="700px" height="700px">
         <p>
-            This browser does not support PDFs. Please follow this
-            <a href="https://drive.google.com/viewerng/viewer?embedded=true&url=https://raw.githubusercontent.com/sirpaulmcd/Software-Cheat-Sheets/master/Hadoop/Creating-A-Cybera-Cluster-With-Hadoop.pdf">link</a> 
-            instead.
+            This browser may not support PDFs. Please refresh or follow this
+            <a href="https://drive.google.com/viewerng/viewer?embedded=true&url=https://raw.githubusercontent.com/sirpaulmcd/Software-Cheat-Sheets/master/Hadoop/Creating-A-Cybera-Cluster-With-Hadoop.pdf">link</a>.
         </p>
     </object>
 </p>

@@ -15,9 +15,8 @@ I made this tutorial so I could remember how to install C++ for VSCode.
 <p align="center">
     <object data="https://drive.google.com/viewerng/viewer?embedded=true&url=https://raw.githubusercontent.com/sirpaulmcd/Software-Cheat-Sheets/master/VSCode/Installing-C%2B%2B-for-VSCode.pdf" type="application/pdf" width="700px" height="700px">
         <p>
-            This browser does not support PDFs. Please follow this
-            <a href="https://drive.google.com/viewerng/viewer?embedded=true&url=https://raw.githubusercontent.com/sirpaulmcd/Software-Cheat-Sheets/master/VSCode/Installing-C%2B%2B-for-VSCode.pdf">link</a> 
-            instead.
+            This browser may not support PDFs. Please refresh or follow this
+            <a href="https://drive.google.com/viewerng/viewer?embedded=true&url=https://raw.githubusercontent.com/sirpaulmcd/Software-Cheat-Sheets/master/VSCode/Installing-C%2B%2B-for-VSCode.pdf">link</a>.
         </p>
     </object>
 </p>
