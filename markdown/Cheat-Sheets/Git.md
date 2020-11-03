@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: Git
 permalink: /cheat-sheets/git/
 parent: Cheat Sheets
@@ -14,7 +14,7 @@ To make learning easier for myself, I made a cheat sheet of the various console 
 I have received very positive feedback for this cheat sheet from my peers so hopefully you find it helpful as well.
 
 <p align="center">
-    <object data="https://drive.google.com/viewerng/viewer?embedded=true&url=https://raw.githubusercontent.com/sirpaulmcd/Software-Cheat-Sheets/master/Git/Git-Cheat-Sheet.pdf" type="application/pdf" width="700px" height="700px">
+    <object data="https://drive.google.com/viewerng/viewer?embedded=true&url=https://raw.githubusercontent.com/sirpaulmcd/Software-Cheat-Sheets/master/Git/Git-Cheat-Sheet.pdf" type="application/pdf" width="725px" height="725px">
         <p>
             This browser may not support PDFs. Please refresh or follow this
             <a href="https://drive.google.com/viewerng/viewer?embedded=true&url=https://raw.githubusercontent.com/sirpaulmcd/Software-Cheat-Sheets/master/Git/Git-Cheat-Sheet.pdf">link</a>.

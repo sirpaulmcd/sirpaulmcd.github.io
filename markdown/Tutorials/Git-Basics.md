@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: Git Basics
 permalink: /tutorials/git-basics/
 parent: Tutorials
@@ -13,7 +13,7 @@ When I was in school, Git was very poorly taught so I felt that I could do a bet
 This tutorial is now being used to teach students Git at the University of Calgary. 
 
 <p align="center">
-    <object data="https://drive.google.com/viewerng/viewer?embedded=true&url=https://raw.githubusercontent.com/sirpaulmcd/Software-Cheat-Sheets/master/Git/Git-Basics/Git-Basics.pdf" type="application/pdf" width="700px" height="700px">
+    <object data="https://drive.google.com/viewerng/viewer?embedded=true&url=https://raw.githubusercontent.com/sirpaulmcd/Software-Cheat-Sheets/master/Git/Git-Basics/Git-Basics.pdf" type="application/pdf" width="725px" height="725px">
         <p>
             This browser may not support PDFs. Please refresh or follow this
             <a href="https://drive.google.com/viewerng/viewer?embedded=true&url=https://raw.githubusercontent.com/sirpaulmcd/Software-Cheat-Sheets/master/Git/Git-Basics/Git-Basics.pdf">link</a>.

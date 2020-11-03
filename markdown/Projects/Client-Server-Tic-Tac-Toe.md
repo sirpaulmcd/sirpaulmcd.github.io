@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: Client-Server Tic-Tac-Toe
 permalink: /projects/client-server-tic-tac-toe/
 parent: Projects

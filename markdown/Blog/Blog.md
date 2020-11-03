@@ -1,11 +1,11 @@
 ---
-layout: page
+layout: default
 title: Blog
 permalink: /blog/
 # parent: 
 # grand_parent: 
 has_children: true
-nav_order: 2
+nav_order: 3
 ---
 
 # Blog

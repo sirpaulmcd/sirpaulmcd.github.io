@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: Official Launch
 permalink: /blog/official-launch/
 parent: Blog

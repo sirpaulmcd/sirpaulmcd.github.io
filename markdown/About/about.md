@@ -1,9 +1,9 @@
 ---
-layout: page
+layout: default
 title: About
 permalink: /about/
 has_children: false
-nav_order: 1
+nav_order: 2
 ---
 
 ### Contact Information

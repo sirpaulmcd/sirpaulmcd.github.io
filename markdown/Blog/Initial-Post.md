@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: Initial Post
 permalink: /blog/initial-post/
 parent: Blog

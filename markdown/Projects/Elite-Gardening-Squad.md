@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: Elite Gardening Squad
 permalink: /projects/elite-gardening-squad/
 parent: Projects

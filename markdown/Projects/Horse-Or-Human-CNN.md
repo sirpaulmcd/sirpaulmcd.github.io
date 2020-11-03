@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: Horse or Human CNN
 permalink: /projects/horse-or-human-cnn/
 parent: Projects

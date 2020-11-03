@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: Markdown
 permalink: /cheat-sheets/markdown/
 parent: Cheat Sheets

@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: Creating a Cybera Cluster With Hadoop
 permalink: /tutorials/creating-a-cybera-cluster-with-hadoop/
 parent: Tutorials

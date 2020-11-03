@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: Databasify
 permalink: /projects/databasify/
 parent: Projects
