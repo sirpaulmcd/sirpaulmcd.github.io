@@ -17,7 +17,7 @@ Python, Java, Javascript, C#
 <hr/>
 
 ### Specialties
-Object Oriented Software Development, Machine Leanring, Data Engineering, Web Application Development, Game Development
+Object Oriented Software Development, Machine Learning, Data Engineering, Web Application Development, Game Development
 
 <hr/>
 
