@@ -51,7 +51,8 @@ In these situations, ricocheting can be simulated using methods such as Raycasti
 Additionally, fast moving TriggerDWGOs can surpass the transform of their targets before a collision is registered.
 As a result, the induced knockback seemingly knocks objects towards the projectile rather than away.
 To account for these cases, Trigger DWGOs have the option to always induce knockback in the direction of movement.
-Similarly, Trigger DWGOs that move so fast that a collision is not even registered should be 
+Similarly, Trigger DWGOs that move so fast that a collision is not even registered should be changed into
+Raycasting weapons rather than using Trigger DWGO projectiles.
 
 #### Collider DWGOs
 Instances of DWGOs that use typical colliders and interact with GameObjects via MonoBehaviour.OnCollisionEnter().
