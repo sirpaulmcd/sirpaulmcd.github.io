@@ -35,8 +35,8 @@ After being spawned into a scene and initialized by their corresponding weapon, 
 and self destruct after a designated amount of time unless otherwise specified. 
 It is important to note that all DWGOs (i.e. projectiles) should be placed on the "Ignore Raycast" layer to avoid complications.
 The ATriggerDWGO and AColliderDWGO abstract classes may appear to share much of the same code.
-However, this is necessary because Trigger DWGOs use OnTriggerEnter (yields a *Collider* argument) whereas
-Collider DWGOs use OnCollisionEnter (yields a *Collision* argument).
+However, this is necessary because Trigger DWGOs use *OnTriggerEnter* (yields a **Collider** argument) whereas
+Collider DWGOs use *OnCollisionEnter* (yields a **Collision** argument).
 As a result, the code used to process GameObject interactions cannot be shared.
 
 #### Trigger DWGOs
