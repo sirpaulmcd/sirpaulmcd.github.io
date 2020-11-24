@@ -26,5 +26,5 @@ For those of you that are not impressed, here's an explosion to spice things up:
     <img src="https://media.giphy.com/media/b4KxdrSaZhBaeRuAHS/giphy.gif" />
 </p>
 
-Intrigued? If so, there's plenty more gifs of weapon implementations on the [system description page](sirpaulmcd.com/projects/elite-gardening-squad/warandpeace-system). 
+Intrigued? If so, there's plenty more gifs of weapon implementations on the [system description page](https://sirpaulmcd.com/projects/elite-gardening-squad/warandpeace-system). 
 I also go into detail about the system architecture. 
