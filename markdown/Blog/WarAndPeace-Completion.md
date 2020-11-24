@@ -8,7 +8,7 @@ has_children: false
 nav_order: 3
 ---
 
-# Official Launch
+# WarAndPeace System Completion
 ### Nov 23, 2020
 
 After a week or two of hard work, I'm glad to say that I have completed the foundation for my WarAndPeace System! 
