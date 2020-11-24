@@ -1,4 +1,4 @@
----
+<!-- ---
 layout: default
 title: WarAndPeace System
 permalink: /projects/elite-gardening-squad/warandpeace-system
@@ -6,7 +6,7 @@ parent: Elite Gardening Squad
 grand_parent: Projects
 has_children: false
 nav_order: 1
----
+--- -->
 
 # WarAndPeace System
 The WarAndPeace System is a generic software architecture for implementing a variety of weapons, obstacles, and items in the Unity game engine.
