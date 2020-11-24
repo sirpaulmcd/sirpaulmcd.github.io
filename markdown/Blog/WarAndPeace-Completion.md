@@ -19,6 +19,7 @@ What do you mean that's not exciting???
 It's a comprehensive foundation for the attack system I'm developing for my proof of concept game!
 It's also a milestone in my experience as a game/software developer.
 I've never made such a complex system from scratch before.
+
 For those of you that are not impressed, here's an explosion to spice things up:
 
 <p align="center">
