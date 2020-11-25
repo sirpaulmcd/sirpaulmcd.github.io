@@ -9,5 +9,4 @@ nav_order: 3
 ---
 
 # Blog
-
-All blog postings can be found via table below.
+All of my blog postings can be found via table below.
