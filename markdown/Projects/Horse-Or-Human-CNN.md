@@ -13,7 +13,7 @@ A convolutional neural network constructed to differentiate between pictures of 
 The project repo can be found [here](https://github.com/sirpaulmcd/Horse-Or-Human-CNN).
 
 <p align="center">
-    <img src="https://cdn.discordapp.com/attachments/751158308236165191/772560833175093268/Summary-Pic.png">
+    <img src="https://drive.google.com/uc?export=view&id=13FQvmNSaz3lt4qioMuytCHhh7Iu1MgOW">
 </p>
 
 ## How to use
@@ -52,7 +52,7 @@ The model predicted 5/6 (or 83%) correctly.
 The image that was incorrectly classified is shown below:
 
 <p align="center">
-    <img src="https://cdn.discordapp.com/attachments/751158308236165191/772549681623859230/unknown.png">
+    <img src="https://drive.google.com/uc?export=view&id=1rfraAowsu52aw2a6jmdvxWDaxzimBsEx">
 </p>
 
 Upon closer invesitvation, it can be seen that this horse has its body directly facing the camera. 

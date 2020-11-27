@@ -16,14 +16,14 @@ All scripts are open source.
 For more info, check out the [project wiki](https://github.com/sirpaulmcd/Elite-Gardening-Squad-Open/wiki).
 
 <p align="center">
-    <img src="https://cdn.discordapp.com/attachments/555041456994123791/769294338684616745/elite-gardener.png" width=200px/>
+    <img src="https://drive.google.com/uc?export=view&id=1GaLC6hhl2YzEAVW8VAayTU1mcvflAZOB" width=200px/>
 </p>
 
 I have made many [contributions](https://github.com/sirpaulmcd/Elite-Gardening-Squad-Open/wiki/Paul-McDonald) to the game. 
 The most impressive of my contributions is the [WarAndPeace System](https://github.com/sirpaulmcd/Elite-Gardening-Squad-Open/wiki/WarAndPeace-System) which is a generic software architecture for implementing a variety of weapons, obstacles, and items in the Unity game engine.
 
 <p align="center">
-    <img src="https://cdn.discordapp.com/attachments/779049567844696064/780556837954256926/Base-Infrastructure.PNG" />
+    <img src="https://drive.google.com/uc?export=view&id=118eo1ng8rHvEP6UeN50FAwqssUPLL5aj" />
     <br />
     Base Infrastructure
 </p>
@@ -36,8 +36,8 @@ A projectile launcher that shoots self-regulating bullets that can:
 - Ricochet off of walls a specific number of times
 
 <p align="center">
-    <img src="https://media.giphy.com/media/GAcX0Q8j8exFNeUiuJ/giphy.gif" width=350 />
-    <img src="https://media.giphy.com/media/sTBEs78T6wtxK14LzI/giphy.gif" width=257 />
+    <img src="https://drive.google.com/uc?export=view&id=15Wu21rWa-qHn_UA7HMv0VqRWqTUWOKEc" width=350 />
+    <img src="https://drive.google.com/uc?export=view&id=11RaYtFLFtHyMM72lriLUj_JLZxHfdsfd" width=257 />
     <br />
 </p>
 

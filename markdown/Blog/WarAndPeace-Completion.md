@@ -23,7 +23,7 @@ I've never made such a complex system from scratch before.
 For those of you that are not impressed, here's an explosion to spice things up:
 
 <p align="center">
-    <img src="https://media.giphy.com/media/b4KxdrSaZhBaeRuAHS/giphy.gif" />
+    <img src="https://drive.google.com/uc?export=view&id=1JUMDbP-lvDZOb_DKRJc05u2OnjTmKwUq" />
 </p>
 
 Intrigued? If so, there's plenty more gifs of weapon implementations on the [system description page](https://github.com/sirpaulmcd/Elite-Gardening-Squad-Open/wiki/WarAndPeace-System). 
