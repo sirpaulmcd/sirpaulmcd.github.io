@@ -1,14 +1,3 @@
-<!-- ---
-layout: default
-title: WarAndPeace System
-permalink: /projects/elite-gardening-squad/warandpeace-system
-parent: Elite Gardening Squad
-grand_parent: Projects
-has_children: false
-nav_order: 1
---- -->
-
-# WarAndPeace System
 The WarAndPeace System is a generic software architecture for implementing a variety of weapons, obstacles, and items in the Unity game engine.
 Since healing is fundamentally the same as dealing damage, it works alongside the Health System to lower **or raise** health points.
 The entire system is open source.
@@ -17,7 +6,7 @@ The entire system is open source.
 The classes that make up the WarAndPeace infrastructure can be seen in the image below.
 
 <p align="center">
-    <img src="https://cdn.discordapp.com/attachments/779049567844696064/780556837954256926/Base-Infrastructure.PNG" />
+    <img src="https://drive.google.com/uc?export=view&id=118eo1ng8rHvEP6UeN50FAwqssUPLL5aj" />
 </p>
 
 All weapon, obstacle, and item implementations simply inherit from these abstract classes and interfaces.
@@ -91,14 +80,14 @@ Once able to calculate damage/healing magnitude, Weaponized GameObjects can infl
 These objects inherit from the base infrastructure as shown below.
 
 <p align="center">
-    <img src="https://cdn.discordapp.com/attachments/779049567844696064/780556841930588211/Weaponized-GameObjects.PNG" />
+    <img src="https://drive.google.com/uc?export=view&id=13F8S5wm1iKtR7s1x-U2wvIrMpEOgFx4d" />
 </p>
 
 Example implementations of WGOs include spikes, pitfalls, and poison gas clouds. 
 
 <p align="center">
-    <img src="https://media.giphy.com/media/o6khUKMV6FOeKzN3Cr/giphy.gif" />
-    <img src="https://media.giphy.com/media/1qwsW4kTp1gCQgHpo8/giphy.gif" />
+    <img src="https://drive.google.com/uc?export=view&id=1Nqi5chOd4tbppdt09rU-t7N0O3hnxaUq" />
+    <img src="https://drive.google.com/uc?export=view&id=1LrRdqmwfdHCy9CRUCWFc-3HWDCgOJvw3" />
 </p>
 
 ### Basic Weapon Implementations
@@ -107,7 +96,7 @@ Once activated, the basic weapon will deal damage/healing to whatever it interac
 These objects inherit from the base infrastructure as shown below.
 
 <p align="center">
-    <img src="https://cdn.discordapp.com/attachments/779049567844696064/780556838004719646/Basic-Weapon.PNG" />
+    <img src="https://drive.google.com/uc?export=view&id=1iXPvI1_YxbHzanlqLs3tRJk-SjD80Oyw" />
 </p>
 
 
@@ -118,7 +107,7 @@ Trigger DWGOs interact with other GameObjects via the MonoBehaviour.OnTriggerEnt
 These objects inherit from the base infrastrucrue as shown below.
 
 <p align="center">
-    <img src="https://cdn.discordapp.com/attachments/779049567844696064/780556840681472011/Trigger-DWGO-Weapons.PNG" />
+    <img src="https://drive.google.com/uc?export=view&id=1Li0q8dVH_0kPM3VsFojm9a7p5m4N7q2G" />
 </p>
 
 #### Bullet Launcher Weapons
@@ -126,8 +115,8 @@ Bullet launchers are an instance Trigger DWGO Weapons that are further specializ
 Bullets have also been specialized to use raycasting which allows them to elastically reflect off of walls a certain number of times.
 
 <p align="center">
-    <img src="https://media.giphy.com/media/GAcX0Q8j8exFNeUiuJ/giphy.gif" width=350 />
-    <img src="https://media.giphy.com/media/sTBEs78T6wtxK14LzI/giphy.gif" width=257 />
+    <img src="https://drive.google.com/uc?export=view&id=15Wu21rWa-qHn_UA7HMv0VqRWqTUWOKEc" width=350 />
+    <img src="https://drive.google.com/uc?export=view&id=11RaYtFLFtHyMM72lriLUj_JLZxHfdsfd" width=257 />
 </p>
 
 #### Melee Weapons
@@ -136,7 +125,7 @@ Melee weapons involve swinging a Trigger DWGO radially around the attacker.
 Extensions of this base weapon can yield more elaborate swinging animations and projectile skins. 
 
 <p align="center">
-    <img src="https://cdn.discordapp.com/attachments/779049567844696064/780571881941630976/Melee-Weapon2.gif" />
+    <img src="https://drive.google.com/uc?export=view&id=1OwZVSCY4iI4NIzrbcorrwwEjcxBl6sSH" />
 </p>
 
 ### Collider DWGO Weapon Implementations
@@ -144,7 +133,7 @@ Collider DWGOs interact with other GameObjects via the MonoBehaviour.OnCollision
 These objects inherit from the base infrastructure as shown below.
 
 <p align="center">
-    <img src="https://cdn.discordapp.com/attachments/779049567844696064/780556839385301022/Collider-DWGO-Weapons.PNG" />
+    <img src="https://drive.google.com/uc?export=view&id=1P4PGeQCXoR0CfoM7eXaq_-Mv4ZTEGmYg" />
 </p>
 
 #### Grenade Weapons
@@ -152,7 +141,7 @@ Grenades are an instance of Collider DWGO Weapons that are further specialized t
 Extensions of this base weapon can yield more elaborate explosive effects and projectile skins.
 
 <p align="center">
-    <img src="https://media.giphy.com/media/b4KxdrSaZhBaeRuAHS/giphy.gif" />
+    <img src="https://drive.google.com/uc?export=view&id=1JUMDbP-lvDZOb_DKRJc05u2OnjTmKwUq" />
 </p>
 
 ## Knockback Mechanics
