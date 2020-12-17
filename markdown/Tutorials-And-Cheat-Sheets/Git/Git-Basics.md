@@ -1,12 +1,16 @@
 ---
 layout: default
 title: Git Basics
-permalink: /tutorials/git-basics/
-parent: Tutorials
-# grand_parent: Blog
+permalink: /tutorials-cheat-sheets/git/git-basics/
+parent: Git
+grand_parent: Tutorials and Cheat Sheets
 has_children: false
-nav_order: 2
+nav_order: 1
+nav_exclude: false
+has_toc: false
 ---
+
+# Git Basics
 
 This tutorial is designed to teach a complete beginner the fundamentals of using Git. 
 When I was in school, Git was very poorly taught so I felt that I could do a better job.

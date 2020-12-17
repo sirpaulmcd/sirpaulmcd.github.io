@@ -1,15 +1,18 @@
 ---
 layout: default
 title: Installing C++ for VSCode
-permalink: /tutorials/installing-c++-for-vscode/
-parent: Tutorials
-# grand_parent: Blog
+permalink: /tutorials-cheat-sheets/vscode/installing-c++-for-vscode/
+parent: VSCode
+grand_parent: Tutorials and Cheat Sheets
 has_children: false
-nav_order: 3
+nav_order: 1
+nav_exclude: false
+has_toc: false
 ---
 
-I prefer to do all my coding within a single IDE. That's why I'm such a fan of VSCode. 
-However, support for lower level languages like greatly varies.
+# Installing C++ for VSCode
+
+VSCode is great, however, support for lower level languages like greatly varies.
 I made this tutorial so I could remember how to install C++ for VSCode.
 
 <p align="center">

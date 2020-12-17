@@ -1,11 +1,13 @@
 ---
 layout: default
-title: Markdown
-permalink: /cheat-sheets/markdown/
-parent: Cheat Sheets
-# grand_parent: Blog
+title: Markdown Cheat Sheet
+permalink: /tutorials-cheat-sheets/one-offs/markdown-cheat-sheet/
+parent: One-Offs
+grand_parent: Tutorials and Cheat Sheets
 has_children: false
 nav_order: 2
+nav_exclude: false
+has_toc: false
 ---
 
 # Markdown Cheat Sheet

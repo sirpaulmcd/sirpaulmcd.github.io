@@ -1,12 +1,16 @@
 ---
 layout: default
 title: Installing MySQL for VSCode
-permalink: /tutorials/installing-mysql-for-vscode/
-parent: Tutorials
-# grand_parent: Blog
+permalink: /tutorials-cheat-sheets/vscode/installing-mysql-for-vscode/
+parent: VSCode
+grand_parent: Tutorials and Cheat Sheets
 has_children: false
-nav_order: 4
+nav_order: 2
+nav_exclude: false
+has_toc: false
 ---
+
+# Installing MySQL for VSCode
 
 There have been a few times that I needed to use a MySQL database for my projects. 
 Since I prefer to do everything in VSCode, I made this tutorial.

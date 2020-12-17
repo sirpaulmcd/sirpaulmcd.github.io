@@ -1,12 +1,16 @@
 ---
 layout: default
-title: Pandas
-permalink: /cheat-sheets/pandas/
-parent: Cheat Sheets
-# grand_parent: Blog
+title: Pandas Cheat Sheet
+permalink: /tutorials-cheat-sheets/one-offs/pandas-cheat-sheet/
+parent: One-Offs
+grand_parent: Tutorials and Cheat Sheets
 has_children: false
 nav_order: 3
+nav_exclude: false
+has_toc: false
 ---
+
+# Pandas Cheat Sheet
 
 Pandas is my favorite tabular data engineering tool. However, I find it hard to remember all the commands so I made this cheat sheet.
 

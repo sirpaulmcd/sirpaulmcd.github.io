@@ -1,14 +1,18 @@
 ---
 layout: default
-title: Git
-permalink: /cheat-sheets/git/
-parent: Cheat Sheets
-# grand_parent: Blog
+title: Git Cheat Sheet
+permalink: /tutorials-cheat-sheets/git/git-cheat-sheet/
+parent: Git
+grand_parent: Tutorials and Cheat Sheets
 has_children: false
-nav_order: 1
+nav_order: 2
+nav_exclude: false
+has_toc: false
 ---
 
-Git is one of the most useful software tools. 
+# Git Cheat Sheet
+
+Git is one of the most valuable software tools to have under your belt. 
 However, I found that learning git wasn't as straightfoward as I would have liked. 
 To make learning easier for myself, I made a cheat sheet of the various console commands and recorded examples of common use cases.
 I have received very positive feedback for this cheat sheet from my peers so hopefully you find it helpful as well.

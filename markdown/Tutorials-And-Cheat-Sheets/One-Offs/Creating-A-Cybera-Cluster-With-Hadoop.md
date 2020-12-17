@@ -1,12 +1,16 @@
 ---
 layout: default
 title: Creating a Cybera Cluster With Hadoop
-permalink: /tutorials/creating-a-cybera-cluster-with-hadoop/
-parent: Tutorials
-# grand_parent: Blog
+permalink: /tutorials-cheat-sheets/one-offs/creating-a-cybera-cluster-with-hadoop/
+parent: One-Offs
+grand_parent: Tutorials and Cheat Sheets
 has_children: false
 nav_order: 1
+nav_exclude: false
+has_toc: false
 ---
+
+# Creating a Cybera Cluster with Hadoop
 
 During my master's program, we had to run Hadoop on a Cybera cluster. 
 A majority of the class had trouble with the installation process so I made this tutorial.
