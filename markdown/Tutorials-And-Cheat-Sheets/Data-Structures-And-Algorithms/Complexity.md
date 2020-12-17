@@ -42,7 +42,7 @@ Time complexity addresses the above issues by summing the number of primitive op
 Let's see an example of this method on a simple algorithm to find the maximum value in a numerical array: 
 
 <p align="center">
-    <img src="https://drive.google.com/uc?export=view&id=1IEs2T-VBSgmYqV8LYkbjZDv7WxCjNLqm"/>
+    <img src="/assets/images/data-structures-and-algorithms/complexity-and-big-o/complexity-example-1.png" alt="complexity-example-1.png"/>
 </p>
 
 Let's call the functional relationship between the number of operations required to handle an array `t(n)` where `n` is the size of the input array.
@@ -54,7 +54,7 @@ In the best case scenario, where the maximum value is at the beginning of the ar
 If we were to graph this relationship, we'd get a straight line with a slope of 6:
 
 <p align="center">
-    <img src="https://drive.google.com/uc?export=view&id=1dVJlm-bmqcV2kkQvuS9Otoa24Zh7lHAs"/>
+    <img src="/assets/images/data-structures-and-algorithms/complexity-and-big-o/time-complexity-graph.png" alt="time-complexity-graph.png"/>
 </p>
 
 Therefore, for every additional value we add to this array, we're increasing the execution time by 6 primitive operations. 

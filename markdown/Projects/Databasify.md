@@ -19,19 +19,19 @@ The project repo can be found [here](https://github.com/rlisowski10/Databasify/)
 ## Features
 
 <p align="center">
-    <img src="https://drive.google.com/uc?export=view&id=1gMiSfANo4yEc2WxvfXkxjmnC5ezCCxys" width=700>
+    <img src="/assets/images/databasify/search-artists.png" alt="artist-view.png" width=700>
     <br/>
     Populate SQLite database with custom song data from the Spotify API
 </p>
 
 <p align="center">
-    <img src="https://drive.google.com/uc?export=view&id=1NhMO1fqq2pT7EzLg7tfzse6H3Ns9nf0x" width=700>
+    <img src="/assets/images/databasify/search-songs.png" alt="song-view.png" width=700>
     <br/>
     Query SQLite database to access dozens of hidden song, album, and artist attributes
 </p>
 
 <p align="center">
-    <img src="https://drive.google.com/uc?export=view&id=1BebjK2eQ4FBrQpCvB1evKGzBVBp1a2TR" width=700>
+    <img src="/assets/images/databasify/create-playlist.png" alt="create-playlist.png" width=700>
     <br/>
     Use advanced search functionality to create exciting new playlists
 </p>

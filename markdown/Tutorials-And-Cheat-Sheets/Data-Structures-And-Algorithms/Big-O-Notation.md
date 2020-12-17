@@ -23,9 +23,9 @@ Big O Notation describes how the input size of an algorithm impacts its runtime.
 - O(n!) - Factorial Time
 
 <p align="center">
-  <img src="https://drive.google.com/uc?export=view&id=12Q-7rP5Ugay-6Et4tloyqGp9gg2T2oDb"/>
-  <br/>
-  Image Source: https://www.bigocheatsheet.com/
+  <img src="/assets/images/data-structures-and-algorithms/complexity-and-big-o/big-o-complexity-chart.png" alt="big-o-complexity-chart.png"/>
+  <br />
+  <a href="https://www.bigocheatsheet.com">source: bigocheatsheet.com</a>
 </p>
 
 The above image is only meant to show the general shape of the typical Big O functions. At this scale, O(log n) and O(1) appear the same. In reality, O(1) is a horizontal line while O(log n) is a curve that quickly flattens out into a horizontal line. Keep in mind that there are runtimes slower than O(n!). That's just where the chart cuts off.
@@ -35,7 +35,7 @@ Let's translate these relationships into practical examples. If we have a snippe
 If we have a snippet of code that has a "linear" time complexity. We know that runtime will increase linearly with input size. Recall the previous example from the [Complexity](/tutorials-cheat-sheets/data-structures-and-algorithms/complexity) section: 
 
 <p align="center">
-    <img src="https://drive.google.com/uc?export=view&id=1IEs2T-VBSgmYqV8LYkbjZDv7WxCjNLqm"/>
+    <img src="/assets/images/data-structures-and-algorithms/complexity-and-big-o/complexity-example-1.png" alt="complexity-example-1.png"/>
 </p>
 
 The Big O (i.e. worst case) runtime is O(8n-2) where n is the size of the input array. You may notice that this is a linear relationship as it follows the linear formula `y = mx + b`. This expression can be simplified into the O(n) category.
@@ -65,7 +65,7 @@ The basic steps for calculating Big O time complexity are as follows:
 Let's follow the basic steps on the below code snippet:
 
 <p align="center">
-    <img src="https://drive.google.com/uc?export=view&id=1sZI_TX6jOb831aV1aqErP5Y1bUvV79QM"/>
+    <img src="/assets/images/data-structures-and-algorithms/complexity-and-big-o/big-o-example-1.png" alt="big-o-example-1.png"/>
 </p>
 
 
@@ -92,7 +92,7 @@ Why are the constants dropped for simplicity? At large values of n, these consta
 Let's take it a step further. Instead of one loop, let's see what happens when we nest two loops together.
 
 <p align="center">
-    <img src="https://drive.google.com/uc?export=view&id=1MFV7cr5wyytoo1m_nFTSEJEkcwMYLptk"/>
+    <img src="/assets/images/data-structures-and-algorithms/complexity-and-big-o/big-o-example-2.png" alt="big-o-example-2.png"/>
 </p>
 
 
@@ -107,7 +107,7 @@ You might be thinking, "This process takes forever!", and you'd be right. Typica
 For the majority of your time using Big O techniques, you will simply be scanning for the "heavy hitters" on each line and their relationships to each other. Let's look at the previous example again and take a more streamlined approach.
 
 <p align="center">
-    <img src="https://drive.google.com/uc?export=view&id=14MpnMFLAw4hIGwZE7qpL1-VXcPFd6Peb"/>
+    <img src="/assets/images/data-structures-and-algorithms/complexity-and-big-o/big-o-example-2.1.png" alt="big-o-example-2.1.png"/>
 </p>
 
 
@@ -122,7 +122,7 @@ The above section explored some fundamental cases. However, as you will find, th
 There is another type of `for` loop that you may come across. Instead of incrementing/decrementing after each iteration, it reduces the remaining iterations by a factor. Here's an example:
 
 <p align="center">
-    <img src="https://drive.google.com/uc?export=view&id=11rQ442_9QhlOcscn1uhtMDkHX7Kkpgkk"/>
+    <img src="/assets/images/data-structures-and-algorithms/complexity-and-big-o/big-o-example-3.png" alt="big-o-example-3.png"/>
 </p>
 
 As you can see, instead of incrementing `j`, the inner for loop divides `j` by a factor of 2. When an algorithm's steps are reduced by a factor, the resulting complexity is likely O(log n). Think of it this way. The value of `j` starts at `n` and the loop will continue until `j` falls below 1. With every iteration of the inner loop, the value of `j` is halved. Therefore, the value of `j` is converging to a value below 1 at an exponential rate. Inversely, it could be said that the loops runtime (or required computations) grows at a logarithmic rate with increasing values of `n`. Hence the O(log n) time complexity.
@@ -131,7 +131,7 @@ As you can see, instead of incrementing `j`, the inner for loop divides `j` by a
 Let's expand our horizons by looking at another special case:
 
 <p align="center">
-    <img src="https://drive.google.com/uc?export=view&id=1sqYPq20NpwGMLV2lU0-LbP4mjFAfjnjb"/>
+    <img src="/assets/images/data-structures-and-algorithms/complexity-and-big-o/big-o-example-4.png" alt="big-o-example-4.png"/>
 </p>
 
 
@@ -146,7 +146,7 @@ This pattern appears in software frequently enough that having the formula for t
 Loops are not the only way code executions can be compounded multiple times. Recursive functions act in a similar way. Here's an example function used to calculate the factorial value of an integer:
 
 <p align="center">
-    <img src="https://drive.google.com/uc?export=view&id=1wGjtledTMAA2dXI8DReHu9P3Wiwv2xqx"/>
+    <img src="/assets/images/data-structures-and-algorithms/complexity-and-big-o/big-o-example-5.png" alt="big-o-example-5.png"/>
 </p>
 
 
@@ -158,14 +158,14 @@ As you can see, this function will be recursively called until the input value o
 In some cases, you will see functions that recursively call themselves multiple times over (the previous example only had one recursive call). A popular example of this is the recursive fibonacci method. It returns the `nth` number of the fibonacci sequence. For example, the beginning of the fibonacci sequence is `1, 1, 2, 3, 5, 8, 13, ...`. Therefore, `fib(4)` should yield a result of `3`.
 
 <p align="center">
-    <img src="https://drive.google.com/uc?export=view&id=1ehHmvQvHryC2P3-FIs2tytBDcIBDjYoT"/>
+    <img src="/assets/images/data-structures-and-algorithms/complexity-and-big-o/big-o-example-6.png" alt="big-o-example-6.png"/>
 </p>
 
 
 In the above algorithm, fib(4) will recursively branch off into two fib(3) calls. Each fib(3) call will branch into two more fib(2) calls. This will continue until the fib(1) calls end the cycle. This branching is visualized below: 
 
 <p align="center">
-    <img src="https://drive.google.com/uc?export=view&id=1sN7o50s2iOwwgWkkZbeD1xBar3z0glxC"/>
+    <img src="/assets/images/data-structures-and-algorithms/complexity-and-big-o/fib-tree.png" alt="fib-tree.png"/>
 </p>
 
 

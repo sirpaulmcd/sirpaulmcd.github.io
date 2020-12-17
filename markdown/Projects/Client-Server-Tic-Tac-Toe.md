@@ -26,24 +26,24 @@ multiple people can challenge each other over the internet.
 ## Preview
 Upon launching the client, a player is asked to input their name:
 <p align="center">
-<img src="https://drive.google.com/uc?export=view&id=10AG03I2vu3gld_SWoeuB14J_z4FuUbiY" width=350 />
+<img src="/assets/images/client-server-tic-tac-toe/enter-name.png" alt="enter-name.png" width=350 />
 </p>
 
 They will then wait to be matched with an opponent. Once found, the game will begin.
 The first person to connect to the server is the first person to play.
 <p align="center">
-<img src="https://drive.google.com/uc?export=view&id=1_FL9CoxQaTYfCsThvttN3l2Tc9ujWofR" width=600 />
+<img src="/assets/images/client-server-tic-tac-toe/game-preview.gif" alt="game-preview.gif" width=600 />
 </p>
 
 
 If a person disconnects from the server prematurely, they are shamed accordingly:
 <p align="center">
-<img src="https://drive.google.com/uc?export=view&id=1cuGz_vEeN27LBA770ay7OjFbWokz8eJ_" width=400 />
+<img src="/assets/images/client-server-tic-tac-toe/rage-quit.png" alt="rage-quit.png" width=400 />
 </p>
 
 Useful logs are kept by the server while it is running:
 <p align="center">
-<img src="https://drive.google.com/uc?export=view&id=1bCB2h2aFJFx-JUZLfvjIoTncniKXfXo6" width=500 />
+<img src="/assets/images/client-server-tic-tac-toe/console-logs.png" alt="console-logs.png" width=500 />
 </p>
 
 ## Learning
