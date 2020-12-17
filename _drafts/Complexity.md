@@ -1,5 +1,3 @@
-Test
-
 # Complexity
 
 Let's say you have two snippets of code (i.e. algorithms) in front of you. Each snippet performs the same overall function but the methods used are different. If you want to know which one is better in terms of performance/efficiency, complexity can help.
@@ -62,8 +60,8 @@ In industry, the only notation that really matters is Big O. That's because know
 
 Space complexity uses a fairly similar technique, although easier to grasp. It accounts for the total number of values stored in memory. For example, an array that stores n values will need O(n) space. Functionally, this means that the required storage space increases linearly with increased array size. Similarly, a 2D array of size n-by-n would require O(n*n) or O(n<sup>2</sup>) space.
 
-Note that stack space required for recursive calls must also be accounted for.
+Note that stack space required for recursive calls must also be accounted for. More examples will be discussed in the Data Structures section.
 
 ## What next? 
 
-Now that you have a basic understanding of the underlying theory, it's time to dive into the [specifics of Big O notation](). 
+Now that you have a basic understanding of the underlying theory, it's time to dive into the specifics of [Big O notation](). 
