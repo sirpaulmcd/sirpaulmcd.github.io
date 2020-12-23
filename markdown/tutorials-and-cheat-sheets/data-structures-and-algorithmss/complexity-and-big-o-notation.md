@@ -1,18 +1,107 @@
 ---
 layout: default
-title: Big O Notation
-permalink: /tutorials-cheat-sheets/data-structures-and-algorithms/big-o-notation/
+title: Complexity and Big O Notation
+permalink: /tutorials-cheat-sheets/data-structures-and-algorithms/complexity-and-big-o-notation/
 parent: Data Structures and Algorithms
 grand_parent: Tutorials and Cheat Sheets
 has_children: false
-nav_order: 2
+nav_order: 1
 nav_exclude: false
 has_toc: false
 ---
 
+<h1>Complexity and Big O Notation</h1>
+
+- [Complexity](#complexity)
+  - [Why Complexity?](#why-complexity)
+  - [Time Complexity](#time-complexity)
+  - [Space Complexity](#space-complexity)
+- [Big O Notation](#big-o-notation)
+  - [Basic Theory](#basic-theory)
+  - [Simple Cases](#simple-cases)
+    - [Example 1: For loops](#example-1-for-loops)
+    - [Example 2: Nested loops](#example-2-nested-loops)
+    - [Example 2.5: Focus on the essentials](#example-25-focus-on-the-essentials)
+  - [Advanced Cases](#advanced-cases)
+    - [Example 3: Logarithic complexity](#example-3-logarithic-complexity)
+    - [Example 4: The Sum of Integers 1 through N](#example-4-the-sum-of-integers-1-through-n)
+    - [Example 5: Recursive functions](#example-5-recursive-functions)
+    - [Example 6: Exponential runtimes](#example-6-exponential-runtimes)
+- [What next?](#what-next)
+
+# Complexity
+
+Let's say you have two snippets of code (i.e. algorithms) in front of you. Each snippet performs the same overall function but the implementations are different. If you want to know which one is better in terms of performance/efficiency, the concept of complexity is used.
+
+Complexity is a mesaure of algorithm performance in terms of the:
+- execution time (Time Complexity)
+- required storage space in memory (Space Complexity)
+- required number of steps or arithmetic operations (Computational Complexity)
+
+In terms of Data Structures and Algorithms, depending on the application, time complexity is typically the priority followed by space complexity. Computational complexity is more of a tie-breaker. 
+
+## Why Complexity?
+
+Why can't we just run each snippet separately and see which algorithm runs faster? There are a number of reasons for this:
+- Algorithm performance depends on the input. Algorithms may be faster for certain inputs and slower for others. If we are just manually timing the code, performance can't be tested for all possible inputs.
+- Algorithm performance depends on the hardware/environment in which it is run. Therefore, algorithm runtimes cannot be compared unless ran using the same device. 
+- Both algorithms would need to be fully implemented in order to test/compare using this method.
+
+Complexity addresses these problems because it provides a way to measure the performance of an algorithm for every possible input regardless of implementation or hardware. 
+
+## Time Complexity
+
+Time complexity addresses the above issues by summing the number of primitive operations and assuming they all take a constant amount of time. Primitive operations include:
+- Accesses (i.e. accessing value from an array) -> `array[i]`
+- Arithmetic -> `x + 5`
+- Assignments -> `x = 5`
+- Comparisons -> `x < 5`
+- Returns -> `return x`
+
+Let's see an example of this method on a simple algorithm to find the maximum value in a numerical array: 
+
+<p align="center">
+    <img src="/assets/images/data-structures-and-algorithms/complexity-and-big-o/complexity-example-1.png" alt="complexity-example-1.png"/>
+</p>
+
+Let's call the functional relationship between the number of operations required to handle an array `t(n)` where `n` is the size of the input array.
+
+In the best case scenario, where the maximum value is at the beginning of the array, line 6 is skipped for every following loop. Therefore, only 4 operations take place in each iteration of the loop. As such:
+
+<p align="center">t(n) = 2 + 1 + 2n + <ins><strong>4</strong></ins>(n-1) + 1 = 6n</p>
+
+If we were to graph this relationship, we'd get a straight line with a slope of 6:
+
+<p align="center">
+    <img src="/assets/images/data-structures-and-algorithms/complexity-and-big-o/time-complexity-graph.png" alt="time-complexity-graph.png"/>
+</p>
+
+Therefore, for every additional value we add to this array, we're increasing the execution time by 6 primitive operations. 
+
+In the worst case scenario, where the maximum value is at the end of the array, line 6 is never skipped. Therefore, 6 operations take place in each iteration of the loop. As a result: 
+
+<p align="center">t(n) = 2 + 1 + 2n + <ins><strong>6</strong></ins>(n-1) + 1 = 8n-2</p>
+
+In the average case, the maximum value will likely be somewhere in between the first and last element of the array. The resulting performance, therefore, will be somewhere between the best and the worst case.
+
+From this example (more complex examples are to come), you should see how algorithm performance is dependent on the input. In the above example, the size of the input array incluenced the execution time of the algorithm. The potential order of numbers within the array resulted in best and worst case execution times. There are 3 notations used to describe these execution times: O, Ω, and Θ.
+- O (big O): Upper bound on algorithm execution time.
+- Ω (big omega): Lower bound on algorithm execution time.
+- Θ (big theta): Both O and Ω simultaneously (unnecessary for tutorial scope).
+
+In industry, the only notation that really matters is Big O. That's because the worst case scenario is the most useful piece of information. Efficient algorithms typically use code that has the minimial "worst case scenario".
+
+## Space Complexity
+
+Space complexity uses a fairly similar technique, although easier to grasp. It accounts for the total number of values stored in memory. For example, an array that stores n values will need O(n) space. Functionally, this means that the required storage space increases linearly with increased array size. Similarly, a 2D array of size n-by-n would require O(n*n) or O(n<sup>2</sup>) space.
+
+Note that stack space required for recursive calls must also be accounted for. More examples will be discussed in the Data Structures section. 
+
 # Big O Notation
 
-## Theory
+Now that you have a basic understanding of why complexity is important, let's look at the most popular method to measure complexity.
+
+## Basic Theory
 Big O Notation describes how the input size of an algorithm impacts its runtime. In other words, it shows how scalable an algoritm is for increasing input sizes. The typical Big O runtime categories are listed with a visualization below:
 - O(1) - Constant Time
 - O(log n) - Logarithmic Time
@@ -60,7 +149,7 @@ The basic steps for calculating Big O time complexity are as follows:
 - Use the worst case for conditional statements
 - Simplify the ending expression
 
-### Example 1
+### Example 1: For loops
 
 Let's follow the basic steps on the below code snippet:
 
@@ -87,7 +176,7 @@ Now that we know the complexity of each line, we can sum them into a formula rep
 
 Why are the constants dropped for simplicity? At large values of n, these constants become relatively insignificant. Realistically, we're only looking for the simplified Big O notation. That's where the biggest time savings are found. If you are looking to compare two algorithms that fall under the same Big O category, then you'd keep the constants. However, that's only really necessary if you're trying to make sure your algorithms are as optimized as possible (nit-picky).
 
-### Example 2
+### Example 2: Nested loops
 
 Let's take it a step further. Instead of one loop, let's see what happens when we nest two loops together.
 
@@ -100,7 +189,7 @@ Finding the time complexity is very similar to the previous example. The twist i
 
 Why was the expression simplified to O(n<sup>2</sup>)? Similarly to the previous example, at large values of n, the rest of the expression becomes negligible. Since the difference between Big O categories are incredible orders of magnitude, it really only matters what ballpark the algorithm is in. As such, we simplify the expression to contain the most significant value.
 
-### Example 2.5
+### Example 2.5: Focus on the essentials
 
 You might be thinking, "This process takes forever!", and you'd be right. Typically, software developers do not calculate time complexities down to the last primitive computation. Practical applications of Big O drop the extra details at the end anyway. However, knowing the entire process is important for your understanding.
 
@@ -171,7 +260,7 @@ In the above algorithm, fib(4) will recursively branch off into two fib(3) calls
 
 To figure out how many times this O(1) function is recursively excuted, we must find the number of nodes in the resulting tree. As can be seen, each iteration doubles the number of nodes. Therefore, we know the complexity is exponential because the amount of recursive executions grows at an exponential rate. When dealing with a tree such as this, the complexity can be represented as O(branches<sup>depth</sup>) where `branches` is the number of recursive branches per node and `depth` is the depth of the tree. In other words, `branches` is the number of recursive calls within the function and `depth` is the maximum number of iterations before the input value reaches the end case. Therefore, since there are 2 recursive calls in the function and it takes `n` iterations for the input value `n` to be decremented to 1, the complexity of this function is O(2<sup>n</sup>).
 
-## What next? 
+# What next? 
 
 If this is your first time covering these concepts, the best thing you can do right now is practice.
 There are plenty of practice resources available for free online. 
