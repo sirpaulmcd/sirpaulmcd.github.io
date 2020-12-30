@@ -18,6 +18,8 @@ This is because data structures and algorithms are an essential part of becoming
 These concepts ensure that you are not just designing functional software but designing software that reaches its peak performance for the desired function. 
 Reaching peak performance is increasingly important as software scales or becomes increasingly complex.
 
+To help myself learn these concepts, I have made this tutorial. It should be useful for people learning these concepts for the first time as well as people looking to brush up on their skills. Hopefully you find it useful.
+
 There are 4 distinct pillars to learning Data Structures and Algorithms. The links to each are included below:
 - [**Complexity and Big O Notation**](/tutorials-cheat-sheets/data-structures-and-algorithms/complexity-and-big-o-notation/)
   - Theory/techniques necessary to determine/compare the performance of data structures and algorithms. Before learning the following pillars, you should have a decent understanding of time and space complexity in terms of Big O notation.
