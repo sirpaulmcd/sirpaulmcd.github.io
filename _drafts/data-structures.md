@@ -20,7 +20,7 @@ The fundamental data structures fall into 4 categories:
   - Queues
 - Tree data structures
   - Binary Search Trees
-  - Heaps
+  - Heaps (binary)
 - Hash data structures
   - Hash Tables
 - Graph data structures
@@ -64,7 +64,7 @@ Arrays are typically primitive data types so they have little functionality out 
 
 My example implementation of an ArrayList can be found [here]().
 
-Worst Case Array Time Complexity:
+Worst/Average Case Array Time Complexity:
 - Indexing - `O(1)`
   - Given an index, you can immediately find the value.
 - Searching - `O(n)`
@@ -92,7 +92,7 @@ Linked lists have many [applications](https://www.geeksforgeeks.org/applications
 
 My example implementations of the above linked lists can be found [here]().
 
-Worst Case Linked List Time Complexity:
+Worst/Average Case Linked List Time Complexity:
 - Indexing - `O(n)`
   - Given an index, a linked list must sequentially traverse nodes starting from the head to locate the indexed node.
 - Searching - `O(n)`
@@ -128,7 +128,7 @@ Stacks are what's known as a LIFO (last in, first out) data structure. An easy v
 
 My example implementations of stacks can be found [here](). Note that a stack can be implemented using either an array or a linked list.
 
-Worst Case Stack Time Complexity:
+Worst/Average Case Stack Time Complexity:
 - Indexing - `O(n)`
   - Given an index, a stack must sequentially search itself to locate the corresponding value.
 - Searching - `O(n)`
@@ -150,7 +150,7 @@ Stacks are what's known as a FIFO (first in, first out) data structure. An easy 
 
 My example implementations of queues can be found [here](). Note that a queue can be implemented using either an array or a linked list.
 
-Worst Case Queue Time Complexity:
+Worst/Average Case Queue Time Complexity:
 - Indexing - `O(n)`
   - Given an index, a queue must sequentially search itself to locate the corresponding value.
 - Searching - `O(n)`
@@ -168,8 +168,9 @@ Worst Case Queue Time Complexity:
     <a href="https://www.geeksforgeeks.org/binary-tree-data-structure/">source: geeksforgeeks</a>
 </p>
 
+Binary trees are the simplest for of tree data structure. As such, they are useful to cover in terms of understanding tree theory. They are particularly useful at storing hierarchical data. However, refering to binary trees simply as a "fundamental data structure" is a bit misleading. Binary trees are not really used for practical applications. Instead, they are the cornerstone to an entire family of more complex/useful data structures such as the binary search trees and heaps. For more information, see the [GeeksForGeeks documentation](https://www.geeksforgeeks.org/binary-tree-data-structure/) or the [mycodeschool video tutorials](https://www.youtube.com/watch?v=qH6yxkw0u78&list=PL2_aWCzGMAwI3W_JlcBbtYTwiQSsOTa6P&index=25).
 
-Binary trees have many [applications](https://www.geeksforgeeks.org/applications-of-tree-data-structure/). They are particularly useful at storing hierarchical data. However, refering to binary trees simply as a "data structure" is a bit misleading. Binary trees are the cornerstone to an entire family of more complex/useful data structures such as the binary search trees and heaps. For more information, see the [GeeksForGeeks documentation](https://www.geeksforgeeks.org/binary-tree-data-structure/) or the [mycodeschool video tutorials](https://www.youtube.com/watch?v=qH6yxkw0u78&list=PL2_aWCzGMAwI3W_JlcBbtYTwiQSsOTa6P&index=25).
+My example implementations of queues can be found [here](). Note that a binary tree can be implemented using either an array or a linked list.
 
 # Binary Search Trees (BST)
 
@@ -181,7 +182,19 @@ Binary trees have many [applications](https://www.geeksforgeeks.org/applications
 
 Binary search trees have many [applications](https://www.geeksforgeeks.org/applications-of-bst/). They are particularly useful for maintiaining a sorted list of data. For more information, see the [GeeksForGeeks documentation](https://www.geeksforgeeks.org/binary-search-tree-data-structure/) or the [mycodeschool video tutorials](https://www.youtube.com/watch?v=pYT9F8_LFTM&list=PL2_aWCzGMAwI3W_JlcBbtYTwiQSsOTa6P&index=27).
 
-# Heaps
+My example implementations of binary search trees can be found [here](). Note that a binary search tree can be implemented using either an array or a linked list.
+
+Binary Search Tree Time Complexity:
+- Indexing - Worst case:`O(n)`, average case:`O(log(n))`
+  - Given an index, 
+- Searching - Worst case:`O(n)`, average case:`O(log(n))`
+  - Given a value, 
+- Inserting - Worst case:`O(n)`, average case:`O(log(n))`
+  - A
+- Deletion - Worst case:`O(n)`, average case:`O(log(n))`
+  - A
+
+# Heaps (binary)
 
 <p align="center">
     <img src="/assets/images/data-structures-and-algorithms/data-structures/min-and-max-heap.png" alt="min-and-max-heap.png"/>
@@ -189,7 +202,14 @@ Binary search trees have many [applications](https://www.geeksforgeeks.org/appli
     <a href="https://www.geeksforgeeks.org/heap-data-structure/">source: geeksforgeeks</a>
 </p>
 
+http://souravsengupta.com/cds2016/lectures/Complexity_Cheatsheet.pdf
+
 Heaps have many [applications](https://www.geeksforgeeks.org/applications-of-heap-data-structure/). They are particularly useful for implementing priority queues. For more information, see the [GeeksForGeeks documentation](https://www.geeksforgeeks.org/heap-data-structure/) or the [HackerRank video tutorial](https://www.youtube.com/watch?v=t0Cq6tVNRBA).
+
+My example implementation of a heap can be found [here](). Note that a heap can be implemented using either an array or a linked list.
+
+Binary Heap Time Complexity:
+- ?
 
 # Hash Tables
 
@@ -201,6 +221,17 @@ Heaps have many [applications](https://www.geeksforgeeks.org/applications-of-hea
 
 Hash tables have many [applications](https://afteracademy.com/blog/applications-of-hash-table). It is particularly useful for solving technical interview questions. For more information, see the [GeeksForGeeks documentation](https://www.geeksforgeeks.org/hashing-data-structure/) or the [Paul Programming video tutorial](https://www.youtube.com/watch?v=MfhjkfocRR0).
 
+My example implementations of a hash table can be found [here]().
+
+Hash Table Time Complexity:
+- Indexing - N/A (There is no indexing, only searching via key)
+- Searching - Worst case:`O(1)`, average case:`O(log(n))`
+  - Given a value, 
+- Inserting - Worst case:`O(1)`, average case:`O(log(n))`
+  - A
+- Deletion - Worst case:`O(1)`, average case:`O(log(n))`
+  - A
+
 # Graphs
 
 <p align="center">
@@ -210,3 +241,8 @@ Hash tables have many [applications](https://afteracademy.com/blog/applications-
 </p>
 
 Graphs have many [applications](https://www.geeksforgeeks.org/applications-of-graph-data-structure/). They are particular useful for relating data in a web-like formation. For example, web pages in the World Wide Web or users in a social media site. For more information, see the [GeeksForGeeks documentation](https://www.geeksforgeeks.org/graph-data-structure-and-algorithms/) or the [mycodeschool video tutorials](https://www.youtube.com/watch?v=gXgEDyodOJU&list=PL2_aWCzGMAwI3W_JlcBbtYTwiQSsOTa6P&index=38).
+
+My example implementations of a graph can be found [here]().
+
+Graph Time Complexity:
+- ?
