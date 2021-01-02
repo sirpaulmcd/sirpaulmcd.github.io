@@ -23,7 +23,7 @@ has_toc: false
     - [Example 2: Nested loops](#example-2-nested-loops)
     - [Example 2.5: Focus on the essentials](#example-25-focus-on-the-essentials)
   - [Advanced Cases](#advanced-cases)
-    - [Example 3: Logarithic complexity](#example-3-logarithic-complexity)
+    - [Example 3: Logarithmic complexity](#example-3-logarithmic-complexity)
     - [Example 4: The Sum of Integers 1 through N](#example-4-the-sum-of-integers-1-through-n)
     - [Example 5: Recursive functions](#example-5-recursive-functions)
     - [Example 6: Exponential runtimes](#example-6-exponential-runtimes)
@@ -33,7 +33,7 @@ has_toc: false
 
 Let's say you have two snippets of code (i.e. algorithms) in front of you. Each snippet performs the same overall function but the implementations are different. If you want to know which one is better in terms of performance/efficiency, the concept of complexity is used.
 
-Complexity is a mesaure of algorithm performance in terms of the:
+Complexity is a measure of algorithm performance in terms of the:
 - execution time (Time Complexity)
 - required storage space in memory (Space Complexity)
 - required number of steps or arithmetic operations (Computational Complexity)
@@ -84,12 +84,12 @@ In the worst case scenario, where the maximum value is at the end of the array, 
 
 In the average case, the maximum value will likely be somewhere in between the first and last element of the array. The resulting performance, therefore, will be somewhere between the best and the worst case.
 
-From this example (more complex examples are to come), you should see how algorithm performance is dependent on the input. In the above example, the size of the input array incluenced the execution time of the algorithm. The potential order of numbers within the array resulted in best and worst case execution times. There are 3 notations used to describe these execution times: O, Ω, and Θ.
+From this example (more complex examples are to come), you should see how algorithm performance is dependent on the input. In the above example, the size of the input array influenced the execution time of the algorithm. The potential order of numbers within the array resulted in best and worst case execution times. There are 3 notations used to describe these execution times: O, Ω, and Θ.
 - O (big O): Upper bound on algorithm execution time.
 - Ω (big omega): Lower bound on algorithm execution time.
 - Θ (big theta): Both O and Ω simultaneously (unnecessary for tutorial scope).
 
-In industry, the only notation that really matters is Big O. That's because the worst case scenario is the most useful piece of information. Efficient algorithms typically use code that has the minimial "worst case scenario".
+In industry, the only notation that really matters is Big O. That's because the worst case scenario is the most useful piece of information. Efficient algorithms typically use code that has the minimal "worst case scenario".
 
 ## Space Complexity
 
@@ -102,7 +102,7 @@ Note that stack space required for recursive calls must also be accounted for. M
 Now that you have a basic understanding of why complexity is important, let's look at the most popular method to measure complexity.
 
 ## Basic Theory
-Big O Notation describes how the input size of an algorithm impacts its runtime. In other words, it shows how scalable an algoritm is for increasing input sizes. The typical Big O runtime categories are listed with a visualization below:
+Big O Notation describes how the input size of an algorithm impacts its runtime. In other words, it shows how scalable an algorithm is for increasing input sizes. The typical Big O runtime categories are listed with a visualization below:
 - O(1) - Constant Time
 - O(log n) - Logarithmic Time
 - O(n) - Linear Time
@@ -121,7 +121,7 @@ The above image is only meant to show the general shape of the typical Big O fun
 
 Let's translate these relationships into practical examples. If we have a snippet of code that has a "constant" time complexity. It means that, no matter how large the input size is, the same amount of primitive operations will be required to execute the code.
 
-If we have a snippet of code that has a "linear" time complexity. We know that runtime will increase linearly with input size. Recall the previous example from the [Complexity](/tutorials-cheat-sheets/data-structures-and-algorithms/complexity) section: 
+If we have a snippet of code that has a "linear" time complexity. We know that runtime will increase linearly with input size. Recall the previous example from the [Time Complexity](#time-complexity) section: 
 
 <p align="center">
     <img src="/assets/images/data-structures-and-algorithms/complexity-and-big-o/complexity-example-1.png" alt="complexity-example-1.png"/>
@@ -129,7 +129,7 @@ If we have a snippet of code that has a "linear" time complexity. We know that r
 
 The Big O (i.e. worst case) runtime is O(8n-2) where n is the size of the input array. You may notice that this is a linear relationship as it follows the linear formula `y = mx + b`. This expression can be simplified into the O(n) category.
 
-Why do these relationships matter anyway? Well, software developers use them as a means to compare the performance of different algorithms. If we have two algorithms that can sort an array, but the first has a time complexity of O(n log n) and the second has a time complexity of O(n<sup>2</sup>), we know that the first algorithm will perform much faster for large inputs and is therefore more scalable. You can tell which is better by just looking at the above visualsation.
+Why do these relationships matter anyway? Well, software developers use them as a means to compare the performance of different algorithms. If we have two algorithms that can sort an array, but the first has a time complexity of O(n log n) and the second has a time complexity of O(n<sup>2</sup>), we know that the first algorithm will perform much faster for large inputs and is therefore more scalable. You can tell which is better by just looking at the above visualization.
 
 ## Simple Cases
 
@@ -206,7 +206,7 @@ As you can see, the only important lines to consider were lines 1 and 3. Since w
 
 The above section explored some fundamental cases. However, as you will find, there are many more advanced cases that require some deeper thinking.
 
-### Example 3: Logarithic complexity
+### Example 3: Logarithmic complexity
 
 There is another type of `for` loop that you may come across. Instead of incrementing/decrementing after each iteration, it reduces the remaining iterations by a factor. Here's an example:
 
@@ -226,7 +226,7 @@ Let's expand our horizons by looking at another special case:
 
 In this example, you will find that the number of iterations of the inner loop depends on the value of `i` in the outer loop. Initially, when `i = 1`, the inner loop iterates once. When `i = 2`, the inner loop iterates twice. This repeats until `i = n` and the inner loop iterates n times. Therefore, through all values of `i`, the inner loop executes the sum of `1 + 2 + ... + n` times. Mathematically, this sum can be simplified to `n(n+2)/2`. Therefore, the complexity of the inner loop is O(n<sup>2</sup>).
 
-Don't worry if you didn't already know that simplfication. A 10 year old discovered it back in the late 1700s. To be fair, they grew up to be an amazing mathematician and physicist. If you're not a naturally gifted 10 year old math wizard, you can find an explanation of the proof [here](https://www.youtube.com/watch?v=tpkzn2e5mtI).
+Don't worry if you didn't already know that simplification. A 10 year old discovered it back in the late 1700s. To be fair, they grew up to be an amazing mathematician and physicist. If you're not a naturally gifted 10 year old math wizard, you can find an explanation of the proof [here](https://www.youtube.com/watch?v=tpkzn2e5mtI).
 
 This pattern appears in software frequently enough that having the formula for the sum of 1 through N memorized is a good idea. 
 
@@ -239,7 +239,7 @@ Loops are not the only way code executions can be compounded multiple times. Rec
 </p>
 
 
-As you can see, this function will be recursively called until the input value of `n` is decremented down to 1. Therefore, even though the function itself has a complexty of O(1), it is recursively executed `n` times. As such, the time complexity is O(1) * n = O(n).
+As you can see, this function will be recursively called until the input value of `n` is decremented down to 1. Therefore, even though the function itself has a complexity of O(1), it is recursively executed `n` times. As such, the time complexity is O(1) * n = O(n).
 
 
 ### Example 6: Exponential runtimes
@@ -258,7 +258,7 @@ In the above algorithm, fib(4) will recursively branch off into two fib(3) calls
 </p>
 
 
-To figure out how many times this O(1) function is recursively excuted, we must find the number of nodes in the resulting tree. As can be seen, each iteration doubles the number of nodes. Therefore, we know the complexity is exponential because the amount of recursive executions grows at an exponential rate. When dealing with a tree such as this, the complexity can be represented as O(branches<sup>depth</sup>) where `branches` is the number of recursive branches per node and `depth` is the depth of the tree. In other words, `branches` is the number of recursive calls within the function and `depth` is the maximum number of iterations before the input value reaches the end case. Therefore, since there are 2 recursive calls in the function and it takes `n` iterations for the input value `n` to be decremented to 1, the complexity of this function is O(2<sup>n</sup>).
+To figure out how many times this O(1) function is recursively executed, we must find the number of nodes in the resulting tree. As can be seen, each iteration doubles the number of nodes. Therefore, we know the complexity is exponential because the amount of recursive executions grows at an exponential rate. When dealing with a tree such as this, the complexity can be represented as O(branches<sup>depth</sup>) where `branches` is the number of recursive branches per node and `depth` is the depth of the tree. In other words, `branches` is the number of recursive calls within the function and `depth` is the maximum number of iterations before the input value reaches the end case. Therefore, since there are 2 recursive calls in the function and it takes `n` iterations for the input value `n` to be decremented to 1, the complexity of this function is O(2<sup>n</sup>).
 
 # What next? 
 

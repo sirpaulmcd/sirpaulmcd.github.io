@@ -24,11 +24,11 @@ There are 4 distinct pillars to learning Data Structures and Algorithms. The lin
 - [**Complexity and Big O Notation**](/tutorials-cheat-sheets/data-structures-and-algorithms/complexity-and-big-o-notation/)
   - Theory/techniques necessary to determine/compare the performance of data structures and algorithms. Before learning the following pillars, you should have a decent understanding of time and space complexity in terms of Big O notation.
 
-- **Data Structures** (in progress)
+- **Data Structures (in progress)** 
   - Methods of organizing data in software. Each data structure has pros and cons that make them suitable for specific applications. To write optimal algorithms, you must know the corresponding optimal data structures. 
 
-- **Sorting and Searching Algorithms** (coming soon)
+- **Sorting and Searching Algorithms (coming soon)** 
   - Algorithms used to sort/search data structures efficiently. There are only so many ways to sort/search an array. No point in reinventing the wheel when the most popular/effective methods of sorting data have already been discovered. Sorting and searching are incredibly common steps when developing algorithms. Therefore, knowing about popular sorting/searching algorithms and their relative performances is good to know before creating your own algorithms. 
 
-- **Algorithms** (coming soon)
+- **Algorithms (coming soon)** 
   - Sequences of well-defined instructions to perform a desired function. Writing efficient algorithms means being aware of the above topics during your development process. 

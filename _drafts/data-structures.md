@@ -20,7 +20,7 @@ The fundamental data structures fall into 4 categories:
   - Queues
 - Tree data structures
   - Binary Search Trees
-  - Heaps (binary)
+  - Binary Heaps
 - Hash data structures
   - Hash Tables
 - Graph data structures
@@ -168,7 +168,11 @@ Worst/Average Case Queue Time Complexity:
     <a href="https://www.geeksforgeeks.org/binary-tree-data-structure/">source: geeksforgeeks</a>
 </p>
 
-Binary trees are the simplest for of tree data structure. As such, they are useful to cover in terms of understanding tree theory. They are particularly useful at storing hierarchical data. However, refering to binary trees simply as a "fundamental data structure" is a bit misleading. Binary trees are not really used for practical applications. Instead, they are the cornerstone to an entire family of more complex/useful data structures such as the binary search trees and heaps. For more information, see the [GeeksForGeeks documentation](https://www.geeksforgeeks.org/binary-tree-data-structure/) or the [mycodeschool video tutorials](https://www.youtube.com/watch?v=qH6yxkw0u78&list=PL2_aWCzGMAwI3W_JlcBbtYTwiQSsOTa6P&index=25).
+Now that all the important *linear* data structures have been covered, it's time to look into *tree* data structures. Binary trees are the simplest for of tree data structure. As such, they are useful to cover in terms of understanding tree theory. They are particularly useful at storing hierarchical data. However, refering to binary trees as a "fundamental data structure" is a bit misleading. Binary trees are not really used for practical applications. Instead, they are the cornerstone to an entire family of more complex/useful data structures such as the binary search trees and heaps. 
+
+
+
+For more information, see the [GeeksForGeeks documentation](https://www.geeksforgeeks.org/binary-tree-data-structure/) or the [mycodeschool video tutorials](https://www.youtube.com/watch?v=qH6yxkw0u78&list=PL2_aWCzGMAwI3W_JlcBbtYTwiQSsOTa6P&index=25).
 
 My example implementations of queues can be found [here](). Note that a binary tree can be implemented using either an array or a linked list.
 
