@@ -10,25 +10,32 @@ nav_exclude: false
 has_toc: false
 ---
 
-# Data Structures
+<h1>Data Structures</h1>
+
+- [Introduction](#introduction)
+- [Choosing Data Structures](#choosing-data-structures)
+- [Linear Data Structures](#linear-data-structures)
+  - [Arrays (Dynamic)](#arrays-dynamic)
+  - [Linked Lists](#linked-lists)
+  - [Stacks](#stacks)
+  - [Queues](#queues)
+- [Tree Data Structures (Binary)](#tree-data-structures-binary)
+  - [Binary Search Trees (BST)](#binary-search-trees-bst)
+  - [Binary Heaps](#binary-heaps)
+- [Hash Data Structures](#hash-data-structures)
+  - [Hash Tables](#hash-tables)
+- [Graph data structures](#graph-data-structures)
+  - [Graphs](#graphs)
+
+# Introduction
 
 The fundamental data structures fall into 4 categories:
 - Linear data structures
-  - Arrays (dynamic)
-  - Linked Lists (singly, doubly, etc.)
-  - Stacks
-  - Queues
 - Tree data structures
-  - Binary Search Trees
-  - Binary Heaps
 - Hash data structures
-  - Hash Tables
 - Graph data structures
-  - Graphs
 
-Although software is not limited to these data structures, the structures listed above are enough to give you a proper foundation if you choose to branch out.
-
-The time and space complexities of some popular data structures can be seen in the image below:
+Although software is not limited to these data structures, the structures listed above are enough to give you a proper foundation if you choose to branch out. The time and space complexities of some popular data structures can be seen in the image below:
 
 <p align="center">
     <img src="/assets/images/data-structures-and-algorithms/data-structures/data-structure-complexity-chart.png" alt="data-structure-complexity-chart.png"/>
@@ -38,7 +45,7 @@ The time and space complexities of some popular data structures can be seen in t
 
 Before moving on, it is important that you know how to interpret the above table. In terms of time complexity:
 - Accessing (AKA indexing): Given an index, find the corresponding value
-- Searching: Given a value, find a match
+- Searching: Given a value or key, find a match
 - Inserting: Given a value, insert it into the data structure
 - Deleting: Given a value, delete it from the data structure
 
@@ -50,7 +57,7 @@ Regarding space complexity, all the fundamental data structures discussed below 
 
 In this section, we'll be going over we'll be going over the fundamental data structures. I have written brief summaries for each data structure. If you are learning these structures for the first time, I have also linked to more comprehensive documentation and video tutorials. However, descriptions are not enough. I find that the best way to learn how a data structure works is to implement it yourself in your preferred programming language. To serve as examples, I've implemented all data structures covered in this tutorial using Java. Why Java? It's more hands-on than Python but not as complex as C++. It's easy to read and similar in syntax to other popular programming languages. It's also my first and preferred object-oriented programming language.
 
-For additional resources, [GeeksForGeeks](https://www.geeksforgeeks.org/data-structures/) has extensive documentation on data structures. Including sample implementations in a variety of languages. They also have quizzes and practice questions to help you hone your skills. Additionally, [mycodeschool](https://www.youtube.com/user/mycodeschool) is a youtube channel with plenty of quality video tutorials on data structures.
+For additional resources, [GeeksForGeeks](https://www.geeksforgeeks.org/data-structures/) has extensive documentation on data structures. Including sample implementations in a variety of languages. They also have quizzes and practice questions to help you hone your skills. Additionally, [mycodeschool](https://www.youtube.com/user/mycodeschool) is a youtube channel with plenty of quality video tutorials on data structures. The channel is incredible but unfortunately has a bit of a tragic [backstory](https://www.freecodecamp.org/news/mycodeschool-youtube-channel-history/) and stopped making videos back in 2016.
 
 # Choosing Data Structures
 
@@ -60,12 +67,12 @@ When you're choosing a data structure, there are some important questions to ask
 - What is the cost of memory (space complexity)?
 - How easy is it to implement? 
 
-As you learn these data structures, it is important that you can relate them back to these fundamental questions.
-Ideally, you should be able to know the fundamentals well enough to implement them for interviews.
-You should also be able to justify your selection of data structure for a specific application. 
-Try to keep these thoughts in mind.
+As you learn these data structures, it is important that you can relate them back to these fundamental questions. Ideally, you should be able to know the fundamentals well enough to implement them for interviews. You should also be able to justify your selection of data structure for a specific application. Try to keep these thoughts in mind.
 
-# Arrays (Dynamic)
+# Linear Data Structures
+
+
+## Arrays (Dynamic)
 
 <p align="center">
     <img src="/assets/images/data-structures-and-algorithms/data-structures/array.png" alt="array.png"/>
@@ -89,7 +96,7 @@ Worst/Average Case Array Time Complexity:
 
 Note that some implementations of dynamic arrays double their size when they reach max capacity. As such, when there is space remaining in the array, insertion complexity is `O(1)`. When there isn't space and the array must be resized, the time complexity is `O(n)`. Having scenarios that result in different time complexities is referred to as `amortized` time complexity.
 
-# Linked Lists
+## Linked Lists
 
 <p align="center">
     <img src="/assets/images/data-structures-and-algorithms/data-structures/linked-list.png" alt="linked-list.png"/>
@@ -129,7 +136,7 @@ From my example implementations, you may have noticed that arrays and linked lis
 
 Arrays and linked lists are the most important data structures to be familiar with. This is because the other fundamental data structures are implemented using their underlying principles. Make sure you have a good grasp of these data structures before moving on.
 
-# Stacks
+## Stacks
 
 <p align="center">
     <img src="/assets/images/data-structures-and-algorithms/data-structures/stack.png" alt="stack.png"/>
@@ -151,7 +158,7 @@ Worst/Average Case Stack Time Complexity:
 - Deletion - `O(1)`
   - Since stacks always remove from the top (an easily indexable location), they have a constant deletion time complexity `O(1)`. 
 
-# Queues
+## Queues
 
 <p align="center">
     <img src="/assets/images/data-structures-and-algorithms/data-structures/queue.png" alt="queue.png"/>
@@ -173,7 +180,7 @@ Worst/Average Case Queue Time Complexity:
 - Deletion - `O(1)`
   - Since queues always remove from the top (an easily indexable location), they have a constant deletion time complexity of `O(1)`. 
 
-# Binary Trees
+# Tree Data Structures (Binary)
 
 <p align="center">
     <img src="/assets/images/data-structures-and-algorithms/data-structures/binary-tree.png" alt="binary-tree.png"/>
@@ -191,9 +198,11 @@ Tree facts:
 - The max # of nodes at depth x is branches<sup>depth</sup> (recall that this forumula was used in the exponential time complexity section)
 - A large oak tree can consume about 100 gallons of water per day
 
+Note that, depending on the application, binary trees can be implmenented using either arrays or linked lists. Whichever is more efficeint/convenient. As you will see, binary search trees are implemented using linked lists while binary heaps are implemented using arrays.
+
 For more information, see the [GeeksForGeeks documentation](https://www.geeksforgeeks.org/binary-tree-data-structure/) or the [mycodeschool video tutorials](https://www.youtube.com/watch?v=qH6yxkw0u78&list=PL2_aWCzGMAwI3W_JlcBbtYTwiQSsOTa6P&index=25).
 
-# Binary Search Trees (BST)
+## Binary Search Trees (BST)
 
 <p align="center">
     <img src="/assets/images/data-structures-and-algorithms/data-structures/binary-search-tree.png" alt="binary-search-tree.png"/>
@@ -231,7 +240,7 @@ Binary Search Tree Time Complexity:
 - Deletion - average case:`O(log(n))`, worst case:`O(n)`
   - If the tree is balanced, binary search is used to locate the deletion position. Otherwise, sequential search is used.
 
-# Binary Heaps
+## Binary Heaps
 
 <p align="center">
     <img src="/assets/images/data-structures-and-algorithms/data-structures/min-and-max-heap.png" alt="min-and-max-heap.png"/>
@@ -262,7 +271,11 @@ Time Complexity of Binary Heap Operations:
 - Access min/max - average/worst case:`O(1)`
   - The min/max value will always be found at index 0 of a min/max heap.
 
-# Hash Tables
+# Hash Data Structures
+
+A hash data structures use a "hash function" to map key-value pairs together such that they can be quickly and conveniently accessed.
+
+## Hash Tables
 
 <p align="center">
     <img src="/assets/images/data-structures-and-algorithms/data-structures/hash-table.png" alt="hash-table.png"/>
@@ -288,13 +301,17 @@ Hash tables have many [applications](https://afteracademy.com/blog/applications-
 Hash Table Time Complexity:
 - Indexing - N/A (There is no indexing, only searching via key)
 - Searching - average case:`O(1)`, worst case:`O(n)`
-  - Given a key, a value can be found instantly. However, in a worst case scenario, the hash table has only collisions and the desired value is at the end of the linked list. 
+  - Given a key, a value can be found with a constant runtime. However, in a worst case scenario, the hash table has only collisions and the desired value is at the end of the linked list. 
 - Inserting - average case:`O(1)`, worst case:`O(n)`
-  - If no collisions, instant. Worst case scenario, only collisions and the entire linked list must be traversed to check if the key already exists.
+  - If no collisions, constant runtime. Worst case scenario, only collisions and the entire linked list must be traversed to check if the key already exists.
 - Deletion - average case:`O(1)`, worst case:`O(n)`
-  - If no collisions, instant. Worst case scenario, only collisions and the entire linked list must be traversed for the node to be removed.
+  - If no collisions, constant runtime. Worst case scenario, only collisions and the entire linked list must be traversed for the node to be removed.
 
-# Graphs
+# Graph data structures
+
+As you have seen, nodes in a defined hierarchy can from a tree shape. As you will see with graphs, nodes without a defined structure form a web shape. Unlike trees, there are no rules regulating the connection of nodes. Therefore, trees are technically just specialized forms of graph. If that's true, why are we learning about graphs last? Well it's because efficient software implementations graphs used hash tables!. Matrices are also used in certain cases. However, those data structures are commonly taught in math curriculums. If you are a math major, you probably already know what a graph is. However, we'll skip that theoretical jargon for some practical software knowledge. 
+
+## Graphs
 
 <p align="center">
     <img src="/assets/images/data-structures-and-algorithms/data-structures/graph.png" alt="graph.png"/>
@@ -302,9 +319,56 @@ Hash Table Time Complexity:
     <a href="https://www.geeksforgeeks.org/graph-data-structure-and-algorithms/">source: geeksforgeeks</a>
 </p>
 
-Graphs have many [applications](https://www.geeksforgeeks.org/applications-of-graph-data-structure/). They are particular useful for relating data in a web-like formation. For example, web pages in the World Wide Web or users in a social media site. For more information, see the [GeeksForGeeks documentation](https://www.geeksforgeeks.org/graph-data-structure-and-algorithms/) or the [mycodeschool video tutorials](https://www.youtube.com/watch?v=gXgEDyodOJU&list=PL2_aWCzGMAwI3W_JlcBbtYTwiQSsOTa6P&index=38).
+Since a standard graph does not have any rules about connecting nodes, there is a ton of room for specialization. As a result, there is quite a bit of theory to learn about the many different types graphs. If you are learning about graphs for the first time, I highly recommend you check out the [mycodeschool video tutorials](https://www.youtube.com/watch?v=gXgEDyodOJU&list=PL2_aWCzGMAwI3W_JlcBbtYTwiQSsOTa6P&index=38). I've included a summary of related graph theory below.
 
-My example implementations of a graph can be found [here]().
+Graph facts:
+- Directed vs Undirected
+  - Directed graphs (AKA digraphs) -> Has only 1-way edges connect nodes 
+  - Undirected graphs -> Has 2-way edges connecting nodes
+- Weighted vs Unweighted
+  - Weighted graphs -> Edges have varying values (i.e. weights)
+  - Unweighted graphs -> Edges all have the same value
+- Simple vs Complex
+  - Simple graphs -> Don't contain self-edges or multi-edges
+  - Complex graphs -> Contain self-edges and multi-edges
+    - Self-edge: Edge with only one vertex (i.e. edge connects node to itself)
+    - Multi-edge: Edge that occurs more than once (i.e. a duplicate edge)
+- Dense vs Sparse
+  - Dense -> Number of edges is close to maximum
+  - Sparse -> Number of edges is far from the maximum
 
-Graph Time Complexity:
-- ?
+Simple graph facts:
+- Number of edges for `n` nodes
+  - Directed graph: minimum `0`, maximum `n(n-1)`
+  - Undirected graph: minimum `0`, maximum `n(n-1)/2`
+
+Connection facts:
+- Walk (AKA Path): A sequence of vertices where each adjacent pair is connected by an edge
+  - Note: When people say "path", they're typically referring to a "simple path"
+- Walk types
+  - Simple Path: A walk where no nodes (and therefore edges) are repeatedly visited
+  - Trail: A walk where no edges are repeatedly visited
+  - Closed walk: A walk that starts and ends on the same node
+  - Cycle (AKA simple cycle): A closed walk where the only repetition is the start/end.
+- A graph is considered "connected" if there is a path from any vertex to any other vertex.
+  - If the graph is also directed, it is considered "strongly connected"
+  - If a directed graph is not strong connected but would be if it had 2-way edges, then it is considered "weakly connected"
+- A graph is considered "acyclic" if it has no cycle (i.e. cannot traverse from a node back to itself without repetition).
+
+In terms of implementations, adjacency matrices are used for dense graphs where the number of edges approaches the maximum (i.e. all nodes connect to almost all other nodes). Conversely, adjacency lists are used for sparse graphs where there are relatively few edges per node (most real world graphs are sparse). This is because matrices are most efficient in terms of time complexity. However, if the matrix isn't adequately filled, an unreasonable amount of memory is wasted. So much, in fact, that it's actually worth taking a hit to time complexity for the sake of space complexity.
+
+Graphs have many [applications](https://www.geeksforgeeks.org/applications-of-graph-data-structure/). They are particular useful for relating data in a web-like formation. For example, web pages in the World Wide Web or users in a social media site. Graphs are also used to make search engines and road mapping software. For more information, see the [GeeksForGeeks documentation](https://www.geeksforgeeks.org/graph-data-structure-and-algorithms/). 
+
+As you can see, there's a lot to cover. There's many different types that it would be unrealistic to implement an example for each. For the purposes of this tutorial, I'll only be implementing a directed acyclic graph (DAG) which can be used in popular "shortest path" algorithms. Here's some information to get you started with graph theory. Further implementations will be up to you.
+
+Graph (dense) implemented using adjacency matrix where `n` is the number of nodes:
+- Time complexity:
+  - Finding adjacent nodes: worst case `O(n)`
+  - Finding if two nodes are connected: worst case `O(1)`
+- Space complexity: `O(n^2)`
+
+Graph (sparse) implemented using adjacency list where `n` is the number of nodes and `e` is the number of edges:
+- Time complexity: 
+  - Finding adjacent nodes: worst case `O(n)`
+  - Finding if two nodes are connected: worst case `O(n)` assuming linear search
+- Space complexity: `O(e)`

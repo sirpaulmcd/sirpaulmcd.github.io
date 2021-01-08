@@ -84,3 +84,5 @@ Bubble sort algorithm steps through the array and swaps an element with its neig
   <br />
   <a href="https://visualgo.net/en/sorting">source: visualgo.net</a>
 </p>
+
+## Heap Sort? 
