@@ -270,18 +270,29 @@ Time Complexity of Binary Heap Operations:
     <a href="https://www.geeksforgeeks.org/hashing-data-structure/">source: geeksforgeeks</a>
 </p>
 
-Hash tables have many [applications](https://afteracademy.com/blog/applications-of-hash-table). It is particularly useful for solving technical interview questions. For more information, see the [GeeksForGeeks documentation](https://www.geeksforgeeks.org/hashing-data-structure/) or the [Paul Programming video tutorial](https://www.youtube.com/watch?v=MfhjkfocRR0).
+A hash table (AKA hash map) is a data structure used to store key-value pairs. It's essentially a fancy array where, instead of indexing values with an arbitrary integer, values are indexed with a meaningful "key". If you're familiar with Python, you likely already know this data structure to be a `dictionary`. Hash tables are incredibly useful because, if we know the key (i.e. the index), we can search, insert, and delete with `O(1)` runtimes!! For this reason, hash tables are probably the most important data structure to master for technical interviews.
 
-My example implementations of a hash table can be found [here]().
+So how does it work? Let's walk through a basic example. Let's say we want to store a series of employee phone numbers. We could store the phone numbers in an array but it would be practically impossible to remember the index of each phone number if we needed to access it later. We'd have to perform some kind of search on the array which would waste time. Instead, we'll associate the phone number with the employee's ID number by:
+- Passing the employee ID (i.e. the key) through a "hashing function" that converts the string value of their ID to an integer.
+- Use that integer as the index position of the phone number (i.e. the value) in the array. 
+
+This way, if we want to know a person's phone number, we can just pass their name into the hash table to instantly find the associated value. Pretty cool. There are many ways to implement a hashing function. Many programs have a generic hashing function built in. [Choosing a hash function](https://www.geeksforgeeks.org/what-are-hash-functions-and-how-to-choose-a-good-hash-function/) is a bit of an art.
+
+But wait a second. Even though employee IDs are unique, what if the hashing function returns the same integer for two separate employee IDs? When two keys yield the same integer for a given hashing function, it is referred to as a "collision". There are several ways to handle collisions. For example:
+- Append collided values to the array index via a linked list (i.e. separate chaining)
+- Place the collided values in the next empty array slot (i.e. )
+- If all keys are known ahead of time, a perfect hashing function can be made to prevent collisions. 
+
+Hash tables have many [applications](https://afteracademy.com/blog/applications-of-hash-table). It is particularly useful for solving technical interview questions. For more information, see the [GeeksForGeeks documentation](https://www.geeksforgeeks.org/hashing-data-structure/) or the [Paul Programming video tutorial](https://www.youtube.com/watch?v=MfhjkfocRR0). My example implementations of a hash table can be found [here]().
 
 Hash Table Time Complexity:
 - Indexing - N/A (There is no indexing, only searching via key)
-- Searching - Worst case:`O(1)`, average case:`O(log(n))`
-  - Given a value, 
-- Inserting - Worst case:`O(1)`, average case:`O(log(n))`
-  - A
-- Deletion - Worst case:`O(1)`, average case:`O(log(n))`
-  - A
+- Searching - average case:`O(1)`, worst case:`O(n)`
+  - Given a key, a value can be found instantly. However, in a worst case scenario, the hash table has only collisions and the desired value is at the end of the linked list. 
+- Inserting - average case:`O(1)`, worst case:`O(n)`
+  - If no collisions, instant. Worst case scenario, only collisions and the entire linked list must be traversed to check if the key already exists.
+- Deletion - average case:`O(1)`, worst case:`O(n)`
+  - If no collisions, instant. Worst case scenario, only collisions and the entire linked list must be traversed for the node to be removed.
 
 # Graphs
 
