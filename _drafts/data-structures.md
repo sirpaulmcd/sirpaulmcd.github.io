@@ -26,6 +26,7 @@ has_toc: false
   - [Hash Tables](#hash-tables)
 - [Graph data structures](#graph-data-structures)
   - [Graphs](#graphs)
+- [What next?](#what-next)
 
 # Introduction
 
@@ -357,18 +358,36 @@ Connection facts:
 
 In terms of implementations, adjacency matrices are used for dense graphs where the number of edges approaches the maximum (i.e. all nodes connect to almost all other nodes). Conversely, adjacency lists are used for sparse graphs where there are relatively few edges per node (most real world graphs are sparse). This is because matrices are most efficient in terms of time complexity. However, if the matrix isn't adequately filled, an unreasonable amount of memory is wasted. So much, in fact, that it's actually worth taking a hit to time complexity for the sake of space complexity.
 
-Graphs have many [applications](https://www.geeksforgeeks.org/applications-of-graph-data-structure/). They are particular useful for relating data in a web-like formation. For example, web pages in the World Wide Web or users in a social media site. Graphs are also used to make search engines and road mapping software. For more information, see the [GeeksForGeeks documentation](https://www.geeksforgeeks.org/graph-data-structure-and-algorithms/). 
+Graphs have many [applications](https://www.geeksforgeeks.org/applications-of-graph-data-structure/). They are particular useful for relating data in a web-like formation. For example, web pages in the World Wide Web or users in a social media site. Graphs are also used to make search engines and road mapping software. For more information, see the [GeeksForGeeks documentation](https://www.geeksforgeeks.org/graph-data-structure-and-algorithms/). My implementations of graphs (adjacency list and matrix) can be found [here]().
 
-As you can see, there's a lot to cover. There's many different types that it would be unrealistic to implement an example for each. For the purposes of this tutorial, I'll only be implementing a directed acyclic graph (DAG) which can be used in popular "shortest path" algorithms. Here's some information to get you started with graph theory. Further implementations will be up to you.
+Graph (adjacency matrix) worst case time complexity where `|V|` is the number of vertices (i.e. nodes) and `|E|` is the number of edges:
+  - Adding a vertex: `O(|V|^2)`
+    - To increase the size of the storage matrix, a new, larger matrix must be created and all values must be copied over.
+  - Removing a vertex: `O(|V|^2)`
+    - To decrease the size of the storage matrix, a new, smaller matrix must be created and all values must be copied over.
+  - Adding an edge: `O(1)`
+    - To add an edge, the value in `matrix[i][j]` must be set to from `0` to `1` (or the appropraite weight value). Where `i` is the index of the first vertex and `j` is the index of the second vertex.
+  - Removing an edge: `O(1)`
+    - To remove an edge, the value in `matrix[i][j]` must be set to from `1` (or the weighted value) to `0`. Where `i` is the index of the first vertex and `j` is the index of the second vertex.
+  - Checking if two vertices are connected: `O(1)` 
+    - A connection can be confirmed by checking that `matrix[i][j]` is not zero. Where `i` is the index of the first vertex and `j` is the index of the second vertex.
+- Space complexity: `O(|V|^2)` 
+  - If there are |V| vertices, a |V|x|V| matrix is required for storage.
 
-Graph (dense) implemented using adjacency matrix where `n` is the number of nodes:
-- Time complexity:
-  - Finding adjacent nodes: worst case `O(n)`
-  - Finding if two nodes are connected: worst case `O(1)`
-- Space complexity: `O(n^2)`
+Graph (adjacency list) worst case time complexity where `|V|` is the number of vertices (i.e. nodes) and `|E|` is the number of edges:
+  - Adding a vertex: `O(1)`
+    - Assuming a hashtable is used to store adjacency lists, a new vertex can be created in constant time. If not, a search must be performed to check if the vertex already exists resulting in `O(|V|)` time.
+  - Removing a vertex: `O(|V| + |E|)`
+    - In order for a vertex to be removed, it must be removed from every adjacency list. Traversing to every vertex in the hash table is `O(|V|)` and traversing every adjacency list (i.e. every edge) is `O(|E|)`.
+  - Adding an edge: `O(1)`
+    - To add an edge, a vertex must be added to the appropriate adjacency list. Finding the adjacency list from the hash table is `O(1)`. Inserting the vertex into the adjacency list (i.e. linked list) is `O(1)`. This process is repeated twice for non-directional edges.
+  - Removing an edge: `O(|V|)`
+    - To remove an edge, a vertex must be removed from the appropriate adjacency list. Finding the adjacency list from the hash table is `O(1)`. Traversing the adjacency list for a match is `O(|V|)` because, in the worst case, all vertices are in the adjacency list. Removing the vertex from the adjacency list (i.e. linked list) is O(1). This process is repeated twice for non-directional edges.
+  - Checking if two vertices are connected: `O(|V|)` 
+    - Finding the adjacency list of the first vertex using the hash table is `O(1)`. Traversing the adjacency list for a match of the second vertex is `O(|V|)` because, in the worst case, all vertices are in the adjacency list. Removing the vertex from the adjacency list (i.e. linked list) is `O(1)`.
+- Space complexity: `O(|V| + |E|)` 
+  - For each edge, an additional vertex is stored. Two for a non-direction edge.
 
-Graph (sparse) implemented using adjacency list where `n` is the number of nodes and `e` is the number of edges:
-- Time complexity: 
-  - Finding adjacent nodes: worst case `O(n)`
-  - Finding if two nodes are connected: worst case `O(n)` assuming linear search
-- Space complexity: `O(e)`
+# What next? 
+
+Knowing about the fundamental data structures is just a baseline. As you continue to improve as a software developer, you will likely apply these data structures in conjunction to create even more complex/specialized data structures to suit your needs. The sky's the limit! If this is your first time covering these concepts, it might take some time for things to really sink in. In my opinion, the best thing you can do is implement the above data structures yourself in your preferred programming language. When you are comfortable, check out the [Algorithms](/tutorials-cheat-sheets/data-structures-and-algorithms/) section.
