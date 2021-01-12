@@ -62,7 +62,7 @@ Although the above 4 operations are an essential part of many data structures, t
 
 When using tables found on the internet, it is important to keep in mind that listed values can be misleading. The complexities listed in these tables depend on a variety of assumptions. For example, the `O(1)` insertion time complexity for linked lists assumes that you already have a reference to the node you're inserting on. A linked list may have a time complexity of `O(1)` when inserting at a referenced node such as the head or the tail. However, inserting into the middle of the list requires a sequential search which results in an `O(n)` runtime. As you can see, vital information can be lost in translation when dealing with simple summaries.
 
-Regarding space complexity, almost all of the fundamental data structures discussed below have an `O(n)` space complexity where `n` represents one element or node. However, even though many data structures are relatively equivalent in terms of space complexity (i.e. memory scalability). There are situations in which certain data structures outperform others in terms of memory. For example, a densely populated array takes up less space than a well populated linked list. However, a sparely populated linked list takes up less space than a sparsely populated array.
+Regarding space complexity, almost all of the fundamental data structures discussed below have an `O(n)` space complexity where `n` represents the number of elements or nodes. However, even though many data structures are relatively equivalent in terms of space complexity (i.e. memory scalability). There are situations in which certain data structures outperform others in terms of memory. For example, a densely populated array takes up less space than a well populated linked list. However, a sparely populated linked list takes up less space than a sparsely populated array.
 
 ## What To Expect
 
@@ -75,7 +75,7 @@ In this section, we'll be going over we'll be going over the fundamental data st
 
 I find that the best way to learn how a data structure works is to implement it yourself in your preferred programming language. To serve as examples, I've implemented all data structures covered in this tutorial using Java. Why Java? It's more hands-on than Python but not as complex as C++. It's easy to read and similar in syntax to other popular programming languages. It's also my first and preferred object-oriented programming language. You can find my java implementations for each data structures [here](https://github.com/sirpaulmcd/Data-Structures-And-Algorithms/tree/main/src/datastructures) or in their respective sections.
 
-For additional resources, [GeeksForGeeks](https://www.geeksforgeeks.org/data-structures/) has extensive documentation on data structures. Including sample implementations in a variety of languages. They also have quizzes and practice questions to assist your learning. Additionally, [mycodeschool](https://www.youtube.com/user/mycodeschool) is a youtube channel with plenty of high quality video tutorials on data structures. Mycodeschool is an incredible resource for learning data structure theory. Unfortunately, it also has a bit of a tragic [backstory](https://www.freecodecamp.org/news/mycodeschool-youtube-channel-history/) and stopped publishing videos back in 2016.
+For additional resources, [GeeksForGeeks](https://www.geeksforgeeks.org/data-structures/) has extensive documentation on data structures. Including sample implementations in a variety of languages. They also have quizzes and practice questions to assist your learning. Additionally, [mycodeschool](https://www.youtube.com/user/mycodeschool) is a YouTube channel with plenty of high quality video tutorials on data structures. Mycodeschool is an incredible resource for learning data structure theory. Unfortunately, it also has a bit of a tragic [backstory](https://www.freecodecamp.org/news/mycodeschool-youtube-channel-history/) and stopped publishing videos back in 2016.
 
 ## Choosing Data Structures
 
@@ -90,7 +90,7 @@ As you learn new data structures, it is important that you can relate them back 
 
 # Linear Data Structures
 
-Linear data structures are the most basic type of data structure. In linear data structures, data is ordered sequentially such that every element is related to their previous and next neighbors by index or referece. To traverse a linear data structure, you move from one element to the next until you reach the end of the line.
+Linear data structures are the most basic type of data structure. In linear data structures, data is ordered sequentially such that every element is related to their previous and next neighbors by index or reference. To traverse a linear data structure, you move from one element to the next until you reach the end of the line.
 
 ## Arrays (Dynamic)
 
@@ -104,13 +104,13 @@ An array is a collection of elements that are stored contiguously (i.e. side-by-
 
 Arrays have many [applications](https://www.thecrazyprogrammer.com/2020/04/applications-of-array.html). As you will find, they are also used implement a variety of other complex data structures. If you're at the point where you're learning data structures and algorithms, you likely already know what an array is. If not, refer to the [GeeksForGeeks documentation](https://www.geeksforgeeks.org/array-data-structure/) or the [mycodeschool video tutorial](https://www.youtube.com/watch?v=5tPLyHCZdU0).
 
-Time complexity for a [array implementations](https://github.com/sirpaulmcd/Data-Structures-And-Algorithms/tree/main/src/datastructures/linear/arrays) where `n` is the number of elements:
+Time complexity for [array implementations](https://github.com/sirpaulmcd/Data-Structures-And-Algorithms/tree/main/src/datastructures/linear/arrays) where `n` is the number of elements:
 
 | Operation | Average/Worst Case | Reasoning |
 | :-------: | :----------: | ---------- |
 | Indexing | O(1) | Given an index, as you may already know, the corresponding value can be accessed with constant runtime. |
 | Searching | O(n) | Given a value, an array must be sequentially searched for a match. In the worst case, there is no match and the entire array is traversed. If the array is sorted, a binary search can increase this complexity to O(log(n)). |
-| Inserting | O(n) | If the element is being inserted to the end of the array, the runtime is O(1). In the worst case, the insertion happens at the first index and all elements must be moved up by one index. | 
+| Inserting | O(n) | If the element is being inserted to the end of the array, the runtime is O(1). In the worst case, the insertion happens at the first index and all elements must be moved up by one index. |
 | Deleting | O(n) | If the element is being deleted from the end of the array, the runtime is O(1). In the worst case, the deletion happens at the first index and all elements must be moved down by one index. |
 
 Note that implementations of dynamic arrays typically increase their size by some factor when they reach capacity. As such, when there is space remaining in the array (i.e. the array is under capacity), insertion to the end of the array is `O(1)`. When there isn't space and the array must be resized, the time complexity becomes `O(n)` because indices need to be shifted. Since this operation has scenarios that result in different time complexities, it is said to have an [amortized](https://medium.com/@satorusasozaki/amortized-time-in-the-time-complexity-of-an-algorithm-6dd9a5d38045) time complexity.
@@ -136,14 +136,14 @@ Time complexity for [linked list implementations](https://github.com/sirpaulmcd/
 | :-------: | :----------: | ---------- |
 | Indexing | O(n) | Given an index, a linked list must sequentially traverse nodes starting from the head to locate the indexed node. |
 | Searching | O(n) | Given a value, a linked list must sequentially search to find a matching value. In the worst case, there is no match and the entire list is traversed. |
-| Inserting | O(1) | Assuming insertion involves a referenced node such as the head, it has a constant runtime. However, if you do not have a refence to a node at the desired insertion location, a sequential search is required to find it resulting in an `O(n)` time complexity. | 
+| Inserting | O(1) | Assuming insertion involves a referenced node such as the head, it has a constant runtime. However, if you do not have a refence to a node at the desired insertion location, a sequential search is required to find it resulting in an `O(n)` time complexity. |
 | Deleting | O(1) | Assuming deletion involves a referenced node such as the head, it has constant time complexity. However, if you do not have a refence to a node at the desired deletion location, a sequential search is required to find it resulting in an `O(n)` time complexity. |
 
 From my example implementations, you may have noticed that arrays and linked lists can perform the same functions. However, their differences provide them with distinct advantages and disadvantages. As such, there are situations where using one over the other is beneficial:'
 
 Arrays should be used when:
 
-| Situation | Reasoning | 
+| Situation | Reasoning |
 | --------- | ---------- |
 | The number of elements to be stored is known (i.e. array size known) | When arrays are at full capacity, they use less memory than linked lists. |
 | Indexing is a major operation | When indexing, arrays have an unbeatable constant time complexity of `O(1)`. Linked lists have a mediocre linear time complexity of `O(n)`. |
@@ -152,8 +152,8 @@ Linked Lists should be used when:
 
 | Situation | Reasoning |
 | --------- | ---------- |
-| The number of elements to be stored is unknown | When arrays are at below full capacity, the use more memory than linked lists. This is because arrays must be defined at a fixed size. When an array is created, memory corresponding to each element is allocated regardless of whether it is filled with useful data. | 
-| Constant time insertions/deletions are required | When inserting/deleting around a referenced node such as the head, linked lists have a constant time complexity of O(1). Otherwise, linked lists and arrays both have linear time complexities of `O(n)`. |
+| The number of elements to be stored is unknown | When arrays are at below full capacity, the use more memory than linked lists. This is because arrays must be defined at a fixed size. When an array is created, memory corresponding to each element is allocated regardless of whether it is filled with useful data. |
+| Constant time insertions/deletions are required | When inserting/deleting around a referenced node such as the head, linked lists have a constant time complexity of `O(1)`. Otherwise, linked lists and arrays both have linear time complexities of `O(n)`. |
 
 Arrays and linked lists are the most important data structures to be familiar with. This is because the other fundamental data structures are implemented using their underlying principles. Make sure you have a good grasp of these data structures before moving on.
 
@@ -175,7 +175,7 @@ Time complexity for [stack implementations](https://github.com/sirpaulmcd/Data-S
 | :-------: | :----------: | ---------- |
 | Indexing | O(n) | Given an index, a stack must sequentially search itself to locate the corresponding value. |
 | Searching | O(n) | Given a value, a stack must sequentially search itself to locate the corresponding value. |
-| Inserting | O(1) | Since stacks always add to the top (an easily indexable location), they have a constant insertion runtime. | 
+| Inserting | O(1) | Since stacks always add to the top (an easily indexable location), they have a constant insertion runtime. |
 | Deleting | O(1) | Since stacks always remove from the top (an easily indexable location), they have a constant deletion runtime. |
 
 Note that a stack can be implemented using either an array or a linked list.
@@ -198,7 +198,7 @@ Time complexity for [queue implementations](https://github.com/sirpaulmcd/Data-S
 | :-------: | :----------: | ---------- |
 | Indexing | O(n) | Given an index, a queue must sequentially search itself to locate the corresponding value. |
 | Searching | O(n) | Given a value, a queue must sequentially search itself to locate the corresponding value. |
-| Inserting | O(1) | Since queues always add to the rear (an easily indexable location), they have a constant insertion runtime. | 
+| Inserting | O(1) | Since queues always add to the rear (an easily indexable location), they have a constant insertion runtime. |
 | Deleting | O(1) | Since queues always remove from the front (an easily indexable location), they have a constant deletion runtime. |
 
 Note that a queue can be implemented using either an array or a linked list.
@@ -211,7 +211,7 @@ Note that a queue can be implemented using either an array or a linked list.
     <a href="https://www.geeksforgeeks.org/binary-tree-data-structure/">source: geeksforgeeks</a>
 </p>
 
-Now that the fundamental *linear* data structures have been covered, it's time to look into *tree* data structures. Binary trees (i.e. trees where nodes have a maximum of 2 children) are the simplest tree data structure. As such, they are useful to cover in terms of understanding tree theory. They are particularly useful at storing hierarchical (i.e. parent/child relation type) data. However, refering to binary trees as a "fundamental data structure" is a bit misleading. Binary trees are not typically used for practical applications. Instead, they are the root to an entire family of more complex/useful data structures such as binary search trees and heaps.
+Now that the fundamental *linear* data structures have been covered, it's time to look into *tree* data structures. Binary trees (i.e. trees where nodes have a maximum of 2 children) are the simplest tree data structure. As such, they are useful to cover in terms of understanding tree theory. They are particularly useful at storing hierarchical (i.e. parent/child relation type) data. However, referring to binary trees as a "fundamental data structure" is a bit misleading. Binary trees are not typically used for practical applications. Instead, they are the root to an entire family of more complex/useful data structures such as binary search trees and heaps.
 
 In a tree, each node is called a vertex. The connections between nodes are called edges. The vertex at the very top of a tree is called the root. The vertices at the bottom are called leaf nodes. Vertices refer to each other using parent/child relationship terminology. For example, when a vertex branches down into other vertices, it is referred to as the parent and the branched vertices are referred to as the children. Child vertices of the same parents are siblings, parents of parents are called grandparents, etc. Trees are recursive data structures. That is to say, any given vertex can be considered the root of a subtree. This recursive relationship leads to a lot of interesting software patterns when traversing trees. For more information, see the [GeeksForGeeks documentation](https://www.geeksforgeeks.org/binary-tree-data-structure/) or the [mycodeschool video tutorials](https://www.youtube.com/watch?v=qH6yxkw0u78&list=PL2_aWCzGMAwI3W_JlcBbtYTwiQSsOTa6P&index=25).
 
@@ -220,10 +220,10 @@ Tree facts:
 - Depth = # of edges between root and chosen node
 - Level = depth + 1 (i.e. the level of the root is 1)
 - Height = # of edges between chosen node a farthest leaf node
-- The max # of nodes at depth x is branches<sup>x</sup> (recall that this forumula was used in the exponential time complexity section)
+- The max # of nodes at depth x is branches<sup>x</sup> (recall that this formula was used in the exponential time complexity section)
 - A large oak tree can consume about 100 gallons of water per day
 
-Note that, depending on the application, binary trees can be implmenented using either arrays or linked lists. Whichever is more efficeint/convenient. As you will see, binary search trees are implemented using linked lists while binary heaps are implemented using arrays.
+Note that, depending on the application, binary trees can be implemented using either arrays or linked lists. Whichever is more efficient/convenient. As you will see, binary search trees are implemented using linked lists while binary heaps are implemented using arrays.
 
 ## Binary Search Trees (BST)
 
@@ -248,7 +248,7 @@ For linear data structures, traversal was simple. You just follow the line until
 - [Breadth-first traversal](https://www.youtube.com/watch?v=86g8jAQug04&list=PL2_aWCzGMAwI3W_JlcBbtYTwiQSsOTa6P&index=33)
   - Level-order
 
-Binary search trees have many [applications](https://www.geeksforgeeks.org/applications-of-bst/). They are particularly useful for maintiaining a sorted list of data that needs quick/scalable lookup, insertion, and deletion runtimes. For more information, see the [GeeksForGeeks documentation](https://www.geeksforgeeks.org/binary-search-tree-data-structure/) or the [mycodeschool video tutorials](https://www.youtube.com/watch?v=pYT9F8_LFTM&list=PL2_aWCzGMAwI3W_JlcBbtYTwiQSsOTa6P&index=27).
+Binary search trees have many [applications](https://www.geeksforgeeks.org/applications-of-bst/). They are particularly useful for maintaining a sorted list of data that needs quick/scalable lookup, insertion, and deletion runtimes. For more information, see the [GeeksForGeeks documentation](https://www.geeksforgeeks.org/binary-search-tree-data-structure/) or the [mycodeschool video tutorials](https://www.youtube.com/watch?v=pYT9F8_LFTM&list=PL2_aWCzGMAwI3W_JlcBbtYTwiQSsOTa6P&index=27).
 
 Binary Tree Facts:
 - Minimum height: log<sub>2</sub>(n)
@@ -260,7 +260,7 @@ Time complexity for [binary search tree implementations](https://github.com/sirp
 | :-------: | :-----: | :---: | --------- |
 | Indexing | O(n) | O(n) | Given an index, a BST must sequentially search itself to locate the corresponding value. |
 | Searching | O(log(n)) | O(n) | Given a value, a BST must binary search itself for a match. In the worst case, the tree is unbalanced and performs sequential search like a linked list. |
-| Inserting | O(log(n)) | O(n)  | If the tree is balanced, binary search is used to locate the insertion position. Otherwise, sequential search is used. | 
+| Inserting | O(log(n)) | O(n)  | If the tree is balanced, binary search is used to locate the insertion position. Otherwise, sequential search is used. |
 | Deleting | O(log(n)) | O(n) | If the tree is balanced, binary search is used to locate the deletion position. Otherwise, sequential search is used. |
 
 Note that a binary search tree can be implemented using either an array or a series or nodes similar to a linked list. However, arrays are typically reserved for "complete" BSTs where every node is filled due to space limitations.
@@ -292,7 +292,7 @@ Time complexity for [binary heap implementations](https://github.com/sirpaulmcd/
 | :-------: | :----------: | ---------- |
 | Indexing | O(1) | Given an index, the corresponding value can be accessed in constant time. The min/max value will always be found at index 0 of a min/max heap. |
 | Searching | O(n) | Given a value, a heap must sequentially search itself for a match because it is not ordered like a binary tree. |
-| Inserting | O(log(n)) | Since a binary heap is always close to a "complete" tree, heapifying inserted elements is efficient. | 
+| Inserting | O(log(n)) | Since a binary heap is always close to a "complete" tree, heapifying inserted elements is efficient. |
 | Deleting | O(log(n)) | Since a binary heap is always close to a "complete" tree, heapifying after deleting elements is efficient. |
 
 # Hash Data Structures
@@ -327,7 +327,7 @@ Time complexity for [separate chaining hash table implementations](https://githu
 | Operation | Average | Worst | Reasoning |
 | :-------: | :-----: | :---: | --------- |
 | Searching | O(1) | O(n) | Given a key, if no collisions, accessing the index corresponding to the key is `O(1)`. In a worst case scenario, there are only collisions and searching the linked list is `O(n)`. |
-| Inserting | O(1) | O(n)  | If no collisions, accessing the index corresponding to the key is `O(1)` and inserting into the linked list is `O(1)`. In a worst case scenario, there are only collisions and the entire linked list must be traversed to check if the key already exists resulting in an `O(n)` runtime. | 
+| Inserting | O(1) | O(n)  | If no collisions, accessing the index corresponding to the key is `O(1)` and inserting into the linked list is `O(1)`. In a worst case scenario, there are only collisions and the entire linked list must be traversed to check if the key already exists resulting in an `O(n)` runtime. |
 | Deleting | O(1) | O(n) | If no collisions, accessing the index corresponding to the key is `O(1)` and inserting into the linked list is `O(1)`. In a worst case scenario, there are only collisions and the entire linked list must be traversed to find the node to be removed resulting in an `O(n)` runtime.  |
 
 Note that values are only found in a hash table using a key. Therefore, indexing is not applicable.
@@ -390,7 +390,7 @@ Time complexity for [adjacency matrix graph implementations](https://github.com/
 | :-------: | :----------: | ---------- |
 | Adding a vertex | O(\|V\|<sup>2</sup>) | To increase the size of the storage matrix, a new, larger matrix must be created and all values must be copied over. |
 | Removing a vertex | O(\|V\|<sup>2</sup>) | To decrease the size of the storage matrix, a new, smaller matrix must be created and all values must be copied over. |
-| Adding an edge | O(1) | To add an edge, the value in `matrix[i][j]` must be set to from `0` to `1` (or the appropraite weight value). Where `i` is the index of the first vertex and `j` is the index of the second vertex. | 
+| Adding an edge | O(1) | To add an edge, the value in `matrix[i][j]` must be set to from `0` to `1` (or the appropriate weight value). Where `i` is the index of the first vertex and `j` is the index of the second vertex. |
 | Removing an edge | O(1) | To remove an edge, the value in `matrix[i][j]` must be set to from `1` (or the weighted value) to `0`. Where `i` is the index of the first vertex and `j` is the index of the second vertex. |
 | Checking if two vertices connect | O() | A connection can be confirmed by checking that `matrix[i][j]` is not zero. Where `i` is the index of the first vertex and `j` is the index of the second vertex. |
 
@@ -402,7 +402,7 @@ Space complexity for [adjacency matrix graph implementations](https://github.com
 
 Time complexity for [adjacency list graph implementations](https://github.com/sirpaulmcd/Data-Structures-And-Algorithms/tree/main/src/datastructures/graph/graphs) where `|V|` is the number of vertices and `|E|` is the number of edges:
 
-| Adding a vertex | O(1) | Assuming a hashtable is used to store adjacency lists, a new vertex can be created in constant time. If not, a search must be performed to check if the vertex already exists resulting in `O(|V|)` time. |
+| Adding a vertex | O(1) | Assuming a hash table is used to store adjacency lists, a new vertex can be created in constant time. If not, a search must be performed to check if the vertex already exists resulting in `O(|V|)` time. |
 | Removing a vertex | O(\|V\| + \|E\|) | In order for a vertex to be removed, it must be removed from every adjacency list. Traversing to every vertex in the hash table is `O(|V|)` and traversing every adjacency list (i.e. every edge) is `O(|E|)`. |
 | Adding an edge | O(1) | To add an edge, a vertex must be added to the appropriate adjacency list. Finding the adjacency list from the hash table is `O(1)`. Inserting the vertex into the adjacency list (i.e. linked list) is `O(1)`. This process is repeated twice for non-directional edges. | 
 | Removing an edge | O(\|V\|) | To remove an edge, a vertex must be removed from the appropriate adjacency list. Finding the adjacency list from the hash table is `O(1)`. Traversing the adjacency list for a match is `O(|V|)` because, in the worst case, all vertices are in the adjacency list. Removing the vertex from the adjacency list (i.e. linked list) is O(1). This process is repeated twice for non-directional edges. |
@@ -412,7 +412,7 @@ Space complexity for [adjacency list graph implementations](https://github.com/s
 
 | Space Complexity | Reasoning |
 | ---------------- | --------- |
-| O(\|V\|<sup>2</sup>) | For each edge, an additional vertex is stored. Two for a non-direction edge. | 
+| O(\|V\|<sup>2</sup>) | For each edge, an additional vertex is stored. Two for a non-direction edge. |
 
 # What next? 
 
