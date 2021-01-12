@@ -258,10 +258,10 @@ Time complexity for [binary search tree implementations](https://github.com/sirp
 
 | Operation | Average | Worst | Reasoning |
 | :-------: | :-----: | :---: | --------- |
-| Indexing | O(n) | O(n) | Given an index, a BST must sequentially search itself to locate the corresponding value. |
-| Searching | O(log(n)) | O(n) | Given a value, a BST must binary search itself for a match. In the worst case, the tree is unbalanced and performs sequential search like a linked list. |
-| Inserting | O(log(n)) | O(n)  | If the tree is balanced, binary search is used to locate the insertion position. Otherwise, sequential search is used. |
-| Deleting | O(log(n)) | O(n) | If the tree is balanced, binary search is used to locate the deletion position. Otherwise, sequential search is used. |
+| Indexing | Θ(n) | O(n) | Given an index, a BST must sequentially search itself to locate the corresponding value. |
+| Searching | Θ(log(n)) | O(n) | Given a value, a BST must binary search itself for a match. In the worst case, the tree is unbalanced and performs sequential search like a linked list. |
+| Inserting | Θ(log(n)) | O(n)  | If the tree is balanced, binary search is used to locate the insertion position. Otherwise, sequential search is used. |
+| Deleting | Θ(log(n)) | O(n) | If the tree is balanced, binary search is used to locate the deletion position. Otherwise, sequential search is used. |
 
 Note that a binary search tree can be implemented using either an array or a series or nodes similar to a linked list. However, arrays are typically reserved for "complete" BSTs where every node is filled due to space limitations.
 
@@ -326,9 +326,9 @@ Time complexity for [separate chaining hash table implementations](https://githu
 
 | Operation | Average | Worst | Reasoning |
 | :-------: | :-----: | :---: | --------- |
-| Searching | O(1) | O(n) | Given a key, if no collisions, accessing the index corresponding to the key is `O(1)`. In a worst case scenario, there are only collisions and searching the linked list is `O(n)`. |
-| Inserting | O(1) | O(n)  | If no collisions, accessing the index corresponding to the key is `O(1)` and inserting into the linked list is `O(1)`. In a worst case scenario, there are only collisions and the entire linked list must be traversed to check if the key already exists resulting in an `O(n)` runtime. |
-| Deleting | O(1) | O(n) | If no collisions, accessing the index corresponding to the key is `O(1)` and inserting into the linked list is `O(1)`. In a worst case scenario, there are only collisions and the entire linked list must be traversed to find the node to be removed resulting in an `O(n)` runtime.  |
+| Searching | Θ(1) | O(n) | Given a key, if no collisions, accessing the index corresponding to the key is `O(1)`. In a worst case scenario, there are only collisions and searching the linked list is `O(n)`. |
+| Inserting | Θ(1) | O(n)  | If no collisions, accessing the index corresponding to the key is `O(1)` and inserting into the linked list is `O(1)`. In a worst case scenario, there are only collisions and the entire linked list must be traversed to check if the key already exists resulting in an `O(n)` runtime. |
+| Deleting | Θ(1) | O(n) | If no collisions, accessing the index corresponding to the key is `O(1)` and inserting into the linked list is `O(1)`. In a worst case scenario, there are only collisions and the entire linked list must be traversed to find the node to be removed resulting in an `O(n)` runtime.  |
 
 Note that values are only found in a hash table using a key. Therefore, indexing is not applicable.
 
@@ -402,6 +402,8 @@ Space complexity for [adjacency matrix graph implementations](https://github.com
 
 Time complexity for [adjacency list graph implementations](https://github.com/sirpaulmcd/Data-Structures-And-Algorithms/tree/main/src/datastructures/graph/graphs) where `|V|` is the number of vertices and `|E|` is the number of edges:
 
+| Operation | Average/Worst Case | Reasoning |
+| :-------: | :----------: | ---------- |
 | Adding a vertex | O(1) | Assuming a hash table is used to store adjacency lists, a new vertex can be created in constant time. If not, a search must be performed to check if the vertex already exists resulting in `O(|V|)` time. |
 | Removing a vertex | O(\|V\| + \|E\|) | In order for a vertex to be removed, it must be removed from every adjacency list. Traversing to every vertex in the hash table is `O(|V|)` and traversing every adjacency list (i.e. every edge) is `O(|E|)`. |
 | Adding an edge | O(1) | To add an edge, a vertex must be added to the appropriate adjacency list. Finding the adjacency list from the hash table is `O(1)`. Inserting the vertex into the adjacency list (i.e. linked list) is `O(1)`. This process is repeated twice for non-directional edges. | 
