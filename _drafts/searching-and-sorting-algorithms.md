@@ -76,8 +76,8 @@ However, we'll just be learning about the fundamental algorithms you would likel
 - Insertion sort
 
 Then we'll cover some more useful sorting algoirthms:
-- Quick sort
 - Merge sort
+- Quick sort
 - Heap sort?
 
 ## Array Sorting Algorithms
@@ -94,28 +94,6 @@ From the above chart, using your Big O knowledge, you should be able to tell tha
 
 I find that the best way to learn a sorting algorithm is to implement it yourself in your preferred programming language. If you are a visual learner, one of the best tools you can use is [visualgo.net](https://visualgo.net/en/sorting). This website allows you to visualize various sorting algorithms for custom arrays. You can go at your own pace working step-by-step through the code. Another good resource is [GeeksForGeeks](https://www.geeksforgeeks.org/sorting-algorithms/). They have a good amount of documentation of each of the sorting algorithms. Their pages include examples as well as implementations in common programming languages. Additionally, [mycodeschool](https://www.youtube.com/user/mycodeschool) is a YouTube channel with plenty of high quality video tutorials on sorting algorithms.
 
-## Bubble Sort
-
-<p align="center">
-  <img src="/assets/images/data-structures-and-algorithms/sorting-algorithms/bubble-sort.gif" alt="bubble-sort.gif"/>
-  <br />
-  <a href="https://visualgo.net/en/sorting">source: visualgo.net</a>
-</p>
-
-Bubble sort algorithm steps through the array and swaps an element with its neighbor if it is out of order. This way, the largest unsorted value "bubbles" to the to end of the array on each pass. Since we know that the largest value has been properly sorted, additional passes are performed using the remaining, unsorted section of the array. This can be seen in the above gif when elements are colored orange after being sorted.
-
-For more information, see the [mycodeschool video tutorial](https://www.youtube.com/watch?v=Jdtq5uKz-w4&list=PL2_aWCzGMAwKedT2KfDMB9YA5DgASZb3U&index=3).
-
-## Insertion Sort
-
-<p align="center">
-  <img src="/assets/images/data-structures-and-algorithms/sorting-algorithms/insertion-sort.gif" alt="insertion-sort.gif"/>
-  <br />
-  <a href="https://visualgo.net/en/sorting">source: visualgo.net</a>
-</p>
-
-For more information, see the [mycodeschool video tutorial](https://www.youtube.com/watch?v=i-SKeOcBwko&list=PL2_aWCzGMAwKedT2KfDMB9YA5DgASZb3U&index=4).
-
 ## Selection Sort
 
 <p align="center">
@@ -125,34 +103,82 @@ For more information, see the [mycodeschool video tutorial](https://www.youtube.
 </p>
 
 Insertion sort is often related to sorting a hand of playing cards. The algorithm is as follows:
-- Start with all the cards in your right hand.
-- Select the minimum card and place it into your left hand.
+- Start with all the cards in your right hand (i.e. unsorted array).
+- Select the minimum card and place it into your left hand (i.e. sorted array).
 - Repeat until all cards have moved from your unsorted right hand to your sorted left hand. 
 
 In terms of software implementation, your left hand represents the original unsorted array and your right hand represents a sorted array. This can be implemented using two separate arrays. However, that would make the space complexity of the algorithm `O(n)`. Ideally, we want our sorting algorithms to be in-place with constant `O(1)` space complexity. Therefore, instead of using 2 arrays, we can simply swap elements around to create sorted/unsorted subsections within the original array. For more information, see the [mycodeschool video tutorial](https://www.youtube.com/watch?v=GUDLRan2DWM&list=PL2_aWCzGMAwKedT2KfDMB9YA5DgASZb3U&index=2).
 
 Selection sort [implementation]() in java:
 <p align="center">
-  <img src="" alt="selection-sort.png"/>
+  <img src="" alt="selection-sort-implementation.png"/>
 </p>
 
 Time complexity of selection sort where `n` is the number of elements:
 
 | Best | Average | Worst | Reasoning |
 | :--: | :-----: | :---: | --------- |
-| Ω(n<sup>2</sup>) | Θ(n<sup>2</sup>) | O(n<sup>2</sup>) | For every element in the array, the array must be sequentially searched for the minimum value. A `O(n)` search repeated `n` times results in an `O(n^2)` runtime. If the array is already sorted, this process still takes place. |
+| Ω(n<sup>2</sup>) | Θ(n<sup>2</sup>) | O(n<sup>2</sup>) | For every element in the array, the unsorted subarray must be sequentially searched for the minimum value. An `O(n)` search repeated `n` times results in an `O(n^2)` runtime. If the array is already sorted, this process still takes place. |
 
 Space complexity of selection sort is `O(1)` because it can be implemented as an in-place sort.
 
-## Quick Sort
+## Bubble Sort
 
 <p align="center">
-  <img src="/assets/images/data-structures-and-algorithms/sorting-algorithms/quick-sort.gif" alt="quick-sort.gif"/>
+  <img src="/assets/images/data-structures-and-algorithms/sorting-algorithms/bubble-sort.gif" alt="bubble-sort.gif"/>
   <br />
   <a href="https://visualgo.net/en/sorting">source: visualgo.net</a>
 </p>
 
-For more information, see the [mycodeschool video tutorial](https://www.youtube.com/watch?v=COk73cpQbFQ&list=PL2_aWCzGMAwKedT2KfDMB9YA5DgASZb3U&index=7).
+Bubble sort algorithm steps through the array and swaps an element with its neighbor if it is out of order. This way, the largest unsorted value "bubbles" to the to end of the array on each pass. Since we know that the largest value has been properly sorted, additional passes are performed using the remaining, unsorted subsection of the array. This can be seen in the above gif when elements are colored orange after being sorted. For more information, see the [mycodeschool video tutorial](https://www.youtube.com/watch?v=Jdtq5uKz-w4&list=PL2_aWCzGMAwKedT2KfDMB9YA5DgASZb3U&index=3).
+
+Selection sort [implementation]() in java:
+
+<p align="center">
+  <img src="" alt="bubble-sort-implementation.png"/>
+</p>
+
+Time complexity of bubble sort where `n` is the number of elements:
+
+| Best | Average | Worst | Reasoning |
+| :--: | :-----: | :---: | --------- |
+| Ω(n) | Θ(n<sup>2</sup>) | O(n<sup>2</sup>) | In the best case, the array is already sorted and bubble sort only traverses once. In the worst case, the array is in descending order and an `O(n)` bubble traversal occurs for every element in the array (i.e. `n` times). |
+
+Space complexity of bubble sort is `O(1)` because it can be implemented as an in-place sort.
+
+## Insertion Sort
+
+<p align="center">
+  <img src="/assets/images/data-structures-and-algorithms/sorting-algorithms/insertion-sort.gif" alt="insertion-sort.gif"/>
+  <br />
+  <a href="https://visualgo.net/en/sorting">source: visualgo.net</a>
+</p>
+
+Insertion sort is the last and most efficient of the 3 basic sorting algorithms. Insertion sort can be visualized with a deck of playing cards similar to selection sort: 
+- Start with all the cards in your right hand. (i.e. unsorted subarray).
+- Select a card and place it into your left hand into the proper sorted position. (i.e. sorted subarray).
+- Repeat until all cards have moved from your unsorted right hand to your sorted left hand. 
+
+In terms of software implementation, to remove a card from the unsorted subarray, you simply:
+- Store the first element of the unsorted array in a temporary variable.
+- Increment the index of its previous neighbors in the sorted subarray until the correct insertion index is made vacant.
+- Insert the stored element into the vacant, sorted position.
+
+For more information, see the [mycodeschool video tutorial](https://www.youtube.com/watch?v=i-SKeOcBwko&list=PL2_aWCzGMAwKedT2KfDMB9YA5DgASZb3U&index=4).
+
+Insertion sort [implementation]() in java:
+
+<p align="center">
+  <img src="" alt="insertion-sort-implementation.png"/>
+</p>
+
+Time complexity of insertion sort where `n` is the number of elements:
+
+| Best | Average | Worst | Reasoning |
+| :--: | :-----: | :---: | --------- |
+| Ω(n) | Θ(n<sup>2</sup>) | O(n<sup>2</sup>) | In the best case, the array is already sorted and insertion sort only traverses once. In the worst case, the array is in descending order and an `O(n)` neighbor incrementation traversal occurs for every element in the array (i.e. `n` times). |
+
+Space complexity of insertion sort is `O(1)` because it can be implemented as an in-place sort.
 
 ## Merge Sort
 
@@ -162,6 +188,64 @@ For more information, see the [mycodeschool video tutorial](https://www.youtube.
   <a href="https://visualgo.net/en/sorting">source: visualgo.net</a>
 </p>
 
-For more information, see the [mycodeschool video tutorial](https://www.youtube.com/watch?v=TzeBrDU-JaY&list=PL2_aWCzGMAwKedT2KfDMB9YA5DgASZb3U&index=5).
+In the previous sorting algorithms, the array was sorted by dividing the array into "sorted" and "unsorted" subsections. Merge sort takes a different approach because it is a recrusive algorithm. An overly simplified approximation of the recursive algorithm can be described like so:
+- Split the array in half
+- Sort the two smaller arrays
+- Merge the two sorted smaller arrays back into a single sorted array
+
+The above algorithm is overly simplistic because recursion actually removes the need for the second step. Since the algorithm is recursive, the array is actually divided until there are `n` subarrays that consist of a single element. Since a subarray of one element is already sorted, each subarray is then recursively merged back together such that they are in sorted order. A good visualization of this process can be seen here:
+
+<p align="center">
+  <img src="/assets/images/data-structures-and-algorithms/sorting-algorithms/merge-sort-visualization.png" alt="merge-sort-visualization.png"/>
+  <br />
+  <a href="https://www.geeksforgeeks.org/merge-sort/">source: GeeksForGeeks</a>
+</p>
+
+Merge sort is a stable sort algorithm. For more information, see the [mycodeschool video tutorial](https://www.youtube.com/watch?v=TzeBrDU-JaY&list=PL2_aWCzGMAwKedT2KfDMB9YA5DgASZb3U&index=5).
+
+Merge sort [implementation]() in java:
+
+<p align="center">
+  <img src="" alt="merge-sort-implementation.png"/>
+</p>
+
+Time complexity of merge sort where `n` is the number of elements:
+
+| Best | Average | Worst | Reasoning |
+| :--: | :-----: | :---: | --------- |
+| Ω(n log(n)) | Θ(n log(n)) | O(n log(n)) | Since merge sort divides the array by a factor of 2 in every recursive step, division until we have reached a single element will take `log(n)` (base 2) recusive levels. On each recursive level, all `n` elements are traversed when merging subarrays. |
+
+Space complexity of insertion sort is `O(n)` because, at the last step of the recursive process, the `merge()` uses merges two temporary subarrays (of collective size `n`) into the final sorted array.
+
+## Quick Sort
+
+<p align="center">
+  <img src="/assets/images/data-structures-and-algorithms/sorting-algorithms/quick-sort.gif" alt="quick-sort.gif"/>
+  <br />
+  <a href="https://visualgo.net/en/sorting">source: visualgo.net</a>
+</p>
+
+Similar to merge sort, quick sort is also recursive. However, quick sort is also an in-place sort which gives it an advantage in terms of space complexity. Quick sort is such a practical choice for an efficient sorting algorithm that programming libraries typically implement it for generic sorting functions. The algorithm is as follows:
+- Select any element in the array to be the pivot
+- Rearrange the list such that all elements lesser than the pivot are to the left of the pivot and all elements greater than the pivot are to the right (doesn't have to be sorted).
+- Split elements to left and right of the pivot into subarrays
+- Recursively repeat process until subarrays are one element in size
+- Recursive stack of subarrays now approximates a binary tree where the lowest left element is the first element. Working up the stack, assign values to array in sorted order.
+
+For more information, see the [mycodeschool video tutorial](https://www.youtube.com/watch?v=COk73cpQbFQ&list=PL2_aWCzGMAwKedT2KfDMB9YA5DgASZb3U&index=7).
+
+Quick sort [implementation]() in java:
+
+<p align="center">
+  <img src="" alt="merge-sort-implementation.png"/>
+</p>
+
+Time complexity of quick sort where `n` is the number of elements:
+
+| Best | Average | Worst | Reasoning |
+| :--: | :-----: | :---: | --------- |
+| Ω(n log(n)) | Θ(n log(n)) | O(n<sup>2</sup>) |  |
+
+Space complexity of insertion sort is `O(log(n))` because it is an in-place sort
 
 ## Heap Sort? 
