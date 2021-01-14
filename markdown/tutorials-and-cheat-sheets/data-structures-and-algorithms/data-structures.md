@@ -100,7 +100,7 @@ Linear data structures are the most basic type of data structure. In linear data
     <a href="https://www.geeksforgeeks.org/array-data-structure/">source: geeksforgeeks</a>
 </p>
 
-An array is a collection of elements that are stored contiguously (i.e. side-by-side) in memory such that each element can be identified with a corresponding index. Arrays are typically primitive data types so they have little functionality out of the box. In some programming languages, primitive arrays can't perform common data structure operations such as `inserting`, and `deleting`. For clarification, when I say *inserting*, I'm not referring to overwriting an element like `arr[0] = 1`. I'm referring to inserting a value into a specified index such that no values are overwritten. For example, inserting `3` into `[1, 5, 4, 2]` such that it becomes `[1, 5, 3, 4, 2]`. Notice how the index of values `4` and `2` were shifted up by one and still exist in the array. Since primitive arrays lack these common data structure operations, when "arrays" are compared to other data structures, the comparison typically refers to a "dynamic array" such as an ArrayList or Vector. A dynamic array is essentially just a primitive array that has been extended to perform the common data structure operations as well as dynamically change in size. 
+An array is a collection of elements that are stored contiguously (i.e. side-by-side) in memory such that each element can be identified with a corresponding index. Arrays are typically primitive data types so they have little functionality out of the box. In some programming languages, primitive arrays can't perform common data structure operations such as `inserting`, and `deleting`. For clarification, when I say *inserting*, I'm not referring to overwriting an element like `arr[0] = 1`. I'm referring to inserting a value into a specified index such that no values are overwritten. For example, inserting `3` into `[1, 5, 4, 2]` such that it becomes `[1, 5, 3, 4, 2]`. Notice how the index of values `4` and `2` were shifted up by one and still exist in the array. Since primitive arrays can lack these common data structure operations, when "arrays" are compared to other data structures, the comparison typically refers to a "dynamic array" such as an ArrayList or Vector. A dynamic array is essentially just a primitive array that has been extended to perform the common data structure operations as well as dynamically change in size. 
 
 Arrays have many [applications](https://www.thecrazyprogrammer.com/2020/04/applications-of-array.html). As you will find, they are also used implement a variety of other complex data structures. If you're at the point where you're learning data structures and algorithms, you likely already know what an array is. If not, refer to the [GeeksForGeeks documentation](https://www.geeksforgeeks.org/array-data-structure/) or the [mycodeschool video tutorial](https://www.youtube.com/watch?v=5tPLyHCZdU0).
 
@@ -297,7 +297,7 @@ Time complexity for [binary heap implementations](https://github.com/sirpaulmcd/
 
 # Hash Data Structures
 
-A hash data structures use a "hash function" to map key-value pairs together such that they can be quickly and conveniently accessed.
+Hash data structures use a "hash function" to map key-value pairs together such that they can be quickly and conveniently accessed.
 
 ## Hash Tables
 
@@ -307,7 +307,7 @@ A hash data structures use a "hash function" to map key-value pairs together suc
     <a href="https://www.geeksforgeeks.org/hashing-data-structure/">source: geeksforgeeks</a>
 </p>
 
-A hash table (AKA hash map) is a data structure used to store key-value pairs. It's essentially a fancy array where, instead of indexing values with an arbitrary integer, values are indexed with a meaningful "key". If you're familiar with Python, you likely already know this data structure to be a `dictionary`. Hash tables are incredibly useful because, if we know the key, we therefore know the index and can search, insert, and delete with constant runtimes! For this reason, hash tables are probably the most important data structure to master for technical interviews.
+A hash table (AKA hash map) is a data structure used to store key-value pairs. It's essentially a fancy array where, instead of indexing values with an arbitrary integer, values are indexed with a meaningful "key". If you're familiar with Python, you likely already know this data structure to be a `dictionary`. Hash tables are incredibly useful because, if we know the key, we therefore know the index and can search, insert, and delete with constant runtimes! For this reason, hash tables are probably the most important data structure to master for technical interviews. 
 
 So how does it work? Let's walk through a basic example. Say we want to store a series of employee phone numbers. We could store the phone numbers in an array but it would be practically impossible to remember the index of each phone number if we needed to access it later. We'd have to perform some kind of search on the array which would waste time. Instead, we'll associate the phone number with the employee's ID number by:
 - Passing the employee ID (i.e. the key) through a "hashing function" that converts the value of their ID to an integer.
@@ -318,7 +318,9 @@ This way, if we want to know an employee's phone number, we can just pass their 
 But wait a second. Even though employee IDs are unique, what if the hashing function returns the same integer for two separate employee IDs? Good question. When two keys yield the same integer for a given hashing function, it is referred to as a "collision". There are several ways to handle collisions. Some solutions include:
 - **Separate chaining:** Append collided values into the array slot via a linked list
 - **Open Addressing:** Place the collided values in the next empty array slot
-- **Key selection:** If all keys are known ahead of time, a perfect hashing function can be made to prevent collisions. 
+- **Key selection:** If all keys are known ahead of time, a perfect hashing function can be made to prevent collisions.
+
+Although hash tables are implemented using arrays, they are not considered linear data structures because elements don't have traditional "next" or "previous" neighbors. For a "separate chaining" hash table, each element in the array branches off into a linked list. For "open addressing" hash tables, collided values are placed arbitrarily in the next available index. It's important to keep this distinction in mind.
 
 Hash tables have many [applications](https://afteracademy.com/blog/applications-of-hash-table). It is particularly useful for solving technical interview questions. For more information, see the [GeeksForGeeks documentation](https://www.geeksforgeeks.org/hashing-data-structure/) or the [Paul Programming video tutorial](https://www.youtube.com/watch?v=MfhjkfocRR0).
 
