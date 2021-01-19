@@ -215,7 +215,7 @@ Time complexity of merge sort where `n` is the number of elements:
 | :--: | :-----: | :---: | --------- |
 | Ω(n log(n)) | Θ(n log(n)) | O(n log(n)) | Since merge sort divides the array by a factor of 2 in every recursive step, division until we have reached a single element will take `log(n)` (base 2) recusive levels. On each recursive level, all `n` elements are traversed when merging subarrays. |
 
-Space complexity of insertion sort is `O(n)` because, at the last step of the recursive process, the `merge()` uses merges two temporary subarrays (of collective size `n`) into the final sorted array.
+Space complexity of insertion sort is `O(n)` because, at the last step of the recursive process, the `merge()` uses merges two temporary subarrays (of collective size `n`) into the final sorted array of size `n`.
 
 ## Quick Sort
 
@@ -225,12 +225,12 @@ Space complexity of insertion sort is `O(n)` because, at the last step of the re
   <a href="https://visualgo.net/en/sorting">source: visualgo.net</a>
 </p>
 
-Similar to merge sort, quick sort is also recursive. However, quick sort is also an in-place sort which gives it an advantage in terms of space complexity. Quick sort is such a practical choice for an efficient sorting algorithm that programming libraries typically implement it for generic sorting functions. The algorithm is as follows:
-- Select any element in the array to be the pivot
+Similar to merge sort, quick sort is also recursive. Unlike marge sort, quick sort is a non-stable sorting algorithm. However, quick sort is an in-place sort which gives it an advantage in terms of space complexity. You may notice that it has a worst case time complexity of `O(n^2)`. However, this case is almost never seen using randomized quick sort where the "pivot" is selected at random. Quick sort is actually such a practical choice for an efficient sorting algorithm that programming libraries typically implement it for generic sorting functions. The algorithm is as follows:
+- Select random element to be the pivot and swap to last index position
 - Rearrange the list such that all elements lesser than the pivot are to the left of the pivot and all elements greater than the pivot are to the right (doesn't have to be sorted).
 - Split elements to left and right of the pivot into subarrays
-- Recursively repeat process until subarrays are one element in size
-- Recursive stack of subarrays now approximates a binary tree where the lowest left element is the first element. Working up the stack, assign values to array in sorted order.
+- Recursively repeat process until subarrays only contain one element
+- Recursive stack of subarrays now represents a binary tree where each pivot represents a node. As a result, the lowest left node will have the lowest value and the lowest right node will have the highest value. Working up the recursive stack using in-order binary tree traversal will yield a sorted array.
 
 For more information, see the [mycodeschool video tutorial](https://www.youtube.com/watch?v=COk73cpQbFQ&list=PL2_aWCzGMAwKedT2KfDMB9YA5DgASZb3U&index=7).
 
@@ -244,8 +244,13 @@ Time complexity of quick sort where `n` is the number of elements:
 
 | Best | Average | Worst | Reasoning |
 | :--: | :-----: | :---: | --------- |
-| Ω(n log(n)) | Θ(n log(n)) | O(n<sup>2</sup>) |  |
+| Ω(n log(n)) | Θ(n log(n)) | O(n<sup>2</sup>) | In the best/average case, partitioning is balanced such that left and right subarrays are of relatively equal size. If the subarrays are near equal size, quick sort divides the array by approximately a factor of 2 on each recursive step. As such, division until we have reached a single element will take `log(n)` (base 2) recusive levels. On each recursive level, the remaining elements are sequentially traversed (`O(n)` operation) when arranging around the pivot. In the worst case, partitioning is always unbalanced (i.e. the pivot is always the largest element in the array) and only left subarrays are created during the recursive process. As such, division until we have reached a single element will take `n` recursive levels. On each recursive level, the remaining elements are sequentially traversed (`O(n)` operation) when arranging around the pivot.
 
-Space complexity of insertion sort is `O(log(n))` because it is an in-place sort
+Space complexity of quick sort:
+| Best | Average | Worst | Reasoning |
+| :--: | :-----: | :---: | --------- |
+| Ω(log(n)) | Θ(log(n)) | O(n) | Since quick sort is an in-place sort is does not require the use of additional data structures. However, since it is a recursive algorithm, additional space is required to account for the rectursive levels necessary to complete the sort. That is why the space complexity corresponds with time complexity in this case. |
 
-## Heap Sort? 
+# What next? 
+
+There are many more [sorting algorithms](https://www.geeksforgeeks.org/sorting-algorithms/). I will probably add more such as heap, radix, and counting sort to this page eventually. The rest will be up to you as you face more specialized software problems. When you are comfortable with this section, check out the [next](/tutorials-cheat-sheets/data-structures-and-algorithms/) section.
