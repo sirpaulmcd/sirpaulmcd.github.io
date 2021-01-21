@@ -5,12 +5,14 @@ permalink: /tutorials-cheat-sheets/data-structures-and-algorithms/data-structure
 parent: Data Structures and Algorithms
 grand_parent: Tutorials and Cheat Sheets
 has_children: false
-nav_order: 2
+nav_order: 3
 nav_exclude: false
 has_toc: false
 ---
 
 <h1>Data Structures</h1>
+
+### Table of contents:
 
 - [Introduction](#introduction)
   - [Critical Thinking](#critical-thinking)

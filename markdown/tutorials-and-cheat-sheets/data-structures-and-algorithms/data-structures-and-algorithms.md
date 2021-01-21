@@ -12,23 +12,22 @@ has_toc: false
 
 # Data Structures and Algorithms
 
-Software job interviews are incredibly challenging/technical when compared to other disciplines. 
-For these interviews, especially those involving big tech companies, knowledge of data structures and algorithms is incredibly important. 
-This is because data structures and algorithms are an essential part of becoming a competent software developer. 
-These concepts ensure that you are not just designing functional software but designing software that reaches its peak performance for the desired function. 
-Reaching peak performance is increasingly important as software scales or becomes increasingly complex.
+Software job interviews are incredibly challenging/technical when compared to other disciplines. For these interviews, especially those involving big tech companies, knowledge of data structures and algorithms is incredibly important. This is because data structures and algorithms are an essential part of becoming a competent software developer. These concepts are required to ensure that your software, in addition to being functional, reaches its peak performance for the desired function. 
 
-To help myself learn these concepts, I have made this tutorial. It should be useful for people learning these concepts for the first time as well as people looking to brush up on their skills. Hopefully you find it useful.
+If you are a software developer, you will need to refresh yourself on these concepts periodically throughout your career. Especially before a job interview. As such, I have structured this tutorial to accommodate first-time learners as well as experienced programmers. However, if you are learning these concepts for the first time, you will need to be familiar with the concepts of object oriented programming (OOP) and recursion.
 
-There are 4 distinct pillars to learning Data Structures and Algorithms. The links to each are included below:
+There are 5 distinct pillars to learning Data Structures and Algorithms. The links to each are included below:
 - [**Complexity and Big O Notation**](/tutorials-cheat-sheets/data-structures-and-algorithms/complexity-and-big-o-notation/)
-  - Theory/techniques necessary to determine/compare the performance of data structures and algorithms. Before learning the following pillars, you should have a decent understanding of time and space complexity in terms of Big O notation.
+  - Theory/techniques necessary to determine/compare the performance of data structures and algorithms. The first prerequisite to understanding data structures and algorithms is to have a decent understanding of time and space complexity in terms of Big O notation.
+
+- [**Searching Algorithms**](/tutorials-cheat-sheets/data-structures-and-algorithms/searching-algorithms/)
+  - Algorithms used to search data structures efficiently. Since searching is a fundamental operation for data structures, these algorithms are a prerequisite.
 
 - [**Data Structures**](/tutorials-cheat-sheets/data-structures-and-algorithms/data-structures/)
   - Methods of organizing data in software. Each data structure has pros and cons that make them suitable for specific applications. To write optimal algorithms, you must know the corresponding optimal data structures. 
 
-- **Sorting and Searching Algorithms (in progress)** 
-  - Algorithms used to sort/search data structures efficiently. There are only so many ways to sort/search an array. No point in reinventing the wheel when the most popular/effective methods of sorting data have already been discovered. Sorting and searching are incredibly common steps when developing algorithms. Therefore, knowing about popular sorting/searching algorithms and their relative performances is good to know before creating your own algorithms. 
+- [**Sorting Algorithms**](/tutorials-cheat-sheets/data-structures-and-algorithms/sorting-algorithms/)
+  - Algorithms used to sort data structures efficiently. Since sorting is an incredibly common process when developing algorithms, knowing the popular sorting algorithms and their relative advantages is an important skill to have. 
 
 - **Algorithms (coming soon)** 
-  - Sequences of well-defined instructions to perform a desired function. Writing efficient algorithms means being aware of the above topics during your development process. 
+  - Sequences of well-defined instructions to perform a desired function. Writing efficient algorithms means being aware of the above topics during your development process. If you are comfortable with each of the prerequisites, the only thing left is to practice.

@@ -12,6 +12,8 @@ has_toc: false
 
 <h1>Complexity and Big O Notation</h1>
 
+### Table of contents:
+
 - [Complexity](#complexity)
   - [Why Complexity?](#why-complexity)
   - [Time Complexity](#time-complexity)
@@ -262,6 +264,4 @@ To figure out how many times this O(1) function is recursively executed, we must
 
 # What next? 
 
-If this is your first time covering these concepts, the best thing you can do right now is practice.
-There are plenty of practice resources available for free online. 
-Once you feel up to speed, start the [next](/tutorials-cheat-sheets/data-structures-and-algorithms/) section. 
+If this is your first time covering these concepts, the best thing you can do right now is practice. There are plenty of practice resources available for free online. Once you feel up to speed, start the [searching algorithms](/tutorials-cheat-sheets/data-structures-and-algorithms/) section. 
