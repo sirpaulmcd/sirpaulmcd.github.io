@@ -42,11 +42,11 @@ has_toc: false
 
 # Introduction
 
-Sorting is the arrangement of elements within a collection into increasing or decreasing order of some property. There are many scenarios where a developer may want a collection sorted. One of the biggest advantages of having a sorted collection is that you can utilize binary search which can make an algorithm significantly more scalable/efficient. Now that you are familair with the fundamental data structures, it's time to learn the fundamental array sorting algorithms. Why arrays? Well, arrays are the most simple/common type of data strucutre. More complex data structures are often implemented using arrays. Therefore, knowing how to sort an array is an important skill. 
+Sorting is the arrangement of elements within a collection into increasing or decreasing order of some property. There are many scenarios where a developer may want a collection sorted. One of the biggest advantages of having a sorted collection is that you can utilize binary search which can make an algorithm significantly more scalable/efficient. Now that you are familiar with the fundamental data structures, it's time to learn the fundamental array sorting algorithms. Why arrays? Well, arrays are the most simple/common type of data structure. More complex data structures are often implemented using arrays. Therefore, knowing how to sort an array is an important skill. 
 
 Technically, under the right conditions, these sorting algorithms can be applied to any linear data structure. Therefore, when you are learning these algorithms, it is important to focus on understanding the general process instead of memorizing the exact implementation. That way, you can apply them to other linear data structures in any language regardless of the underlying conditions.
 
-You may be wondering why this section is being covered after data strucutres. The reason is that some complex sorting algorithms utilize data structures. For example, stacks are sometimes used to implement an iterative version of quick sort. Additionally, binary heaps are used to implement heap sort. 
+You may be wondering why this section is being covered after data structures. The reason is that some complex sorting algorithms utilize data structures. For example, stacks are sometimes used to implement an iterative version of quick sort. Additionally, binary heaps are used to implement heap sort. 
 
 There are a great deal of sorting algorithms out there: 
 
@@ -59,7 +59,7 @@ However, we'll just be learning about the fundamental algorithms you would likel
 - Bubble sort
 - Insertion sort
 
-Then we'll cover some more useful, advanced sorting algoirthms:
+Then we'll cover some more useful, advanced sorting algorithms:
 - Merge sort
 - Quick sort (random)
 - *More to be added later...*
@@ -75,9 +75,9 @@ Before moving on, you should be familiar with the following sorting terminology:
 | Term | Definition |
 | :--: | ---------- |
 | in-place sort | A sort that swaps data within a data structure without the help of additional data structures for temporary storage. We want our sorting algorithms to be in-place wherever possible because it minimizes space complexity. |
-| stable sort | A sort that preserves the relative order of eqivalent elements. That is to say, if two elements of equal (primary key) value exist in a certain order before sorting, they will remain in the same order after sorting. |
+| stable sort | A sort that preserves the relative order of equivalent elements. That is to say, if two elements of equal (primary key) value exist in a certain order before sorting, they will remain in the same order after sorting. |
 | internal sort | A sort where data is kept in primary memory (i.e. in RAM using arrays) |
-| external sort | A sort where data is kept in secondary memory (i.e. on disk or tape) | 
+| external sort | A sort where data is kept in secondary memory (i.e. on disk or tape) |
 
 In addition to the above terminology, sorting algorithms can also be labelled as either "recursive" or "non-recursive" depending on whether their implementations use recursion. For more information on sorting theory, see the [mycodeschool video tutorial](https://www.youtube.com/watch?v=pkkFqlG0Hds&list=PL2_aWCzGMAwKedT2KfDMB9YA5DgASZb3U&index=1).
 
@@ -212,7 +212,7 @@ The above sorting algorithms can be handy in very basic scenarios involving smal
 
 ### Description
 
-In the previous sorting algorithms, the array was sorted by dividing the array into "sorted" and "unsorted" subsections. Merge sort takes a different approach because it is a recrusive algorithm. An overly simplified approximation of the recursive algorithm can be described like so:
+In the previous sorting algorithms, the array was sorted by dividing the array into "sorted" and "unsorted" subsections. Merge sort takes a different approach because it is a recursive algorithm. An overly simplified approximation of the recursive algorithm can be described like so:
 - Split the array in half
 - Sort the two smaller arrays
 - Merge the two sorted smaller arrays back into a single sorted array
@@ -237,13 +237,13 @@ Time complexity of merge sort where `n` is the number of elements:
 
 | All cases | Reasoning |
 | :-------: | --------- |
-| O(n log(n)) | Since merge sort divides the array by a factor of 2 in every recursive step, division until subarrays are a single element in length will take `log(n)` (base 2) recusive levels. On each recursive level, all `n` values are traversed when copying/merging subarrays. |
+| O(n log(n)) | Since merge sort divides the array by a factor of 2 in every recursive step, division until subarrays are a single element in length will take `log(n)` (base 2) recursive levels. On each recursive level, all `n` values are traversed when copying/merging subarrays. |
 
 Space complexity of insertion sort where `n` is the number of elements:
 
 | All cases | Reasoning |
 | :-------: | --------- |
-| O(n) | Each recursive level holds a collective `n` elements in temporary storage during the `merge()` function. For example, at the last step of the recursive process, `merge()` combines two temporary subarrays (of collective size `n`) into the final sorted array of size `n`. | 
+| O(n) | Each recursive level holds a collective `n` elements in temporary storage during the `merge()` function. For example, at the last step of the recursive process, `merge()` combines two temporary subarrays (of collective size `n`) into the final sorted array of size `n`. |
 
 ## Quick Sort (Random)
 
@@ -271,15 +271,15 @@ For more information, see the [mycodeschool video tutorial](https://www.youtube.
 
 Time complexity of quick sort where `n` is the number of elements:
 
-| Best/Averge | Worst | Reasoning |
+| Best/Average | Worst | Reasoning |
 | :---------: | :---: | --------- |
-| O(n log(n)) | O(n<sup>2</sup>) | In the best/average case, partitioning is balanced such that left and right subarrays are of relatively equal size. This way, quick sort divides the array by some factor on each recursive step. As such, division until we have reached a single element will take approximately `log(n)` recusive levels. On each recursive level, the remaining (i.e. some factor of `n`) elements are sequentially traversed when arranging around the partition index. In the worst case, partitioning is always unbalanced (i.e. the pivot is always the largest/smallest element in the array) and only left/right subarrays are created during the recursive process. Therefore, division until we have reached a single element will take `n` recursive levels (resembling a linked list).
+| O(n log(n)) | O(n<sup>2</sup>) | In the best/average case, partitioning is balanced such that left and right subarrays are of relatively equal size. This way, quick sort divides the array by some factor on each recursive step. As such, division until we have reached a single element will take approximately `log(n)` recursive levels. On each recursive level, the remaining (i.e. some factor of `n`) elements are sequentially traversed when arranging around the partition index. In the worst case, partitioning is always unbalanced (i.e. the pivot is always the largest/smallest element in the array) and only left/right subarrays are created during the recursive process. Therefore, division until we have reached a single element will take `n` recursive levels (resembling a linked list).
 
 Space complexity of insertion sort where `n` is the number of elements:
 
 | Best/Average | Worst | Reasoning |
 | :----------: | :---: | --------- |
-| O(log(n)) | O(n) | Quick sort is an in-place sort and therefore does not require the use of temporary data structures. However, since it is a recursive algorithm, additional space is required to account for the data stored on each rectursive level. That is why the space complexity corresponds with time complexity in this case. In the best/average case there are `log(n)` recursive levels with an `O(1)` space complexity. In the worst case, there are `O(n)` recursive levels using `O(1)` space complexity. |
+| O(log(n)) | O(n) | Quick sort is an in-place sort and therefore does not require the use of temporary data structures. However, since it is a recursive algorithm, additional space is required to account for the data stored on each recursive level. That is why the space complexity corresponds with time complexity in this case. In the best/average case there are `log(n)` recursive levels with an `O(1)` space complexity. In the worst case, there are `O(n)` recursive levels using `O(1)` space complexity. |
 
 # What next? 
 

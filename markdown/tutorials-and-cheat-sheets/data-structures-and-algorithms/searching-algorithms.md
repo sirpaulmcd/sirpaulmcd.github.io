@@ -17,12 +17,12 @@ has_toc: false
 - [Fundamental Searching Algorithms](#fundamental-searching-algorithms)
   - [Linear (Sequential) Search](#linear-sequential-search)
     - [Description](#description)
-    - [Linear search Java implementation](#linear-search-java-implementation)
+    - [Implementation in Java](#implementation-in-java)
     - [Complexity](#complexity)
   - [Binary Search](#binary-search)
     - [Description](#description-1)
-    - [Iterative binary search Java implementation](#iterative-binary-search-java-implementation)
-    - [Recursive binary search Java implementation](#recursive-binary-search-java-implementation)
+    - [Iterative Implementation in Java](#iterative-implementation-in-java)
+    - [Recursive Implementation in Java](#recursive-implementation-in-java)
     - [Complexity](#complexity-1)
 - [What next?](#what-next)
 
@@ -51,7 +51,7 @@ The general algorithm is as follows. Given a search key:
   - Else, if a match is not found, move on to the next element
 - Repeat process until either a match is found or every element has been checked
 
-### Linear search Java [implementation](https://github.com/sirpaulmcd/Data-Structures-And-Algorithms/blob/main/src/searching/SearchingAlgorithms.java)
+### [Implementation](https://github.com/sirpaulmcd/Data-Structures-And-Algorithms/blob/main/src/searching/SearchingAlgorithms.java) in Java
 
 <script src="https://gist.github.com/sirpaulmcd/f44db8114ad233b63df5da604f865311.js?file=LinearSearch.java"></script>
 
@@ -93,11 +93,11 @@ Although you may not search a dictionary quite as systematically, the general te
 
 Binary search significantly outperforms linear search in almost all cases. As seen by the difference in time complexity, the performance difference increases significantly with larger input sizes. For more information, check out the [GeeksForGeeks documentation]() or the [mycodeschool video tutorials](https://www.youtube.com/watch?v=j5uXyPJ0Pew&list=PL2_aWCzGMAwL3ldWlrii6YeLszojgH77j).
 
-### Iterative binary search Java [implementation](https://github.com/sirpaulmcd/Data-Structures-And-Algorithms/blob/main/src/searching/SearchingAlgorithms.java)
+### Iterative [Implementation](https://github.com/sirpaulmcd/Data-Structures-And-Algorithms/blob/main/src/searching/SearchingAlgorithms.java) in Java
 
 <script src="https://gist.github.com/sirpaulmcd/f44db8114ad233b63df5da604f865311.js?file=BinarySearchIterative.java"></script>
 
-### Recursive binary search Java [implementation](https://github.com/sirpaulmcd/Data-Structures-And-Algorithms/blob/main/src/searching/SearchingAlgorithms.java)
+### Recursive [Implementation](https://github.com/sirpaulmcd/Data-Structures-And-Algorithms/blob/main/src/searching/SearchingAlgorithms.java) in Java
 
 <script src="https://gist.github.com/sirpaulmcd/f44db8114ad233b63df5da604f865311.js?file=BinarySearchRecursive.java"></script>
 
