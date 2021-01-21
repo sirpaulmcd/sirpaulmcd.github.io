@@ -97,7 +97,7 @@ In industry, the only notation that really matters is Big O. That's because the 
 
 Space complexity uses a fairly similar technique, although easier to grasp. It accounts for the total number of values stored in memory. For example, an array that stores n values will need O(n) space. Functionally, this means that the required storage space increases linearly with increased array size. Similarly, a 2D array of size n-by-n would require O(n*n) or O(n<sup>2</sup>) space.
 
-Note that stack space required for recursive calls must also be accounted for. More examples will be discussed in the Data Structures section. 
+With space complexity, you also have to account for the memory used up by recursive calls. For example, if a code snippet appears to have an O(1) space complexity (i.e. does not use any temporary storage dependent on input size) but requires `n` recursive levels to execute, then the algorithm has a space complexity of O(n). You will see plenty examples in the upcoming sections.
 
 # Big O Notation
 
