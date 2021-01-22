@@ -243,7 +243,7 @@ Space complexity of insertion sort where `n` is the number of elements:
 
 | All cases | Reasoning |
 | :-------: | --------- |
-| O(n) | Each recursive level holds a collective `n` elements in temporary storage during the `merge()` function. For example, at the last step of the recursive process, `merge()` combines two temporary subarrays (of collective size `n`) into the final sorted array of size `n`. |
+| O(n) | Merge sort has a space complexity of `O(n)` because it is not an in-place sort. When merging, the two sorted subarray halves are copied into temporary arrays (of collective size `n` on the first recursive level) and then combined back into the original array in sorted order. |
 
 ## Quick Sort (Random)
 

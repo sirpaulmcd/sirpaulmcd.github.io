@@ -29,5 +29,5 @@ There are 5 distinct pillars to learning Data Structures and Algorithms. The lin
 - [**Sorting Algorithms**](/tutorials-cheat-sheets/data-structures-and-algorithms/sorting-algorithms/)
   - Algorithms used to sort data structures efficiently. Since sorting is an incredibly common process when developing algorithms, knowing the popular sorting algorithms and their relative advantages is an important skill to have. 
 
-- **Algorithm Design and Moving Forward (coming soon)** 
+- **Algorithm Design and Moving Forward (work in progress)** 
   - Sequences of well-defined instructions to perform a desired function. Writing efficient algorithms means being aware of the above topics during your development process. If you are comfortable with each of the prerequisites, the only thing left is to practice.
