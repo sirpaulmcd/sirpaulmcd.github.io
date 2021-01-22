@@ -246,12 +246,11 @@ As you can see, this function will be recursively called until the input value o
 
 ### Example 6: Exponential runtimes
 
-In some cases, you will see functions that recursively call themselves multiple times over (the previous example only had one recursive call). A popular example of this is the recursive fibonacci method. It returns the `nth` number of the fibonacci sequence. For example, the beginning of the fibonacci sequence is `1, 1, 2, 3, 5, 8, 13, ...`. Therefore, `fib(4)` should yield a result of `3`.
+In some cases, you will see functions that recursively call themselves multiple times over (the previous example only had one recursive call). In addition to having multiple recursive calls, expontential runtimes result when the end case is approached incrementally rather than exponentially. Recall that, as shown in example 3, functions where an end case is approached exponentially will have logarithmic time complexity. A popular example of an algorithm with exponential runtime is the recursive fibonacci function. It returns the `nth` number of the fibonacci sequence. For example, the beginning of the fibonacci sequence is `1, 1, 2, 3, 5, 8, 13, ...`. Therefore, `fib(4)` should yield a result of `3`.
 
 <p align="center">
     <img src="/assets/images/data-structures-and-algorithms/complexity-and-big-o/big-o-example-6.png" alt="big-o-example-6.png"/>
 </p>
-
 
 In the above algorithm, fib(4) will recursively branch off into two fib(3) calls. Each fib(3) call will branch into two more fib(2) calls. This will continue until the fib(1) calls end the cycle. This branching is visualized below: 
 
@@ -259,8 +258,7 @@ In the above algorithm, fib(4) will recursively branch off into two fib(3) calls
     <img src="/assets/images/data-structures-and-algorithms/complexity-and-big-o/fib-tree.png" alt="fib-tree.png"/>
 </p>
 
-
-To figure out how many times this O(1) function is recursively executed, we must find the number of nodes in the resulting tree. As can be seen, each iteration doubles the number of nodes. Therefore, we know the complexity is exponential because the amount of recursive executions grows at an exponential rate. When dealing with a tree such as this, the complexity can be represented as O(branches<sup>depth</sup>) where `branches` is the number of recursive branches per node and `depth` is the depth of the tree. In other words, `branches` is the number of recursive calls within the function and `depth` is the maximum number of iterations before the input value reaches the end case. Therefore, since there are 2 recursive calls in the function and it takes `n` iterations for the input value `n` to be decremented to 1, the complexity of this function is O(2<sup>n</sup>).
+To figure out how many times this O(1) function is recursively executed, we must find the number of nodes in the resulting tree. As can be seen, each iteration doubles the number of nodes. Therefore, we know the complexity is exponential because the amount of recursive executions grows at an exponential rate. When dealing with a tree such as this, time complexity can be represented as O(branches<sup>depth</sup>) where `branches` is the number of recursive branches per node and `depth` is the depth of the tree. In other words, `branches` is the number of recursive calls within the function and `depth` is the maximum number of iterations before the input value reaches the end case. Therefore, since there are 2 recursive calls in the function and it takes `n` iterations for the input value `n` to be decremented to 1, the complexity of this function is O(2<sup>n</sup>).
 
 # What next? 
 
