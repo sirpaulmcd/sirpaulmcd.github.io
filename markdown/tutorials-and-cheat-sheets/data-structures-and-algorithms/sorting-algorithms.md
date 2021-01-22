@@ -46,7 +46,7 @@ Sorting is the arrangement of elements within a collection into increasing or de
 
 Technically, under the right conditions, these sorting algorithms can be applied to any linear data structure. Therefore, when you are learning these algorithms, it is important to focus on understanding the general process instead of memorizing the exact implementation. That way, you can apply them to other linear data structures in any language regardless of the underlying conditions.
 
-You may be wondering why this section is being covered after data structures. The reason is that some complex sorting algorithms utilize data structures. For example, stacks are sometimes used to implement an iterative version of quick sort. Additionally, binary heaps are used to implement heap sort. 
+You may be wondering why this section is being covered after data structures. The reason is that some complex sorting algorithms utilize complex data structures. For example, stacks are sometimes used to implement an iterative version of quick sort. Additionally, binary heaps are used to implement heap sort. 
 
 There are a great deal of sorting algorithms out there: 
 
@@ -59,7 +59,7 @@ However, we'll just be learning about the fundamental algorithms you would likel
 - Bubble sort
 - Insertion sort
 
-Then we'll cover some more useful, advanced sorting algorithms:
+Then we'll cover some more useful/advanced sorting algorithms:
 - Merge sort
 - Quick sort (random)
 - *More to be added later...*
@@ -108,7 +108,7 @@ Insertion sort is often related to sorting a hand of playing cards. The algorith
 - Select the minimum card from your right hand and place it into the end of your left hand (i.e. the sorted subarray shown above in orange).
 - Repeat until all cards have moved from your unsorted right hand to your sorted left hand. 
 
-The above algorithm can be implemented using two separate arrays (sorted and unsorted). However, that would make the space complexity of the algorithm `O(n)`. Ideally, we want our sorting algorithms to be **in-place** with constant `O(1)` space complexity. Therefore, instead of using 2 arrays, we can simply swap elements around to create sorted/unsorted subsections within the original array. For more information, see the [mycodeschool video tutorial](https://www.youtube.com/watch?v=GUDLRan2DWM&list=PL2_aWCzGMAwKedT2KfDMB9YA5DgASZb3U&index=2).
+The above algorithm can be implemented using two separate arrays (sorted and unsorted). However, that would make the space complexity of the algorithm `O(n)`. Ideally, we want our sorting algorithms to be *in-place* with constant `O(1)` space complexity if possible. Therefore, instead of using 2 arrays, we can simply swap elements around to create sorted/unsorted subsections within the original array. For more information, see the [mycodeschool video tutorial](https://www.youtube.com/watch?v=GUDLRan2DWM&list=PL2_aWCzGMAwKedT2KfDMB9YA5DgASZb3U&index=2).
 
 ### [Implementation](https://github.com/sirpaulmcd/Data-Structures-And-Algorithms/blob/main/src/sorting/SortingAlgorithms.java) in Java
 
@@ -138,7 +138,7 @@ Space complexity of selection sort where `n` is the number of elements:
 
 ### Description
 
-The bubble sort algorithm steps through the array and swaps an element with its neighbor if it is out of order. This way, the largest unsorted value "bubbles" to the to end of the array on each pass. Since we know that the largest value has been properly sorted, additional passes are performed using the remaining, unsorted subsection of the array. This can be seen in the above gif when elements are colored orange after being sorted. Optimized versions of bubble sort also break from the loop if the array is detected to be sorted. For more information, see the [mycodeschool video tutorial](https://www.youtube.com/watch?v=Jdtq5uKz-w4&list=PL2_aWCzGMAwKedT2KfDMB9YA5DgASZb3U&index=3).
+The bubble sort algorithm steps through the array and swaps an element with its neighbor if it is out of order. This way, the largest unsorted value "bubbles" to the to end of the array on each pass. Since we know that the largest value has been properly sorted (shown above in orange), additional passes are performed using the remaining, unsorted subsection of the array (shown above in blue). Optimized versions of bubble sort also break from the loop if the array is detected to be sorted. For more information, see the [mycodeschool video tutorial](https://www.youtube.com/watch?v=Jdtq5uKz-w4&list=PL2_aWCzGMAwKedT2KfDMB9YA5DgASZb3U&index=3).
 
 ### [Implementation](https://github.com/sirpaulmcd/Data-Structures-And-Algorithms/blob/main/src/sorting/SortingAlgorithms.java) in Java
 
@@ -150,7 +150,7 @@ Time complexity of bubble sort where `n` is the number of elements:
 
 | Best | Average/Worst | Reasoning |
 | :--: | :-----------: | --------- |
-| O(n) | O(n<sup>2</sup>) | In the best case, the array is already sorted and bubble sort only traverses once. In the average/worst case, the array is in random/descending order and an `O(n)` bubble traversal occurs for a portion of or all of the `n` elements. |
+| O(n) | O(n<sup>2</sup>) | In the best case, the array is already sorted and bubble sort only traverses once. In the average/worst case, the array is in random/descending order and an `O(n)` traversal occurs for a portion of or all of the `n` elements. |
 
 Space complexity of insertion sort where `n` is the number of elements:
 
@@ -169,12 +169,12 @@ Space complexity of insertion sort where `n` is the number of elements:
 ### Description
 
 Insertion sort is the last and most efficient of the 3 basic sorting algorithms. Similar to selection sort, insertion sort can be visualized with a deck of playing cards: 
-- Start with all the cards in your right hand. (i.e. unsorted subarray).
-- Select a card and place it into your left hand into the proper sorted position. (i.e. sorted subarray).
+- Start with all the cards in your right hand. (i.e. unsorted subarray shown above in blue).
+- Select a card and place it into your left hand into the proper sorted position. (i.e. sorted subarray shown above in orange).
 - Repeat until all cards have moved from your unsorted right hand to your sorted left hand. 
 
 In terms of software implementation, to remove a card from the unsorted subarray, you simply:
-- Store the first element of the unsorted array in a temporary variable.
+- Store the first element of the unsorted array in a temporary variable (shown above in red).
 - Increment the index of its previous neighbors in the sorted subarray until the correct insertion index is made vacant.
 - Insert the stored element into the vacant, sorted position.
 
@@ -217,7 +217,7 @@ In the previous sorting algorithms, the array was sorted by dividing the array i
 - Sort the two smaller arrays
 - Merge the two sorted smaller arrays back into a single sorted array
 
-The above algorithm is overly simplistic because recursion actually removes the need for the second step. Since the algorithm is recursive, the array is actually divided until there are `n` subarrays that consist of a single element. This can be seen in the above gif when every element has a different color. Since a subarray of one element is already sorted, each subarray is then recursively merged back together such that they are in sorted order. A good visualization of this process can be seen here:
+The above algorithm is overly simplistic because recursion actually removes the need for the second step. Since the algorithm is recursive, the array is actually divided until there are `n` subarrays that consist of a single element. This can be seen in the above gif when every element starts as a different color. Since a subarray of one element is already sorted, each subarray is then recursively merged back together in sorted order. A good visualization of this process can be seen here:
 
 <p align="center">
   <img src="/assets/images/data-structures-and-algorithms/sorting-algorithms/merge-sort-visualization.png" alt="merge-sort-visualization.png"/>
@@ -225,7 +225,7 @@ The above algorithm is overly simplistic because recursion actually removes the 
   <a href="https://www.geeksforgeeks.org/merge-sort/">source: GeeksForGeeks</a>
 </p>
 
-The order of which single elements are split and merged back into a single sorted array is indicated by the green numbers. The order of the merging process is best visualized in the above gif. Merge sort is a stable sorting algorithm. For more information, see the [mycodeschool video tutorial](https://www.youtube.com/watch?v=TzeBrDU-JaY&list=PL2_aWCzGMAwKedT2KfDMB9YA5DgASZb3U&index=5).
+The order in which elements are split and merged back together is indicated by the green numbers. The order of the merging process is best visualized in the above gif. Merge sort is a stable sorting algorithm. For more information, see the [mycodeschool video tutorial](https://www.youtube.com/watch?v=TzeBrDU-JaY&list=PL2_aWCzGMAwKedT2KfDMB9YA5DgASZb3U&index=5).
 
 ### [Implementation](https://github.com/sirpaulmcd/Data-Structures-And-Algorithms/blob/main/src/sorting/SortingAlgorithms.java) in Java
 
@@ -237,7 +237,7 @@ Time complexity of merge sort where `n` is the number of elements:
 
 | All cases | Reasoning |
 | :-------: | --------- |
-| O(n log(n)) | Since merge sort divides the array by a factor of 2 in every recursive step, division until subarrays are a single element in length will take `log(n)` (base 2) recursive levels. On each recursive level, all `n` values are traversed when copying/merging subarrays. |
+| O(n log<sub>2</sub>(n)) | Since merge sort divides the array by a factor of 2 in every recursive step, division until subarrays are a single element in length will take `log(n)` recursive calls. In each recursive call, a portion of the `n` values are sequentially traversed when copying/merging subarrays. |
 
 Space complexity of insertion sort where `n` is the number of elements:
 
@@ -273,13 +273,13 @@ Time complexity of quick sort where `n` is the number of elements:
 
 | Best/Average | Worst | Reasoning |
 | :---------: | :---: | --------- |
-| O(n log(n)) | O(n<sup>2</sup>) | In the best/average case, partitioning is balanced such that left and right subarrays are of relatively equal size. This way, quick sort divides the array by some factor on each recursive step. As such, division until we have reached a single element will take approximately `log(n)` recursive levels. On each recursive level, the remaining (i.e. some factor of `n`) elements are sequentially traversed when arranging around the partition index. In the worst case, partitioning is always unbalanced (i.e. the pivot is always the largest/smallest element in the array) and only left/right subarrays are created during the recursive process. Therefore, division until we have reached a single element will take `n` recursive levels (resembling a linked list).
+| O(n log<sub>2</sub>(n)) | O(n<sup>2</sup>) | In the best/average case, partitioning is balanced such that left and right subarrays are of relatively equal size. This way, quick sort divides the array by some factor on each recursive step. As such, division until we have reached a single element will take approximately `log(n)` recursive levels. On each recursive level, the remaining (i.e. some factor of `n`) elements are sequentially traversed when arranging around the partition index. In the worst case, partitioning is always unbalanced (i.e. the pivot is always the largest/smallest element in the array) and only left/right subarrays are created during the recursive process. Therefore, division until we have reached a single element will take `n` recursive levels (resembling a linked list). This case is statistically improbable when the pivot is selected at random.
 
 Space complexity of insertion sort where `n` is the number of elements:
 
 | Best/Average | Worst | Reasoning |
 | :----------: | :---: | --------- |
-| O(log(n)) | O(n) | Quick sort is an in-place sort and therefore does not require the use of temporary data structures. However, since it is a recursive algorithm, additional space is required to account for the data stored on each recursive level. That is why the space complexity corresponds with time complexity in this case. In the best/average case there are `log(n)` recursive levels with an `O(1)` space complexity. In the worst case, there are `O(n)` recursive levels using `O(1)` space complexity. |
+| O(log<sub>2</sub>(n)) | O(n) | Quick sort is an in-place sort and therefore does not require the use of temporary data structures. However, since it is a recursive algorithm, additional space is required to account for the data stored on each recursive level. That is why the space complexity corresponds with time complexity in this case. In the best/average case there are `log(n)` recursive levels with `O(1)` space complexity and `log(n) * O(1) = O(log(n))`. In the worst case, there are `n` recursive levels with `O(1)` space complexity and `n * O(1) = O(n)`. |
 
 # What next? 
 

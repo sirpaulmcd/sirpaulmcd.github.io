@@ -264,4 +264,4 @@ Be careful though. In the upcoming sections, you will see that recursive sorting
 
 # What next? 
 
-If this is your first time covering these concepts, the best thing you can do right now is practice. There are plenty of practice resources available for free online. Once you feel up to speed, start the [searching algorithms](/tutorials-cheat-sheets/data-structures-and-algorithms/) section. 
+If this is your first time covering these concepts, the best thing you can do right now is practice. There are plenty of practice resources available for free online. Once you feel up to speed, start the [searching algorithms](/tutorials-cheat-sheets/data-structures-and-algorithms/searching-algorithms) section. 

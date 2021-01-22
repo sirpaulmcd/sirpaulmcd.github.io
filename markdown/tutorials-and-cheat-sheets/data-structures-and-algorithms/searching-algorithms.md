@@ -67,7 +67,7 @@ Space complexity where `n` is the number of elements:
 
 | All cases | Reasoning |
 | :-------: | --------- |
-| O(1) | The space complexity of linear search is O(1) because its memory allocations do not depend on input size and no recursive calls are made. |
+| O(1) | The space complexity of linear search is `O(1)` because its memory allocations do not depend on input size and no recursive calls are made. |
 
 **Fun fact:** Even though linear search has a worse time complexity than binary search, it can actually out perform binary search when applied to very small collections due to its simplicity.
 
@@ -85,13 +85,13 @@ The general algorithm is as follows. Given a sorted collection and a search key:
 
 This algorithm is often compared to finding a word in a dictionary:
 - Navigate to a page half way through the dictionary
-  - If your word (i.e. key) is alphabetically lesser than the words on the page, navigate to a page half way between your current page and the beginning
-  - If your word is alphabetically greater than the words on the page, navigate to a page half way between your current page and the end. 
+  - If your word (i.e. key) is alphabetically lesser than the words on the current page, navigate to a page half way between your current page and the beginning
+  - If your word is alphabetically greater than the words on the current page, navigate to a page half way between your current page and the end. 
 - Repeat this process until you find a match or realize your word does not exist. 
 
-Although you may not search a dictionary quite as systematically, the general technique is the same. Just like how your brain may skip to the end of a dictionary to search for a word starting with the letter Z, optimizations can be made to this algorithm to increase its speed.
+You probably wouldn't search a dictionary quite as systematically but the general technique is the same. Just like how your brain may skip to the end of a dictionary to search for a word starting with the letter Z, optimizations can be made to this algorithm to increase its speed.
 
-Binary search significantly outperforms linear search in almost all cases. As seen by the difference in time complexity, the performance difference increases significantly with larger input sizes. For more information, check out the [GeeksForGeeks documentation]() or the [mycodeschool video tutorials](https://www.youtube.com/watch?v=j5uXyPJ0Pew&list=PL2_aWCzGMAwL3ldWlrii6YeLszojgH77j).
+Binary search significantly outperforms linear search in almost all cases. As its time complexity suggests, the performance difference increases significantly with larger input sizes. For more information, check out the [GeeksForGeeks documentation]() or the [mycodeschool video tutorials](https://www.youtube.com/watch?v=j5uXyPJ0Pew&list=PL2_aWCzGMAwL3ldWlrii6YeLszojgH77j).
 
 ### Iterative [Implementation](https://github.com/sirpaulmcd/Data-Structures-And-Algorithms/blob/main/src/searching/SearchingAlgorithms.java) in Java
 
@@ -107,13 +107,13 @@ Time complexity where `n` is the number of elements:
 
 | Average/Worst | Reasoning |
 | :-----------: | --------- |
-| O(log(n)) | On each step of binary search, the remaining number of keys to be searched is decreased by a factor of 2. This means we are converging on a solution at an exponential rate. As such, it will only take log(n) (base 2) steps to find a match. |
+| O(log<sub>2</sub>(n)) | On each step of binary search, the remaining number of keys to be searched is decreased by a factor of **2**. This means we are converging on a solution at an exponential rate. As such, it will only take log<sub>**2**</sub>(n) steps to find a match. |
 
 Space complexity where `n` is the number of elements:
 
 | Iterative | Recursive | Reasoning |
 | :-------: | :-------: | --------- |
-| O(1) | O(log(n)) | The space complexity of iterative binary search is `O(1)` because its memory allocations do not depend on input size and no recursive calls are made. The space complexity of recursive binary search is `O(log(n))` because constant-space memory allocations are applied to `log(n)` recursive levels. |
+| O(1) | O(log<sub>2</sub>(n)) | The space complexity of iterative binary search is `O(1)` because its memory allocations do not depend on input size and no recursive calls are made. The space complexity of recursive binary search is `O(log(n))` because an `O(1)` space complexity is applied to `log(n)` recursive levels and `O(1) * O(log(n)) = O(log(n))`. |
 
 Therefore, iterative binary search is typically a better algorithm than recursive binary search due to its advantage of constant space complexity.
 
