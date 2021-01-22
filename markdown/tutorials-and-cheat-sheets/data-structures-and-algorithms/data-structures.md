@@ -410,7 +410,7 @@ Time complexity for [adjacency list graph implementations](https://github.com/si
 | :-------: | :----------: | ---------- |
 | Adding a vertex | O(1) | Assuming a hash table is used to store adjacency lists, a new vertex can be created in constant time. If not, a search must be performed to check if the vertex already exists resulting in `O(|V|)` time. |
 | Removing a vertex | O(\|V\| + \|E\|) | In order for a vertex to be removed, it must be removed from every adjacency list. Traversing to every vertex in the hash table is `O(|V|)` and traversing every adjacency list (i.e. every edge) is `O(|E|)`. |
-| Adding an edge | O(1) | To add an edge, a vertex must be added to the appropriate adjacency list. Finding the adjacency list from the hash table is `O(1)`. Inserting the vertex into the adjacency list (i.e. linked list) is `O(1)`. This process is repeated twice for non-directional edges. | 
+| Adding an edge | O(1) | To add an edge, a vertex must be added to the appropriate adjacency list. Finding the adjacency list from the hash table is `O(1)`. Inserting the vertex into the adjacency list (i.e. linked list) is `O(1)`. This process is repeated twice for non-directional edges. |
 | Removing an edge | O(\|V\|) | To remove an edge, a vertex must be removed from the appropriate adjacency list. Finding the adjacency list from the hash table is `O(1)`. Traversing the adjacency list for a match is `O(|V|)` because, in the worst case, all vertices are in the adjacency list. Removing the vertex from the adjacency list (i.e. linked list) is O(1). This process is repeated twice for non-directional edges. |
 | Checking if two vertices connect | O(\|V\|) | Finding the adjacency list of the first vertex using the hash table is `O(1)`. Traversing the adjacency list for a match of the second vertex is `O(|V|)` because, in the worst case, all vertices are in the adjacency list. Removing the vertex from the adjacency list (i.e. linked list) is `O(1)`. |
 
@@ -422,6 +422,6 @@ Space complexity for [adjacency list graph implementations](https://github.com/s
 
 # What next? 
 
-There's one more data structure that I will be adding to this page eventually. It's called a [trie](https://www.youtube.com/watch?v=zIjfhVPRZCg) and can also be very helpful for techical interviews. If you're applying to large tech companies, you should probably learn this data structure. 
+There's one more data structure that I will be adding to this page eventually. It's called a [trie](https://www.youtube.com/watch?v=zIjfhVPRZCg) and can also be very helpful for technical interviews. If you're applying to large tech companies, you should probably learn this data structure. 
 
 Knowing about the fundamental data structures is just a baseline. As you continue to improve as a software developer, you will likely apply these data structures in conjunction to create even more complex/specialized data structures to suit your needs. The sky's the limit! If this is your first time covering these concepts, it might take some time for things to really sink in. In my opinion, the best thing you can do is implement the above data structures yourself in your preferred programming language. When you are comfortable, check out the [next](/tutorials-cheat-sheets/data-structures-and-algorithms/) section.
