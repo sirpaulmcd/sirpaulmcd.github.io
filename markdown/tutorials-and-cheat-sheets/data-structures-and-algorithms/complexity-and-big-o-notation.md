@@ -67,7 +67,7 @@ Let's see an example applied to a simple algorithm to find the maximum value in 
     <img src="/assets/images/data-structures-and-algorithms/complexity-and-big-o/complexity-example-1.png" alt="complexity-example-1.png"/>
 </p>
 
-Let's call the functional relationship between the number of operations required to handle an array `t(n)` where *n* is the size of the input array.
+Let's call the functional relationship between the number of operations required to handle an array `t(n)` where `n` is the size of the input array.
 
 In the best case scenario, where the maximum value is at the beginning of the array, line 6 is skipped for every following loop. Therefore, only 4 operations take place in each iteration of the loop. As such:
 
@@ -79,9 +79,7 @@ If we were to graph this relationship, we'd get a straight line with a slope of 
     <img src="/assets/images/data-structures-and-algorithms/complexity-and-big-o/time-complexity-graph.png" alt="time-complexity-graph.png"/>
 </p>
 
-Therefore, for every additional value we add to this array, we're increasing the execution time by 6 primitive operations. 
-
-In the worst case scenario, where the maximum value is at the end of the array, line 6 is never skipped. Therefore, 6 operations take place in each iteration of the loop. As a result: 
+Therefore, for every additional value we add to this array, we're increasing the execution time by 6 primitive operations. In the worst case scenario, where the maximum value is at the end of the array, line 6 is never skipped. Therefore, 6 operations take place in each iteration of the loop. As a result: 
 
 <p align="center">t(n) = 2 + 1 + 2n + <ins><strong>6</strong></ins>(n-1) + 1 = 8n-2</p>
 
@@ -96,11 +94,11 @@ For practical applications, the main focus is Big O. That's because the worst ca
 
 ## Space Complexity
 
-Space complexity uses a fairly similar technique, although easier to grasp. When applied to data structures, it accounts for the total number of values stored in memory. For example, an array that stores n values will need *O(n)* space. Functionally, this means that the required storage space increases linearly with increased array size. Similarly, a 2D array of size n-by-n would require `O(n*n)` or *O(n<sup>2</sup>)* space.
+Space complexity uses a fairly similar technique, although easier to grasp. When applied to data structures, it accounts for the total number of values stored in memory. For example, an array that stores n values will need O(n) space. Functionally, this means that the required storage space increases linearly with increased array size. Similarly, a 2D array of size n-by-n would require `O(n*n)` or O(n<sup>2</sup>) space.
 
-When applied to algorithms, space complexity accounts for the usage of data structures that are dependent on input size. For example, an in-place sort where values are swapped within the existing array can have a space complexity of *O(1)*. However, an out-of-place sort would require copying the values into a temporary array of size *n* which would result in an *O(n)* space complexity. 
+When applied to algorithms, space complexity accounts for the usage of data structures that are dependent on input size. For example, an in-place sort where values are swapped within the existing array can have a space complexity of O(1). However, an out-of-place sort would require copying the values into a temporary array of size *n* which would result in an O(n) space complexity. 
 
-Additionally, space complexity accounts for the memory used up by recursive calls. For example, if a code snippet has an *O(1)* space complexity (i.e. does not use any additional storage dependent on input size) but is recursively executed *n* times, then the algorithm has a space complexity of *O(n)* since `O(1) * n = O(n)`. Plenty more examples will be covered in the upcoming sections.
+Additionally, space complexity accounts for the memory used up by recursive calls. For example, if a code snippet has an O(1) space complexity (i.e. does not use any additional storage dependent on input size) but is recursively executed *n* times, then the algorithm has a space complexity of O(n) since `O(1) * n = O(n)`. Plenty more examples will be covered in the upcoming sections.
 
 # Big O Notation
 
@@ -122,7 +120,7 @@ Big O Notation describes how the input size of an algorithm impacts its runtime.
   <a href="https://www.bigocheatsheet.com">source: bigocheatsheet.com</a>
 </p>
 
-The above image is only meant to show the general shape of the typical Big O functions. At this scale, *O(log n)* and *O(1)* appear the same. In reality, *O(1)* is a horizontal line while *O(log n)* is a curve that quickly flattens out into a horizontal line. Keep in mind that there are runtimes slower than *O(n!)*. That's just where the chart cuts off.
+The above image is only meant to show the general shape of the typical Big O functions. At this scale, O(log n) and O(1) appear the same. In reality, O(1) is a horizontal line while O(log n) is a curve that quickly flattens out into a horizontal line. Keep in mind that there are runtimes slower than O(n!). That's just where the chart cuts off.
 
 Let's translate these relationships into practical examples. If a code snippet has "constant" time complexity, it means that, no matter how large the input size is, the same amount of primitive operations will be required to execute the code. Therefore, the runtime will be about the same no matter how large the data input is.
 
@@ -132,9 +130,9 @@ If we have a snippet of code that has a "linear" time complexity. We know that r
     <img src="/assets/images/data-structures-and-algorithms/complexity-and-big-o/complexity-example-1.png" alt="complexity-example-1.png"/>
 </p>
 
-The Big O (i.e. worst case) runtime is `O(8n-2)` where n is the size of the input array. You may notice that this is a linear relationship as it follows the linear formula `y = mx + b`. This expression can be simplified into the *O(n)* runtime category.
+The Big O (i.e. worst case) runtime is `O(8n-2)` where n is the size of the input array. You may notice that this is a linear relationship as it follows the linear formula `y = mx + b`. This expression can be simplified into the O(n) runtime category.
 
-Why do these relationships matter anyway? Well, software developers use them as a means to compare the performance of different algorithms. If we have two algorithms that can sort an array, but the first has a time complexity of *O(n log n)* and the second has a time complexity of *O(n<sup>2</sup>)*, we know that the first algorithm will perform much faster for large inputs and is therefore more scalable.
+Why do these relationships matter anyway? Well, software developers use them as a means to compare the performance of different algorithms. If we have two algorithms that can sort an array, but the first has a time complexity of O(n log n) and the second has a time complexity of O(n<sup>2</sup>), we know that the first algorithm will perform much faster for large inputs and is therefore more scalable.
 
 ## Simple Cases
 
@@ -216,7 +214,7 @@ There is another type of "for" loop that you may come across. Instead of increme
     <img src="/assets/images/data-structures-and-algorithms/complexity-and-big-o/big-o-example-3.png" alt="big-o-example-3.png"/>
 </p>
 
-As you can see, instead of incrementing `j`, the inner for loop divides `j` by a factor of 2. When an algorithm's steps are reduced by a factor, the resulting complexity is likely *O(log n)*. Think of it this way. The value of `j` starts at `n` and the loop will continue until `j` falls below `1`. With every iteration of the inner loop, the value of `j` is halved. Therefore, the value of `j` is converging to a value below `1` at an exponential rate. Inversely, it could be said that the loops runtime (or required computations) grows at a logarithmic rate with increasing values of `n`. Hence the logarithmic *O(log n)* time complexity.
+As you can see, instead of incrementing `j`, the inner for loop divides `j` by a factor of 2. When an algorithm's steps are reduced by a factor, the resulting complexity is likely O(log n). Think of it this way. The value of `j` starts at `n` and the loop will continue until `j` falls below `1`. With every iteration of the inner loop, the value of `j` is halved. Therefore, the value of `j` is converging to a value below `1` at an exponential rate. Inversely, it could be said that the loops runtime (or required computations) grows at a logarithmic rate with increasing values of `n`. Hence the logarithmic O(log n) time complexity.
 
 ### Example 4: The Sum of Integers 1 through N
 Let's expand our horizons by looking at another special case:
@@ -226,7 +224,7 @@ Let's expand our horizons by looking at another special case:
 </p>
 
 
-In this example, you will find that the number of iterations of the inner loop depends on the value of `i` in the outer loop. Initially, when `i = 1`, the inner loop iterates once. When `i = 2`, the inner loop iterates twice. This repeats until `i = n` and the inner loop iterates `n` times. Therefore, through all values of `i`, the inner loop executes the sum of `1 + 2 + ... + n` times. Mathematically, this sum can be simplified to `n(n+2)/2`. Therefore, the complexity of the inner loop is *O(n<sup>2</sup>)*.
+In this example, you will find that the number of iterations of the inner loop depends on the value of `i` in the outer loop. Initially, when `i = 1`, the inner loop iterates once. When `i = 2`, the inner loop iterates twice. This repeats until `i = n` and the inner loop iterates `n` times. Therefore, through all values of `i`, the inner loop executes the sum of `1 + 2 + ... + n` times. Mathematically, this sum can be simplified to `n(n+2)/2`. Therefore, the complexity of the inner loop is O(n<sup>2</sup>).
 
 Don't worry if you didn't already know that simplification. A 10 year old discovered it back in the late 1700s. To be fair, they grew up to be an amazing mathematician and physicist. If you're not a naturally gifted 10 year old math wizard, you can find an explanation of the proof [here](https://www.youtube.com/watch?v=tpkzn2e5mtI).
 
@@ -256,9 +254,9 @@ In the above algorithm, `fib(4)` will recursively branch off into two `fib(3)` c
     <img src="/assets/images/data-structures-and-algorithms/complexity-and-big-o/fib-tree.png" alt="fib-tree.png"/>
 </p>
 
-To figure out how many times this *O(1)* function is recursively executed, we must find the number of nodes in the resulting tree. As can be seen, each iteration doubles the number of nodes. Therefore, we know the complexity is exponential because the amount of recursive executions grows at an exponential rate. When dealing with a tree such as this, time complexity can be represented as *O(branches<sup>depth</sup>)* where `branches` is the number of recursive branches per node and `depth` is the depth of the tree. In other words, `branches` is the number of recursive calls within the function and `depth` is the maximum number of iterations before the input value reaches the end case. Therefore, since there are 2 recursive calls in the function and it takes `n` iterations for the input value to be decremented to 1, the time complexity of this function is *O(2<sup>n</sup>)*.
+To figure out how many times this O(1) function is recursively executed, we must find the number of nodes in the resulting tree. As can be seen, each iteration doubles the number of nodes. Therefore, we know the complexity is exponential because the amount of recursive executions grows at an exponential rate. When dealing with a tree such as this, time complexity can be represented as O(branches<sup>depth</sup>) where `branches` is the number of recursive branches per node and `depth` is the depth of the tree. In other words, `branches` is the number of recursive calls within the function and `depth` is the maximum number of iterations before the input value reaches the end case. Therefore, since there are 2 recursive calls in the function and it takes *n* iterations for the input value to be decremented to 1, the time complexity of this function is O(2<sup>n</sup>).
 
-In the upcoming sections, you will see that recursive sorting functions like merge sort and quick sort will recursively call themselves twice. However, they will not have exponential time complexities. That's because the recursive end case is approached at an exponential rate. As a result, the `depth` component of the *O(branches<sup>depth</sup>)* equation is logarithmic. Therefore, instead of having a time complexity equation resembling *O(2<sup>n</sup>)*, the equation is actually *O(2<sup>log<sub>2</sub>(n)</sup>)* which, if you know your logarithmic manipulations, is equivalent to *log(2<sup>n</sup>)*. Therefore, they have a logarithmic time complexity rather than an exponential time complexity.
+Be careful though. In the upcoming sections, you will see that recursive sorting functions like merge sort and quick sort will recursively call themselves twice. However, they will not have exponential time complexities. That's because the recursive end case is approached at an exponential rate. As a result, the `depth` component of the O(branches<sup>depth</sup>) equation is logarithmic. Therefore, instead of having a time complexity equation resembling O(2<sup>n</sup>), the equation is actually O(2<sup>log<sub>2</sub>(n)</sup>) which, if you know your logarithmic manipulations, is equivalent to log(2<sup>n</sup>). Therefore, they have a logarithmic time complexity rather than an exponential time complexity.
 
 ## Amortized Time Complexity
 
