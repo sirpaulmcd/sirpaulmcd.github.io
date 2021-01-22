@@ -17,10 +17,11 @@ To help myself better prepare for interviews, I've been learning more about data
 To facilitate my learning, I've been putting together tutorials for the various concepts as I work through them myself.
 Ideally, my notes will be a one-stop-shop for practical DSAA knowledge for myself and anyone else who finds it useful.
 
-The [tutorial series](/tutorials-cheat-sheets/data-structures-and-algorithms/) will be split into 4 parts:
+The [tutorial series](/tutorials-cheat-sheets/data-structures-and-algorithms/) will be split into 5 parts:
 - Complexity and Big O Notation
+- Searching Algorithms
 - Data Structures
 - Sorting Algorithms
-- Algorithms
+- Algorithm Design and Moving Forward
 
 Hopefully it turns out well!

@@ -246,7 +246,7 @@ As you can see, this function will be recursively called until the input value o
 
 ### Example 6: Exponential runtimes
 
-In some cases, you will see functions that recursively call themselves multiple times over (the previous example only had one recursive call). In addition to having multiple recursive calls, expontential runtimes result when the end case is approached incrementally rather than exponentially. Recall that, as shown in example 3, functions where an end case is approached exponentially will have logarithmic time complexity. A popular example of an algorithm with exponential runtime is the recursive fibonacci function. It returns the `nth` number of the fibonacci sequence. For example, the beginning of the fibonacci sequence is `1, 1, 2, 3, 5, 8, 13, ...`. Therefore, `fib(4)` should yield a result of `3`.
+In some cases, you will see functions that recursively call themselves multiple times over (the previous example only had one recursive call). In addition to having multiple recursive calls, exponential runtimes result when the end case is approached incrementally rather than exponentially. Recall that, as shown in example 3, functions where an end case is approached exponentially will have logarithmic time complexity. A popular example of an algorithm with exponential runtime is the recursive fibonacci function. It returns the `nth` number of the fibonacci sequence. For example, the beginning of the fibonacci sequence is `1, 1, 2, 3, 5, 8, 13, ...`. Therefore, `fib(4)` should yield a result of `3`.
 
 <p align="center">
     <img src="/assets/images/data-structures-and-algorithms/complexity-and-big-o/big-o-example-6.png" alt="big-o-example-6.png"/>

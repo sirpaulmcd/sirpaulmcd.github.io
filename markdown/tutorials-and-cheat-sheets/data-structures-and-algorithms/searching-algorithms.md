@@ -28,7 +28,7 @@ has_toc: false
 
 # Fundamental Searching Algorithms
 
-When data is stored inside of a data structure, we need some way of locating it later on when it's needed. As such, searching is one of the most common data structure operations. Now that you have a basic understanding of complexity and Big O notation, it's time to learn the fundamental array searching algorithms. Why arrays? Well, arrays are the most simple/common type of data strucutre. More complex data structures are often implemented using arrays. Therefore, knowing how to search an array is an important skill. 
+When data is stored inside of a data structure, we need some way of locating it later on when it's needed. As such, searching is one of the most common data structure operations. Now that you have a basic understanding of complexity and Big O notation, it's time to learn the fundamental array searching algorithms. Why arrays? Well, arrays are the most simple/common type of data structure. More complex data structures are often implemented using arrays. Therefore, knowing how to search an array is an important skill. 
 
 Technically, under the right conditions, these sorting algorithms can be applied to any linear data structure. Therefore, when you are learning these algorithms, it is important to focus on understanding the general process instead of memorizing the exact implementation. That way, you can apply them to other linear data structures in any language regardless of the underlying conditions.
 
@@ -86,10 +86,10 @@ The general algorithm is as follows. Given a sorted collection and a search key:
 This algorithm is often compared to finding a word in a dictionary:
 - Navigate to a page half way through the dictionary
   - If your word (i.e. key) is alphabetically lesser than the words on the page, navigate to a page half way between your current page and the beginning
-  - If your word is alphabetically greater than the words on the page, nagivate to a page half way between your current page and the end. 
+  - If your word is alphabetically greater than the words on the page, navigate to a page half way between your current page and the end. 
 - Repeat this process until you find a match or realize your word does not exist. 
- 
-Although you may not search a dictionary quite as systematically, the general technique is the same. Just like how your brain may skip to the end of a dicitonary to search for a word starting with the letter Z, optimizations can be made to this algorithm to increase its speed.
+
+Although you may not search a dictionary quite as systematically, the general technique is the same. Just like how your brain may skip to the end of a dictionary to search for a word starting with the letter Z, optimizations can be made to this algorithm to increase its speed.
 
 Binary search significantly outperforms linear search in almost all cases. As seen by the difference in time complexity, the performance difference increases significantly with larger input sizes. For more information, check out the [GeeksForGeeks documentation]() or the [mycodeschool video tutorials](https://www.youtube.com/watch?v=j5uXyPJ0Pew&list=PL2_aWCzGMAwL3ldWlrii6YeLszojgH77j).
 
@@ -107,7 +107,7 @@ Time complexity where `n` is the number of elements:
 
 | Average/Worst | Reasoning |
 | :-----------: | --------- |
-| O(log(n)) | On each step of binary search, the remaining number of keys to be searched is decreased by a factor of 2. This means we are converging on a solution at an exponential rate. As such, it will only take log(n) (base 2) steps to find a match. |  
+| O(log(n)) | On each step of binary search, the remaining number of keys to be searched is decreased by a factor of 2. This means we are converging on a solution at an exponential rate. As such, it will only take log(n) (base 2) steps to find a match. |
 
 Space complexity where `n` is the number of elements:
 

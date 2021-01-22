@@ -20,7 +20,6 @@ For more info, check out the [project wiki](https://github.com/sirpaulmcd/Elite-
 <p align="center">
     <img src="/assets/images/egs/miscellaneous/elite-gardener.png" alt="elite-gardener.png" width=200px/>
 </p>
-
 I have made many [contributions](https://github.com/sirpaulmcd/Elite-Gardening-Squad-Open/wiki/Paul-McDonald) to the game. 
 The most impressive of my contributions is the [WarAndPeace System](https://github.com/sirpaulmcd/Elite-Gardening-Squad-Open/wiki/WarAndPeace-System) which is a generic software architecture for implementing a variety of weapons, obstacles, and items in the Unity game engine.
 
@@ -29,12 +28,12 @@ The most impressive of my contributions is the [WarAndPeace System](https://gith
     <br />
     Base Infrastructure
 </p>
-
 As a teaser, here's an example weapon implemented using the system.
 A projectile launcher that shoots self-regulating bullets that can:
+
 - Deal damage with critical chance
 - Apply knockback through impulsive forces or velocity changes
-- Pierce through a specific number of targers
+- Pierce through a specific number of targets
 - Ricochet off of walls a specific number of times
 
 <p align="center">

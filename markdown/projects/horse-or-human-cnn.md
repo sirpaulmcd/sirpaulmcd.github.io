@@ -56,11 +56,11 @@ The image that was incorrectly classified is shown below:
 <p align="center">
     <img src="/assets/images/horse-or-human-cnn/failed-prediction.png" alt="failed-prediction.png">
 </p>
-
-Upon closer invesitvation, it can be seen that this horse has its body directly facing the camera. 
+Upon closer investigation, it can be seen that this horse has its body directly facing the camera. 
 As a result, its legs align such that it appears almost bipedal. 
 After seeing this special case, it is easy to understand why this simple CNN would wrongly classify this image.
-​
+
+
 ## Conclusion
 This was my first attempt at creating a convolutional neural network.
 It was fun but I'd definitely change some things moving forward. 

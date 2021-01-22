@@ -11,4 +11,4 @@ has_toc: true
 ---
 
 # Tutorials and Cheat Sheets
-I have a habit of making notes as I learn things for myself. I house the tutorials and cheat sheets that I make in a collaborative [Software-Cheat-Sheets](https://github.com/sirpaulmcd/Software-Cheat-Sheets) repo. All of my tutorials and cheat sheets can be found via table below.
+I have a habit of making notes as I learn things for myself. I house the tutorials and cheat sheets that I make in a collaborative [Software-Cheat-Sheets](https://github.com/sirpaulmcd/Software-Cheat-Sheets) repo. All of my tutorials and cheat sheets can also be found via table below.
