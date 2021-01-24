@@ -224,7 +224,7 @@ Let's expand our horizons by looking at another special case:
 </p>
 
 
-In this example, you will find that the number of iterations of the inner loop depends on the value of `i` in the outer loop. Initially, when `i = 1`, the inner loop iterates once. When `i = 2`, the inner loop iterates twice. This repeats until `i = n` and the inner loop iterates `n` times. Therefore, through all values of `i`, the inner loop executes the sum of `1 + 2 + ... + n` times. Mathematically, this sum can be simplified to `n(n+2)/2`. Therefore, the complexity of the inner loop is O(n<sup>2</sup>).
+In this example, you will find that the number of iterations of the inner loop depends on the value of `i` in the outer loop. Initially, when `i = 1`, the inner loop iterates once. When `i = 2`, the inner loop iterates twice. This repeats until `i = n` and the inner loop iterates `n` times. Therefore, through all values of `i`, the inner loop executes the sum of `1 + 2 + ... + n` times. Mathematically, this sum can be simplified to `n(n+1)/2`. Therefore, the complexity of the inner loop is O(n<sup>2</sup>).
 
 Don't worry if you didn't already know that simplification. A 10 year old discovered it back in the late 1700s. To be fair, they grew up to be an amazing [mathematician and physicist](https://en.wikipedia.org/wiki/Carl_Friedrich_Gauss). If you're not a naturally gifted 10 year old math wizard, you can find an explanation of the proof [here](https://www.youtube.com/watch?v=tpkzn2e5mtI).
 
