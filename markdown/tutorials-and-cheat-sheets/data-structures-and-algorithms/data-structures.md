@@ -396,7 +396,7 @@ Time complexity for [adjacency matrix graph implementations](https://github.com/
 | Removing a vertex | O(\|V\|<sup>2</sup>) | To decrease the size of the storage matrix, a new, smaller matrix (i.e. 2D array) must be created and all values must be copied over. |
 | Adding an edge | O(1) | To add an edge, the value in `matrix[i][j]` must be set to from `0` to `1` (or the appropriate weight value). Where `i` is the index of the first vertex and `j` is the index of the second vertex. |
 | Removing an edge | O(1) | To remove an edge, the value in `matrix[i][j]` must be set to from `1` (or the weighted value) to `0`. Where `i` is the index of the first vertex and `j` is the index of the second vertex. |
-| Checking if two vertices connect | O() | A connection can be confirmed by checking that `matrix[i][j]` is not zero. Where `i` is the index of the first vertex and `j` is the index of the second vertex. |
+| Checking if two vertices connect | O(1) | A connection can be confirmed by checking that `matrix[i][j]` is not zero. Where `i` is the index of the first vertex and `j` is the index of the second vertex. |
 
 Space complexity for [adjacency matrix graph implementations](https://github.com/sirpaulmcd/Data-Structures-And-Algorithms/tree/main/src/datastructures/graph/graphs):
 
@@ -417,7 +417,7 @@ Time complexity for [adjacency list graph implementations](https://github.com/si
 Space complexity for [adjacency list graph implementations](https://github.com/sirpaulmcd/Data-Structures-And-Algorithms/tree/main/src/datastructures/graph/graphs):
 
 | Space Complexity | Reasoning |
-| ---------------- | --------- |
+| :--------------: | --------- |
 | O(\|V\|<sup>2</sup>) | For each edge, an additional vertex is stored. Two for a non-direction edge. |
 
 # What next? 
