@@ -272,10 +272,10 @@ Time and space complexity for [binary search tree implementations](https://githu
 
 | Operation | Average | Worst | Reasoning |
 | :-------: | :-----: | :---: | --------- |
-| Indexing | Θ(n) | O(n) | Given an index, a BST must sequentially search itself to locate the corresponding value. Since BSTs are sorted, values can be associated with an index regardless of its branching structure. |
-| Searching | Θ(log(n)) | O(n) | Given a value, a BST must binary search itself for a match. In the worst case, the tree is unbalanced and performs sequential search like a linked list. |
-| Inserting | Θ(log(n)) | O(n)  | If the tree is balanced, binary search is used to locate the insertion position. Otherwise, sequential search is used. |
-| Deleting | Θ(log(n)) | O(n) | If the tree is balanced, binary search is used to locate the deletion position. Otherwise, sequential search is used. |
+| Indexing | O(n) | O(n) | Given an index, a BST must sequentially search itself to locate the corresponding value. Since BSTs are sorted, values can be associated with an index regardless of its branching structure. |
+| Searching | O(log(n)) | O(n) | Given a value, a BST must binary search itself for a match. In the worst case, the tree is unbalanced and performs sequential search like a linked list. |
+| Inserting | O(log(n)) | O(n)  | If the tree is balanced, binary search is used to locate the insertion position. Otherwise, sequential search is used. |
+| Deleting | O(log(n)) | O(n) | If the tree is balanced, binary search is used to locate the deletion position. Otherwise, sequential search is used. |
 
 | Space Complexity | Reasoning |
 | :--------------: | --------- |
@@ -350,9 +350,9 @@ Time and space complexity for [separate chaining hash table implementations](htt
 
 | Operation | Average | Worst | Reasoning |
 | :-------: | :-----: | :---: | --------- |
-| Searching | Θ(1) | O(n) | Given a key, if no collisions, accessing the index corresponding to the key is `O(1)`. In a worst case scenario, there are only collisions and searching the linked list is `O(n)`. |
-| Inserting | Θ(1) | O(n)  | If no collisions, accessing the index corresponding to the key is `O(1)` and inserting into the linked list is `O(1)`. In a worst case scenario, there are only collisions and the entire linked list must be traversed to check if the key already exists resulting in an `O(n)` runtime. |
-| Deleting | Θ(1) | O(n) | If no collisions, accessing the index corresponding to the key is `O(1)` and deleting from the linked list is `O(1)`. In a worst case scenario, there are only collisions and the entire linked list must be traversed to find the node to be removed resulting in an `O(n)` runtime.  |
+| Searching | O(1) | O(n) | Given a key, if no collisions, accessing the index corresponding to the key is `O(1)`. In a worst case scenario, there are only collisions and searching the linked list is `O(n)`. |
+| Inserting | O(1) | O(n)  | If no collisions, accessing the index corresponding to the key is `O(1)` and inserting into the linked list is `O(1)`. In a worst case scenario, there are only collisions and the entire linked list must be traversed to check if the key already exists resulting in an `O(n)` runtime. |
+| Deleting | O(1) | O(n) | If no collisions, accessing the index corresponding to the key is `O(1)` and deleting from the linked list is `O(1)`. In a worst case scenario, there are only collisions and the entire linked list must be traversed to find the node to be removed resulting in an `O(n)` runtime.  |
 
 | Space Complexity | Reasoning |
 | :--------------: | --------- |
