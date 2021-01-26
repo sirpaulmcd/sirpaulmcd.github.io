@@ -14,7 +14,7 @@ has_toc: false
 
 Software job interviews are incredibly challenging/technical when compared to other disciplines. For these interviews, especially those involving big tech companies, knowledge of data structures and algorithms is incredibly important. This is because data structures and algorithms are an essential part of becoming a competent software developer. These concepts are required to ensure that your software, in addition to being functional, reaches its peak performance for the desired function. 
 
-If you are a software developer, you will need to refresh yourself on these concepts periodically throughout your career. Especially before a job interview. As such, I have structured this tutorial to accommodate first-time learners as well as experienced programmers. However, if you are learning these concepts for the first time, you will need to be familiar with the concepts of object oriented programming (OOP) and recursion.
+If you are a software developer, you will need to refresh yourself on these concepts periodically throughout your career. Especially before a job interview. As such, I have structured this tutorial to accommodate first-time learners as well as experienced programmers. However, if you are learning these concepts for the first time, you will need to be familiar with the concepts of object oriented programming (OOP), recursion, and stack/heap memory.
 
 There are 5 distinct pillars to learning Data Structures and Algorithms. The links to each are included below:
 - [**Complexity and Big O Notation**](/tutorials-cheat-sheets/data-structures-and-algorithms/complexity-and-big-o-notation/)

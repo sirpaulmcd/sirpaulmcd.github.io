@@ -98,7 +98,9 @@ Space complexity uses a fairly similar technique, although easier to grasp. When
 
 When applied to algorithms, space complexity accounts for the usage of data structures that are dependent on input size. For example, an in-place sort where values are swapped within the existing array can have a space complexity of O(1). However, an out-of-place sort would require copying the values into a temporary array of size *n* which would result in an O(n) space complexity. 
 
-Additionally, space complexity accounts for the memory used up by recursive calls. For example, if a code snippet has an O(1) space complexity (i.e. does not use any additional storage dependent on input size) but is recursively executed *n* times, then the algorithm has a space complexity of O(n) since `O(1) * n = O(n)`. Plenty more examples will be covered in the upcoming sections.
+Additionally, space complexity accounts for the memory used up by recursive calls. For example, if a code snippet has an O(1) space complexity (i.e. does not use any additional storage dependent on input size) but is recursively executed *n* times, then the algorithm has a space complexity of O(n) since `O(1) * n = O(n)`. 
+
+Be mindful when considering recursive calls. The equation where `O(1) * n = O(n)` only applies when all `n` recursive calls exist in stack memory at the same time. This isn't always the case. For example, if a function recursively calls itself multiple times, its executions can be visualized in a tree-like pattern (see [example 6](#example-6-exponential-runtimes)). In this case, instead of all recursive calls existing in stack memory at once, the recursive call stack only gets as high as the depth of the tree. Therefore, as you will see with quick and merge sort, the space complexity of branching recursive functions typically correlates with tree depth. Plenty more examples will be covered in the upcoming sections.
 
 # Big O Notation
 
