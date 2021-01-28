@@ -237,7 +237,7 @@ Time complexity of merge sort where `n` is the number of elements:
 
 | All cases | Reasoning |
 | :-------: | --------- |
-| O(n log<sub>2</sub>(n)) | Since merge sort divides the array by a factor of 2 in every recursive step, division until subarrays are a single element in length will take `log(n)` recursive calls. In each recursive call, a portion of the `n` values are sequentially traversed when copying/merging subarrays. |
+| O(n log<sub>2</sub>(n)) | Since merge sort divides the array by a factor of 2 in every recursive step, division until subarrays are a single element in length will take `log(n)` recursive levels. In each recursive level, `n` values are sequentially traversed when copying/merging subarrays. |
 
 Space complexity of insertion sort where `n` is the number of elements:
 
