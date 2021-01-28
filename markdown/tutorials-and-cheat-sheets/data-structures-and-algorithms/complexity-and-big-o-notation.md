@@ -195,12 +195,9 @@ This is similar to the previous example. The twist is that you have to account f
 
 You might be thinking, "This process takes forever!", and you'd be right. Typically, software developers do not calculate time complexities down to the last primitive computation. Practical applications of Big O drop the extra details at the end anyway. However, knowing the entire process is important for your understanding.
 
-For the majority of your time using Big O techniques, you will simply be scanning for the "heavy hitters" on each line and their relationships to each other. Let's look at the previous example again and take a more streamlined approach.
+For the majority of your time using Big O techniques, you will simply be scanning for the "heavy hitters" on each line and their relationships to each other. Let's look at the previous example again and take a more streamlined approach. No highlighting necessary.
 
-<p align="center">
-    <img src="/assets/images/data-structures-and-algorithms/complexity-and-big-o/big-o-example-2.1.png" alt="big-o-example-2.1.png"/>
-</p>
-
+<script src="https://gist.github.com/sirpaulmcd/2450000326da0b24f111edf3d2f8a1e6.js?file=ForLoops.java"></script>
 
 As you can see, the only important lines to consider were lines 1 and 3. Since we know each loop iterates n times, we know that this compounds into a complexity of O(n<sup>2</sup>) for the inner loop. That was much faster!
 
@@ -212,19 +209,14 @@ The above section explored some fundamental cases. However, as you will find, th
 
 There is another type of "for" loop that you may come across. Instead of incrementing/decrementing after each iteration, it reduces the remaining iterations by a factor. Here's an example:
 
-<p align="center">
-    <img src="/assets/images/data-structures-and-algorithms/complexity-and-big-o/big-o-example-3.png" alt="big-o-example-3.png"/>
-</p>
+<script src="https://gist.github.com/sirpaulmcd/2450000326da0b24f111edf3d2f8a1e6.js?file=Logarithmic.java"></script>
 
 As you can see, instead of incrementing `j`, the inner for loop divides `j` by a factor of 2. When an algorithm's steps are reduced by a factor, the resulting complexity is likely O(log n). Think of it this way. The value of `j` starts at `n` and the loop will continue until `j` falls below `1`. With every iteration of the inner loop, the value of `j` is halved. Therefore, the value of `j` is converging to a value below `1` at an exponential rate. Inversely, it could be said that the loops runtime (or required computations) grows at a logarithmic rate with increasing values of `n`. Hence the logarithmic O(log n) time complexity.
 
 ### Example 4: The Sum of Integers 1 through N
 Let's expand our horizons by looking at another special case:
 
-<p align="center">
-    <img src="/assets/images/data-structures-and-algorithms/complexity-and-big-o/big-o-example-4.png" alt="big-o-example-4.png"/>
-</p>
-
+<script src="https://gist.github.com/sirpaulmcd/2450000326da0b24f111edf3d2f8a1e6.js?file=SumOfIntegers.java"></script>
 
 In this example, you will find that the number of iterations of the inner loop depends on the value of `i` in the outer loop. Initially, when `i = 1`, the inner loop iterates once. When `i = 2`, the inner loop iterates twice. This repeats until `i = n` and the inner loop iterates `n` times. Therefore, through all values of `i`, the inner loop executes the sum of `1 + 2 + ... + n` times. Mathematically, this sum can be simplified to `n(n+1)/2`. Therefore, the complexity of the inner loop is O(n<sup>2</sup>).
 
@@ -236,19 +228,29 @@ This pattern appears in software frequently enough that having the formula for t
 
 Loops are not the only way code executions can be compounded multiple times. Recursive functions act in a similar way. Here's an example function used to calculate the factorial value of an integer:
 
-<p align="center">
-    <img src="/assets/images/data-structures-and-algorithms/complexity-and-big-o/big-o-example-5.png" alt="big-o-example-5.png"/>
-</p>
+<script src="https://gist.github.com/sirpaulmcd/2450000326da0b24f111edf3d2f8a1e6.js?file=Recursive.java"></script>
 
 As you can see, this function will be recursively called until the input value of `n` is decremented down to 1. Therefore, even though the function itself has a complexity of `O(1)`, it is recursively executed `n` times. As such, the time complexity is `O(1) * n = O(n)`.
 
 ### Example 6: Exponential runtimes
 
-In some cases, you will see functions that recursively call themselves multiple times over (the previous example only had one recursive call). In addition to having multiple recursive calls, exponential runtimes result when the end case is approached incrementally rather than exponentially. Recall that, as shown in [example 3](#example-3-logarithmic-complexity), functions where an end case is approached exponentially will have logarithmic time complexity. A popular example of an algorithm with exponential runtime is the recursive fibonacci function. It returns the `nth` number of the fibonacci sequence. For example, the beginning of the fibonacci sequence is `1, 1, 2, 3, 5, 8, 13, ...`. Therefore, `fib(4)` should yield a result of `3`.
+In some cases, you will see functions that recursively call themselves multiple times over (the previous example only had one recursive call). In addition to having multiple recursive calls, exponential runtimes result when the end case is approached incrementally rather than exponentially. Recall that, as shown in [example 3](#example-3-logarithmic-complexity), functions where an end case is approached exponentially will have logarithmic time complexity. 
+
+My favorite example of exponential runtimes is from [Cracking the Coding Interview](https://www.amazon.ca/Cracking-Coding-Interview-Programming-Questions/dp/0984782850). The following code returns the `nth` number of a sequence where every number is double the previous number. For example, the beginning of the sequence is `[1, 2, 4, 8, 16, 32, 64, ...]`. Therefore, `f(4)` should yield a result of `3`.
+
+<script src="https://gist.github.com/sirpaulmcd/2450000326da0b24f111edf3d2f8a1e6.js?file=Double.java"></script>
+
+In the above algorithm, `f(4)` will recursively branch off into two `f(3)` calls. Each `f(3)` call will branch into two more `f(2)` calls. This will continue until the `f(1)` calls end the cycle. This branching is visualized below:
 
 <p align="center">
-    <img src="/assets/images/data-structures-and-algorithms/complexity-and-big-o/big-o-example-6.png" alt="big-o-example-6.png"/>
+    <img src="/assets/images/data-structures-and-algorithms/complexity-and-big-o/f-tree.png" alt="f-tree.png"/>
 </p>
+
+To figure out how many times this O(1) function is recursively executed, we must find the number of nodes in the resulting tree. As can be seen, each iteration doubles the number of nodes. Therefore, we know the complexity is likely exponential because the amount of recursive executions appears to grow at an exponential rate. When dealing with a tree such as this, time complexity can be represented as O(branches<sup>depth</sup>) where `branches` is the number of recursive branches per node and `depth` is the depth of the tree. In other words, `branches` is the number of recursive calls within the function and `depth` is the maximum number of iterations before the input value reaches the end case. Therefore, since there are 2 recursive calls in the function and it takes *n* iterations for the input value to be decremented to 1, the time complexity of this function is O(2<sup>n</sup>).
+
+Another popular example of an algorithm with exponential runtime is the recursive fibonacci function. It returns the `nth` number of the fibonacci sequence. For example, the beginning of the fibonacci sequence is `[1, 1, 2, 3, 5, 8, 13, ...]`. Therefore, `fib(4)` should yield a result of `3`.
+
+<script src="https://gist.github.com/sirpaulmcd/2450000326da0b24f111edf3d2f8a1e6.js?file=Fibonacci.java"></script>
 
 In the above algorithm, `fib(4)` will recursively branch off into a `fib(3)` call and a `fib(2)` call. The `fib(3)` call will branch into a `fib(2)` call and a `fib(1)` call. This will continue until the `fib(1)` and `fib(0)` calls end the cycle. This branching is visualized below: 
 
@@ -256,7 +258,7 @@ In the above algorithm, `fib(4)` will recursively branch off into a `fib(3)` cal
     <img src="/assets/images/data-structures-and-algorithms/complexity-and-big-o/fib-tree.png" alt="fib-tree.png"/>
 </p>
 
-To figure out how many times this O(1) function is recursively executed, we must find the number of nodes in the resulting tree. As can be seen, each iteration doubles the number of nodes. Therefore, we know the complexity is likely exponential because the amount of recursive executions appears to grow at an exponential rate. When dealing with a tree such as this, time complexity can be represented as O(branches<sup>depth</sup>) where `branches` is the number of recursive branches per node and `depth` is the depth of the tree. In other words, `branches` is the number of recursive calls within the function and `depth` is the maximum number of iterations before the input value reaches the end case. Therefore, since there are 2 recursive calls in the function and it takes *n* iterations for the input value to be decremented to 1, the time complexity of this function is O(2<sup>n</sup>).
+Using the branches<sup>depth</sup> equation, the fibonacci method also has a time complexity of O(2<sup>n</sup>). However, the recursive fibonacci branching did not create a complete tree like the previous example. That is to say, there are less than 2<sup>n</sup> nodes in the above tree. Therefore, the O(1) code snippet is not recursively called exactly 2<sup>n</sup> times. If you dive into the math, it's actually recursively called approximately 1.6<sup>n</sup> times. However, 2<sup>n</sup> is an acceptable approximation.
 
 Be careful though. In the upcoming sections, you will see that recursive sorting functions like merge sort and quick sort will recursively call themselves twice. However, they will not have exponential time complexities. That's because the recursive end case is approached at an exponential rate. As a result, the `depth` component of the O(branches<sup>depth</sup>) equation is logarithmic. Therefore, instead of having a time complexity equation resembling O(2<sup>n</sup>), the equation is actually O(2<sup>log<sub>2</sub>(n)</sup>) which, if you know your logarithmic manipulations, is equivalent to O(n).
 
