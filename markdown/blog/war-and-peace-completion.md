@@ -25,8 +25,8 @@ I've never made such a complex system from scratch before.
 For those of you that are not impressed, here's an explosion to spice things up:
 
 <p align="center">
-    <img src="/assets/images/egs/war-and-peace-system/grenade.gif" alt="grenade-implementation.png"/>
+    <img src="/assets/images/onion-trail/war-and-peace-system/grenade.gif" alt="grenade-implementation.png"/>
 </p>
 
-Intrigued? If so, there's plenty more gifs of weapon implementations on the [system description page](https://github.com/sirpaulmcd/Elite-Gardening-Squad-Open/wiki/WarAndPeace-System). 
+Intrigued? If so, there's plenty more gifs of weapon implementations on the [system description page](https://github.com/sirpaulmcd/Onion-Trail-Open/wiki/WarAndPeace-System). 
 I also go into detail about the system architecture. 

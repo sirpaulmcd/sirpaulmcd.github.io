@@ -24,7 +24,7 @@ This concept is a revamp of Oregon Trail fairly similar in nature to a game call
 Here's a little demo teaser:
 
 <p align="center">
-    <img src="/assets/images/egs/oregon-trail-system/basic-prompts.gif" alt="basic-prompts.png"/>
+    <img src="/assets/images/onion-trail/oregon-trail-system/basic-prompts.gif" alt="basic-prompts.png"/>
 </p>
 
 One last thing. I'm still working through my [data structures and algorithms tutorial series](/tutorials-cheat-sheets/data-structures-and-algorithms/).
