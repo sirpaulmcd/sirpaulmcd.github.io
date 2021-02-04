@@ -103,7 +103,7 @@ From the above chart, using your Big O knowledge, you should be able to tell tha
 
 ### Description
 
-Insertion sort is often related to sorting a hand of playing cards. The algorithm is as follows:
+Selection sort is often related to sorting a hand of playing cards. The algorithm is as follows:
 - Start with all the cards in your right hand (i.e. the unsorted subarray shown above in blue).
 - Select the minimum card from your right hand and place it into the end of your left hand (i.e. the sorted subarray shown above in orange).
 - Repeat until all cards have moved from your unsorted right hand to your sorted left hand. 
