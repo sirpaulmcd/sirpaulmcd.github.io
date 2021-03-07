@@ -15,9 +15,10 @@ has_toc: false
 
 Happy new year! I haven't posted an update in a while so I figured I should talk about some of the stuff I've been busy with.
 Last year, a team of friends and I started a game development project together.
-Our eager minds pitched several intruiging game concepts until we settled on a coop dungeon crawler called Elite Gardening Squad.
+Our eager minds pitched several intriguing game concepts until we settled on a coop dungeon crawler called Elite Gardening Squad.
 Expectedly, as time passed, the team's passion for game development faded as people prioritized their work or other hobbies.
 Fortunately, I am still eager as ever to continue developing games in my spare time.
+
 Given the circumstances, I have decided to pivot the scope of the game to reflect the smaller team size.
 Instead scrapping everything, we're taking mechanics that have already been implemented and applying them to a new concept.
 This concept is a revamp of Oregon Trail fairly similar in nature to a game called Death Road to Canada.

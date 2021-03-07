@@ -13,8 +13,8 @@ has_toc: false
 # WarAndPeace System Completion
 ### Nov 23, 2020
 
-After a week or two of hard work, I'm glad to say that I have completed the foundation for my WarAndPeace System! 
-"What's that?", you may be wondering. Well, I'm glad you asked.
+I have an announcement to make. I'm pleased to say that I have completed the foundation for my WarAndPeace System! 
+"What's that?", you say? Well, I'm glad you asked.
 It's a generic software architecture for implementing a variety of weapons, obstacles, and items in the Unity game engine!
 
 What do you mean that's not exciting???
