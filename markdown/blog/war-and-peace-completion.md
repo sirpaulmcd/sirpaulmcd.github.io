@@ -1,7 +1,7 @@
 ---
 layout: default
 title: WarAndPeace System Completed
-permalink: /blog/warandpeace-system-completed/
+permalink: /blog/war-and-peace-completion/
 parent: Blog
 # grand_parent: Blog
 has_children: false
@@ -30,3 +30,7 @@ For those of you that are not impressed, here's an explosion to spice things up:
 
 Intrigued? If so, there's plenty more gifs of weapon implementations on the [system description page](https://github.com/sirpaulmcd/Onion-Trail-Open/wiki/WarAndPeace-System). 
 I also go into detail about the system architecture. 
+
+<hr>
+<span style="text-align: left"><a href="/blog/official-launch">Previous Post</a></span>
+<span style="float: right"><a href="/blog/data-structures-and-algorithms-tutorial">Next Post</a></span>

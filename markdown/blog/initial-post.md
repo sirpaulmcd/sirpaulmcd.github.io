@@ -20,3 +20,8 @@ As a new engineer, I want to find a prosperous and stable future career.
 However, as an individual, I want to avoid selling myself short by wasting my creative potential being a cog in some big tech machine. 
 While I am on the hunt for the right job, it seems only right to document my progress and lessons learned as I grow as a software developer.
 I'm not entirely sure what I want to share in this blog but I know that having one is the right decision.
+
+[Next](/blog/official-launch)
+
+<hr>
+<span style="float: right"><a href="/blog/official-launch">Next Post</a></span>

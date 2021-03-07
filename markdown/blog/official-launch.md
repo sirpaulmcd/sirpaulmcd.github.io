@@ -19,3 +19,7 @@ It's nice that I've finally found a use for one as a Software Engineering portfo
 I have the foundation set up. Now all I have to do is expand the selection.
 I'll be picking up another personal project soon.
 I have some friends that may want to revamp the Databasify project that we worked on during our masters together. 
+
+<hr>
+<span style="text-align: left"><a href="/blog/initial-post">Previous Post</a></span>
+<span style="float: right"><a href="/blog/war-and-peace-completion">Next Post</a></span>

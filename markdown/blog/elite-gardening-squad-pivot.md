@@ -1,7 +1,7 @@
 ---
 layout: default
 title: EGS Pivot
-permalink: /blog/egs-pivot/
+permalink: /blog/elite-gardening-squad-pivot/
 parent: Blog
 # grand_parent: Blog
 has_children: false
@@ -30,3 +30,7 @@ Here's a little demo teaser:
 One last thing. I'm still working through my [data structures and algorithms tutorial series](/tutorials-cheat-sheets/data-structures-and-algorithms/).
 I'm excited to release the data structures component because I think a lot of people will find it helpful (my future self included).
 Now that the holidays are out of the way, it'll be done fairly soon. 
+
+<hr>
+<span style="text-align: left"><a href="/blog/data-structures-and-algorithms-tutorial">Previous Post</a></span>
+<span style="float: right"><a href="/blog/gift-exchange-project">Next Post</a></span>

@@ -25,3 +25,7 @@ The [tutorial series](/tutorials-cheat-sheets/data-structures-and-algorithms/) w
 - Algorithm Design and Moving Forward
 
 Hopefully it turns out well!
+
+<hr>
+<span style="text-align: left"><a href="/blog/war-and-peace-completion">Previous Post</a></span>
+<span style="float: right"><a href="/blog/elite-gardening-squad-pivot">Next Post</a></span>
