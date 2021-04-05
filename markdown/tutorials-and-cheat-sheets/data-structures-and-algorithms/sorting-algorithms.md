@@ -64,7 +64,7 @@ Then we'll cover some more useful/advanced sorting algorithms:
 - Quick sort (random)
 - *More to be added later...*
 
-If you want to empirically see how the performance of these sorting algorithms compare, I have implemented them in java. Using this [script](https://github.com/sirpaulmcd/Data-Structures-And-Algorithms/blob/main/src/sorting/SortingAlgorithms.java), you can record the runtime of each sorting algorithm with input arrays of varying orders and sizes. 
+If you want to empirically see how the performance of these sorting algorithms compare, I have implemented them in Java. Using this [script](https://github.com/sirpaulmcd/Data-Structures-And-Algorithms/blob/main/src/sorting/SortingAlgorithms.java), you can record the runtime of each sorting algorithm with input arrays of varying orders and sizes. 
 
 I find that the best way to learn sorting algorithms is to implement them yourself in your preferred programming language. If you are a visual learner, a great tool you can use is [visualgo.net](https://visualgo.net/en/sorting). This website allows you to visualize various sorting algorithms on custom arrays. You can go at your own pace working step-by-step through the code. Another good resource is [GeeksForGeeks](https://www.geeksforgeeks.org/sorting-algorithms/). Their website contains implementations of each sorting algorithm in a variety of programming languages. If you like videos, [mycodeschool](https://www.youtube.com/user/mycodeschool) is a YouTube channel with plenty of high quality video tutorials on sorting algorithms.
 

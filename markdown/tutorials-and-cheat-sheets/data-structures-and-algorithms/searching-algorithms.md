@@ -36,7 +36,7 @@ There are two fundamental searching algorithms:
 - Linear (AKA sequential) search
 - Binary (AKA half-interval or logarithmic) search
 
-If you want to empirically see how the performance of these searching algorithms compare, I have implemented them in java. Using this [script](https://github.com/sirpaulmcd/Data-Structures-And-Algorithms/blob/main/src/searching/SearchingAlgorithms.java), you can record the runtime of each searching algorithm with input arrays of varying orders and sizes. 
+If you want to empirically see how the performance of these searching algorithms compare, I have implemented them in Java. Using this [script](https://github.com/sirpaulmcd/Data-Structures-And-Algorithms/blob/main/src/searching/SearchingAlgorithms.java), you can record the runtime of each searching algorithm with input arrays of varying orders and sizes. 
 
 ## Linear (Sequential) Search
 
@@ -74,7 +74,7 @@ Space complexity where `n` is the number of elements:
 ## Binary Search
 
 ### Description
-Binary search is significantly more effective/scalable than linear search but it can only be performed on sorted lists.
+Binary search is significantly more effective/scalable than linear search but it can only be performed on sorted collections.
 
 The general algorithm is as follows. Given a sorted collection and a search key:
 - Locate the middle item

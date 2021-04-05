@@ -64,7 +64,7 @@ Although the above 4 operations are an essential part of many data structures, t
 
 When using tables found on the internet, it is important to keep in mind that listed values can be misleading. The complexities listed in these tables depend on a variety of assumptions. For example, the `O(1)` insertion time complexity for linked lists assumes that you already have a reference to the node you're inserting on. A linked list may have a time complexity of `O(1)` when inserting at a referenced node such as the head or the tail. However, inserting into the middle of the list requires a sequential search which results in an `O(n)` runtime. As you can see, vital information can be lost in translation when dealing with simple summaries.
 
-Regarding space complexity, almost all of the fundamental data structures discussed below have an `O(n)` space complexity where `n` represents the number of elements or nodes. However, even though many data structures are relatively equivalent in terms of space complexity (i.e. memory scalability), there are situations in which certain data structures outperform others in terms of memory. For example, a densely populated array takes up less space than a well populated linked list. However, a sparely populated linked list takes up less space than a sparsely populated array.
+Regarding space complexity, almost all of the fundamental data structures discussed below have an `O(n)` space complexity where `n` represents the number of elements or nodes. However, even though many data structures are relatively equivalent in terms of space complexity (i.e. memory scalability), there are situations in which certain data structures outperform others in terms of memory. For example, a densely populated array takes up less space than a linked list of the same size. However, a sparsely populated array takes up more space than a shorter, full linked list.
 
 ## What To Expect
 
@@ -75,13 +75,13 @@ In this section, we'll be going over we'll be going over the fundamental data st
 - Defining the complexities of the major operations of the data structure with reasoning.
 - Additional theory where applicable.
 
-I find that the best way to learn how a data structure works is to implement it yourself in your preferred programming language. To serve as examples, I've implemented all of the data structures covered in this tutorial using Java. Why Java? It's more hands-on than Python but not as complex as C++. It's easy to read and similar in syntax to other popular programming languages. It's also my first and preferred object-oriented programming language. You can find my java implementations for each data structures [here](https://github.com/sirpaulmcd/Data-Structures-And-Algorithms/tree/main/src/datastructures) or in their respective sections.
+I find that the best way to learn how a data structure works is to implement it yourself in your preferred programming language. To serve as examples, I've implemented all of the data structures covered in this tutorial using Java. Why Java? It's more hands-on than Python but not as complex as C++. It's easy to read and similar in syntax to other popular programming languages. It's also my first and preferred object-oriented programming language. You can find my Java implementations for each data structures [here](https://github.com/sirpaulmcd/Data-Structures-And-Algorithms/tree/main/src/datastructures) or in their respective sections.
 
 For additional resources, [GeeksForGeeks](https://www.geeksforgeeks.org/data-structures/) has extensive documentation on data structures. Including sample implementations in a variety of languages. They also have quizzes and practice questions to assist your learning. Additionally, [mycodeschool](https://www.youtube.com/user/mycodeschool) is a YouTube channel with plenty of high quality video tutorials on data structures. Mycodeschool is an incredible resource for learning data structure theory. Unfortunately, it also has a bit of a tragic [backstory](https://www.freecodecamp.org/news/mycodeschool-youtube-channel-history/) and stopped publishing videos back in 2016.
 
 ## Choosing Data Structures
 
-While you learn about a specific data structure, it is important to understand its performance relative to other data structures. You should be aware of the common applications for a data structure as well as how its complexities cause it to be advantageous or problematic for certain applications. When you're choosing a data structure, there are some important questions to ask:
+While you learn about a specific data structure, it is important to understand its performance relative to other data structures. You should be aware of the common applications for a data structure as well as how its complexities cause it to be advantageous or problematic for certain tasks. When you're choosing a data structure, there are some important questions to ask:
 - What data is being stored?
 - What are the major operations required by the data structure to store this information?
 - What data structures have the lowest complexities for the required operations?
@@ -119,7 +119,9 @@ Time and space complexity for [array implementations](https://github.com/sirpaul
 | :--------------: | --------- |
 | O(n) | An array requires one empty slot for every stored value. |
 
-Note that implementations of dynamic arrays typically increase their size by some factor when they reach capacity. As such, when there is space remaining in the array (i.e. the array is under capacity), insertion to the end of the array is `O(1)`. When there isn't space and the array must be resized, the time complexity becomes `O(n)` because elements need to be shifted. Since this operation has scenarios that result in different time complexities, it is said to have an [amortized](https://medium.com/@satorusasozaki/amortized-time-in-the-time-complexity-of-an-algorithm-6dd9a5d38045) time complexity.
+Note that implementations of dynamic arrays typically increase their size by some factor when they reach capacity. As such, when there is space remaining in the array (i.e. the array is under capacity), insertion to the end of the array is `O(1)`. When there isn't space and the array must be resized, the time complexity becomes `O(n)` since `n` values must be copied into a larger storage array. Since this operation has scenarios that result in different time complexities, it is said to have an [amortized](https://medium.com/@satorusasozaki/amortized-time-in-the-time-complexity-of-an-algorithm-6dd9a5d38045) time complexity. 
+
+Keep in mind that dynamic arrays simply extend primitive arrays and provide the illusion of resizing. Primitive arrays are fixed in size because their data must be physically stored side-by-side in memory such that an index can be established. In reality, resizing a dynamic array involves the copying of `n` values from a smaller primitive storage array into a larger primitive storage array.
 
 ## Linked Lists
 
