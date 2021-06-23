@@ -5,7 +5,7 @@ permalink: /projects/client-server-tic-tac-toe/
 parent: Projects
 # grand_parent: Blog
 has_children: false
-nav_order: 1
+nav_order: 3
 nav_exclude: false
 has_toc: false
 ---

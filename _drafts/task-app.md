@@ -10,7 +10,7 @@ nav_exclude: false
 has_toc: false
 ---
 
-# Task App
+# Task App 📝
 
 A full-stack To-Do List application. After creating an account, users can manage their user information as well as To-Do style tasks in various lists. The project repo can be found [here](https://github.com/sirpaulmcd/Task-App).
 
@@ -25,16 +25,39 @@ Check and see if the project is currently deployed [here](http://taskapp.paulspr
 
 ## Preview
 
-### Sign Up or Login
+New users can sign up for an account:
+<p align="center">
+<img src="/assets/images/task-app/sign-up.gif" alt="sign up preview" width=450 />
+</p>
 
-### Manage your account
+Existing users can sign in with email and password:
+<p align="center">
+<img src="/assets/images/task-app/sign-in.gif" alt="sign in preview" width=450 />
+</p>
 
-### Create tasks for various lists
+Registered users can manage their information and change their theme:
+<p align="center">
+<img src="/assets/images/task-app/user-management.gif" alt="user management preview" width=650 />
+</p>
 
-- Task creation
-- Completing a task
-- Editing a task (change lists)
-- Deleting a task
+Users can create tasks with corresponding categories and due dates:
+<p align="center">
+<img src="/assets/images/task-app/create-task.gif" alt="create task preview" width=650 />
+</p>
+
+Tasks can be filtered by category using the dropdown menu. In a given view, tasks are sorted such that items with the closet due date are at the top and tasks with no due date are at the bottom.
+
+Tasks can be deleted and updated using the side buttons:
+
+<p align="center">
+<img src="/assets/images/task-app/update-delete-tasks.gif" alt="update and delete task preview" width=650 />
+</p>
+
+Tasks can completed by checking the box on the left:
+
+<p align="center">
+<img src="/assets/images/task-app/complete-task.gif" alt="complete task preview" width=650 />
+</p>
 
 ## Stack and Deployment
 
@@ -112,3 +135,5 @@ Backlog (if I feel like it):
 - User list sharing (let multiple users view/manage the same list)
 - Continuous Integration (server automatically serves latest docker image)
 - Email verification
+- Due date notifications
+- Recurring tasks

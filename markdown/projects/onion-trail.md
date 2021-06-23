@@ -5,7 +5,7 @@ permalink: /projects/onion-trail/
 parent: Projects
 # grand_parent: Blog
 has_children: false
-nav_order: 3
+nav_order: 2
 nav_exclude: false
 has_toc: false
 ---

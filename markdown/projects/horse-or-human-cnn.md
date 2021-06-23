@@ -5,7 +5,7 @@ permalink: /projects/horse-or-human-cnn/
 parent: Projects
 # grand_parent: Blog
 has_children: false
-nav_order: 4
+nav_order: 5
 nav_exclude: false
 has_toc: false
 ---
