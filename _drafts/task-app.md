@@ -26,21 +26,25 @@ Check and see if the project is currently deployed [here](http://taskapp.paulspr
 ## Preview
 
 New users can sign up for an account:
+
 <p align="center">
 <img src="/assets/images/task-app/sign-up.gif" alt="sign up preview" width=450 />
 </p>
 
 Existing users can sign in with email and password:
+
 <p align="center">
 <img src="/assets/images/task-app/sign-in.gif" alt="sign in preview" width=450 />
 </p>
 
 Registered users can manage their information and change their theme:
+
 <p align="center">
 <img src="/assets/images/task-app/user-management.gif" alt="user management preview" width=650 />
 </p>
 
 Users can create tasks with corresponding categories and due dates:
+
 <p align="center">
 <img src="/assets/images/task-app/create-task.gif" alt="create task preview" width=650 />
 </p>
@@ -57,6 +61,12 @@ Tasks can completed by checking the box on the left:
 
 <p align="center">
 <img src="/assets/images/task-app/complete-task.gif" alt="complete task preview" width=650 />
+</p>
+
+Pages are dynamically styled with mobile users in mind:
+
+<p align="center">
+<img src="/assets/images/task-app/mobile-view.gif" alt="page resize preview" width=650 />
 </p>
 
 ## Stack and Deployment
