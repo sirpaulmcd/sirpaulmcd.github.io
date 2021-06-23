@@ -12,16 +12,16 @@ has_toc: false
 
 # Task App
 
-A full-stack TODO list application. After creating an account, users can manage TODO style tasks in various lists. The project repo can be found [here](https://github.com/sirpaulmcd/Task-App).
+A full-stack To-Do List application. After creating an account, users can manage their user information as well as To-Do style tasks in various lists. The project repo can be found [here](https://github.com/sirpaulmcd/Task-App).
 
 ## How to use
 
 Check and see if the project is currently deployed [here](http://taskapp.paulsprojects.xyz). If not, a development build can be easily created with the following instructions:
 
-- Download Docker Desktop and Git (prerequisite).
-- Clone the project [repo](https://github.com/sirpaulmcd/Task-App) to your computer.
-- Open a terminal at the root level of the project folder and use the command `docker-compose --env-file docker-compose.env up --build`.
-- Open your browser to http://localhost:3000/.
+- Download Docker Desktop and Git (prerequisite)
+- Clone the project [repo](https://github.com/sirpaulmcd/Task-App) to your computer
+- Open a terminal at the root level of the project folder and use the command `docker-compose --env-file docker-compose.env up --build`
+- Open your browser to [http://localhost:3000/](http://localhost:3000/)
 
 ## Preview
 
@@ -40,20 +40,21 @@ Check and see if the project is currently deployed [here](http://taskapp.paulspr
 
 Task App is built using the MERN stack:
 
-- **M**: MongoDB document database (with Mongoose)
-- **E**: ExpressJS API backend
-- **R**: ReactJS frontend
-- **N**: NodeJS runtime environment
+- **M**ongoDB document database (with Mongoose)
+- **E**xpressJS API backend
+- **R**eactJS frontend
+- **N**odeJS runtime environment
 
 Task App is deployed using:
 
+- Docker (containerized environments)
 - DigitalOcean Droplet (remote linux virtual machine)
 - Nginx (web server, reverse proxy)
 - Certbot (SSL certificate)
 
 ## Learning
 
-I chose a TODO list style application because I didn't want to reinvent the wheel on my first attempt at a full-stack web application. Although the app may seem rather simple, I was surprised to find out how much critical thinking goes on behind the scenes of a typical web application. To create/deploy this Task App, I needed to take in an ocean of knowledge. To help get my point across, I've organized some noteworthy technologies/concepts that were necessary for this project.
+I chose a To-Do List style application because I didn't want to reinvent the wheel on my first attempt at a full-stack web application. Although the app may seem rather simple, I was surprised to find out how much critical thinking goes on behind the scenes of a typical web application. To create/deploy this Task App, I needed to take in an ocean of knowledge. To help get my point across, I've organized some noteworthy technologies/concepts that were necessary for this project.
 
 **General Web Development**
 
@@ -91,9 +92,9 @@ I chose a TODO list style application because I didn't want to reinvent the whee
 
 **General Development and Deployment**
 
-- Git (Version control)
-- GitHub Actions (Automating QA checks)
-- Docker (Containerizing applications)
+- Git (version control)
+- GitHub Actions (automating QA checks)
+- Docker (containerizing applications)
 - Managing environment variables
 - DigitalOcean Droplets (remote linux virtual machine)
 - Linux server management and best practices
@@ -105,7 +106,7 @@ Needless to say, I'm glad to have this project under my belt. Creating and deplo
 
 ## Moving Forward
 
-Backlog (If I feel like it):
+Backlog (if I feel like it):
 
 - Implement custom user lists (currently, users can only use premade list categories)
 - User list sharing (let multiple users view/manage the same list)
