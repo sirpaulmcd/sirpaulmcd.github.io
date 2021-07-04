@@ -12,7 +12,7 @@ has_toc: false
 
 # Task App 📝
 
-A full-stack To-Do List application. After creating an account, users can manage their user information as well as To-Do style tasks in various lists. The project repo can be found [here](https://github.com/sirpaulmcd/Task-App).
+A full-stack containerized To-Do List web application. After creating an account, users can manage their user information as well as To-Do style tasks in various lists. The project repo can be found [here](https://github.com/sirpaulmcd/Task-App).
 
 ## How to use
 
