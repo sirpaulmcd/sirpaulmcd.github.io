@@ -9,26 +9,29 @@ has_toc: false
 ---
 
 ### Contact Information
+
 Email: paul.mcdonald@tutanota.com
 
 <hr/>
 
 ### Languages
-Python, Java, Javascript, C#
+
+Java, Javascript, C#, Python
 
 <hr/>
 
 ### Specialties
-Object Oriented Software Development, Machine Learning, Data Engineering, Web Application Development, Game Development
+
+Object-Oriented Programming, Game Development, Full Stack Web Development
 
 <hr/>
 
 ### Technologies
-React, Django, SQL, Git, Postman, AWS, Scikit-learn, TensorFlow, Pandas, NumPy, BeautifulSoup, Minesweeper, Apache Spark, Hadoop, Unity (Game Engine), Figma, HTML, CSS, LaTeX, Markdown
+
+Unity Game Engine, Git, React, Express, GraphQL, MongoDB, Mongoose, Docker, Nginx, Postman, Material-UI, DigitalOcean, Figma
 
 <hr/>
 
 ### Professional Experience and Education
+
 See my [LinkedIn](https://www.linkedin.com/in/sirpaulmcd/) for details.
-
-

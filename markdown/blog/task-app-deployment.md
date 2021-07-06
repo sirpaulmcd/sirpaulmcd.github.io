@@ -30,7 +30,7 @@ I'm at the point where I have most of the mechanics I want programmed into the g
     <img src="/assets/images/onion-trail/miscellaneous/building-interior.gif" alt="building interior preview" width=600px/>
 </p>
 
-Now that Task App is out of the way, I'm hoping to get some good time towards game development while I apply for jobs. I really want to have a playable demo so that people can try the game out instead of just seeing gifs. No promises though because game development is a never ending treadmill of complexity.
+After creating/deploying a full stack web app. I feel like I know enough about what web development has to offer. While I had fun and learned a lot, it never really grabbed me like working on my game development projects have. After trying both, I've decided to look further into finding work in game development and working on Onion Trail on the side.
 
 <hr>
 <span style="text-align: left"><a href="/blog/gift-exchange-project">Previous Post</a></span>
