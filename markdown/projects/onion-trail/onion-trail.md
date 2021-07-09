@@ -41,5 +41,5 @@ I also have some small-scale [miscellaneous](/projects/onion-trail/miscellaneous
     <br />
 </p>
 
-Intrigued? If so, there's plenty more gifs of weapon implementations on the [system description page](/projects/onion-trail/wareandpeace-system).
+Intrigued? If so, there's plenty more gifs of weapon implementations on the [system description page](/projects/onion-trail/war-and-peace-system).
 I also go into detail about the system architecture.
