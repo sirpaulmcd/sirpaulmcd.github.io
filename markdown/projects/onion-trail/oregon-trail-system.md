@@ -28,7 +28,7 @@ The prompt system was designed with game designers in mind. New prompts can be c
 
 ## Resources
 
-Resources can either be gained through in-vehicle prompts or picked up when outside the vehicle:
+Resources can either be gained through in-vehicle prompts or collected when outside the vehicle:
 
 <p align="center">
 <img src="/assets/images/onion-trail/oregon-trail-system/resources-1.gif" alt="walk over resources preview" />
@@ -36,7 +36,7 @@ Resources can either be gained through in-vehicle prompts or picked up when outs
 Walk-over resources
 </p>
 
-Other resources are too large and substantial to pick up as you go. In these cases, the resource needs to be lifted and carried to the vehicle:
+Some resources are too large and substantial to pick up as you walk over them. In these cases, the resource needs to be lifted and carried to the vehicle:
 
 <p align="center">
 <img src="/assets/images/onion-trail/oregon-trail-system/resources-2.gif" alt="lift and carry resources preview" />

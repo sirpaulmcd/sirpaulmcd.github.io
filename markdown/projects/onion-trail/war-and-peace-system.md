@@ -13,7 +13,7 @@ has_toc: false
 # WarAndPeace System
 
 The WarAndPeace system is a generic software architecture for implementing a variety of weapons, obstacles, and items in the Unity game engine.
-Since healing is fundamentally the same as dealing damage, it works alongside the Entity system to lower **or raise** health points.
+Since healing is fundamentally the same as dealing damage, it works alongside the Entity system to lower _or raise_ health points.
 
 ## Infrastructure Layout
 
@@ -137,7 +137,7 @@ These objects inherit from the base infrastrucrue as shown below.
 
 #### Bullet Launcher Weapons
 
-Bullet launchers are an instance Trigger DWGO Weapons that are further specialized to pierce through a specific number of enemies before self destructing.
+Bullet launchers are an instance of Trigger DWGO Weapons that are further specialized to pierce through a specific number of enemies before self destructing.
 Bullets have also been specialized to use raycasting which allows them to elastically reflect off of walls a certain number of times.
 
 <p align="center">

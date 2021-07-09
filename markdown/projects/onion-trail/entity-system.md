@@ -12,7 +12,7 @@ has_toc: false
 
 # Entity System
 
-The entity system is responsible for handling the controls, health, and status effects of player and NPC entitites. It is a bit of a work-in-progress at the moment but the overall layout looks somewhat like this:
+The entity system is responsible for handling the controls, health, and status effects of player/NPC entitites. This system is still under development at the moment but the overall layout looks somewhat like this:
 
 <p align="center">
     <img src="/assets/images/onion-trail/entity-system/base-infrastructure.png" alt="entity system base infrastructure" />
@@ -22,7 +22,7 @@ The entity system is responsible for handling the controls, health, and status e
 
 ## Controller Subsystem (green)
 
-This system contains the infrastructure for controller player and NPC entities. All entities have common traits like movement speeds and rigidbodies. Player entities are controlled by a person using either keyboard or gamepad. NPC entities are controlled using finite state machines to simulate intelligent behaviour:
+This system contains the infrastructure for controlling player and NPC entities. All entities have common properties like movement speeds and rigidbodies. Player entities are controlled using keyboard/gamepad while NPC entities are controlled using finite state machines to simulate intelligent behaviour:
 
 <p align="center">
     <img src="/assets/images/onion-trail/entity-system/base-enemy.gif" alt="base enemy AI preview" />
@@ -32,7 +32,7 @@ This system contains the infrastructure for controller player and NPC entities. 
 
 ## Stat Subsystem (blue)
 
-This system contains the infrastructure for status effects of entities. Status effects are any effects placed on an entity that manipulate controls, health, appearance, etc. Knockback effects are handled differently between players and AI because they are controlled by different means. Here's an example status effect that allows entities to catch on fire. If they run into other entities, the fire will spread:
+This system contains the infrastructure for inflicting status effects on entities. Status effects can be placed on an entity to manipulate their controls, health, appearance, etc. The Stat system works with the WarAndPeace system to induce knockback effects on attacked entities. Here's an example status effect that allows entities to catch on fire. If they run into other entities, the fire will spread:
 
 <p align="center">
     <img src="/assets/images/onion-trail/entity-system/combustion.gif" alt="combustion status effect preview" />
@@ -42,4 +42,4 @@ This system contains the infrastructure for status effects of entities. Status e
 
 ## Health Subsystem (red)
 
-Infrastructure for player health. This system allows the player to be healed, take damage, and die. Changes in health are reflected in applicable health bars and damage numbers pop up on the screen as seen above.
+This system contains the infrastructure that allows entities to be healed, take damage, and die. Changes in health can be visualized through health bars and damage pop-ups as seen above.

@@ -12,7 +12,7 @@ has_toc: false
 
 # Miscellaneous
 
-This page is to show off miscellaneous features that don't need their own page.
+This page shows off miscellaneous features that aren't substantial enough for their own page.
 
 ## Building Interiors
 
@@ -26,7 +26,7 @@ Building interior
 
 ## Interactable System
 
-Upon pressing the "Interact" button, the player spherecasts in front of their position in search of GameObjects that inherit from the `IInteractable` interface. This allows the player to interact with NPCs, lift objects, and open doors:
+Upon pressing the "Interact" button, the player spherecasts in front of themselves in search of GameObjects that inherit from the `IInteractable` interface. This allows the player to interact with NPCs, lift objects, and open doors:
 
 <p align="center">
 <img src="/assets/images/onion-trail/interactable-system/door-interaction-preview.gif" />
@@ -36,7 +36,7 @@ Door interaction
 
 ## Dialogue System:
 
-Instantiates dialogue prefab to canvas when called. Allows for different fonts, text sizes, typing speeds, typing sounds. Allows players to skip the typing sequence.
+When a player interacts with an NPC, a dialogue canvas prefab is instantiated. Players can skip the typing sequence of dialogue by pressing a button. This system allows for customized images, fonts, text sizes, typing speeds, typing sounds.
 
 <p align="center">
 <img src="/assets/images/onion-trail/dialogue-system/dialogue-preview.gif" />
@@ -78,6 +78,8 @@ Collisions are carried down the stack
 
 ## Life and Respawn System
 
+The life and respawn system is in charge of tracking player lives, checkpoints, and respawning.
+
 ### Squad lives
 
 <p align="center">
@@ -85,7 +87,7 @@ Collisions are carried down the stack
 </p>
 
 - Players share a set of lives. Lives only decrement when all players die.
-- Dead players can be respawned by living players by touching a checkpoint for the first time.
+- Dead players can be respawned by living players if they touch a checkpoint for the first time.
 - When a squad dies, a squad life is lost and the team respawns at the latest checkpoint.
 - When the squad runs out of lives, the game is over.
 
@@ -107,11 +109,11 @@ Collisions are carried down the stack
 </p>
 
 - Players that fall off of the map are respawned onto the last piece of stable ground they have touched.
-- Pit respawn locations are updated periodically.
+- Ledge respawn locations are updated periodically while a player is grounded.
 
 ## Carry Ridibody System
 
-This system allows certain objects to carry other objects around without the use of friction. Allows pairing via external triggers or OnCollisionEnter (pairs on all sides, magnetic feel)
+This system allows certain objects to carry other objects around without the use of friction. Pairing can be achieved using triggers on top of moving GameObjects. If pairing is done with OnCollisionEnter, the player can be paired to all sides of an object which results in a magnetic feel.
 
 <p align="center">
 <img src="/assets/images/onion-trail/miscellaneous/carry-rigidbody-1.gif" alt="preview without carry rigidbody system" />
