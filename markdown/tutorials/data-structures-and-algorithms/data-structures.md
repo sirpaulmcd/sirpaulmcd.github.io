@@ -236,7 +236,7 @@ Tree facts:
 - Depth: The number of edges between root and chosen node
 - Level: Depth + 1 (i.e. the level of the root is 1)
 - Height: The number of edges between chosen node a farthest leaf node
-- The maximum number of nodes is `branches^depth` where `branches` is the maximum number of children per node and `depth` is the maximum depth of the tree (recall that this formula was used in the exponential time [complexity](/tutorials-cheat-sheets/data-structures-and-algorithms/complexity-and-big-o-notation#example-6-exponential-runtimes) section)
+- The maximum number of nodes is `branches^depth` where `branches` is the maximum number of children per node and `depth` is the maximum depth of the tree (recall that this formula was used in the exponential time [complexity](/tutorials/data-structures-and-algorithms/complexity-and-big-o-notation#example-6-exponential-runtimes) section)
 - A large oak tree can consume about 100 gallons of water per day
 
 Note that, depending on the application, binary trees can be implemented using either arrays or linked lists. Whichever is more efficient/convenient. As you will see, binary search trees are implemented using linked lists while binary heaps are implemented using arrays.
@@ -446,4 +446,4 @@ Time and space complexity for [adjacency list graph implementations](https://git
 
 There's one more data structure that I will be adding to this page eventually. It's called a [trie](https://www.youtube.com/watch?v=zIjfhVPRZCg) and can also be very helpful for technical interviews. If you're applying to large tech companies, you should probably learn this data structure. 
 
-Knowing about the fundamental data structures is just a baseline. As you continue to improve as a software developer, you will likely apply these data structures in conjunction to create even more complex/specialized data structures to suit your needs. The sky's the limit! If this is your first time covering these concepts, it might take some time for things to really sink in. In my opinion, the best thing you can do is implement the above data structures yourself in your preferred programming language. When you are comfortable, check out the [next](/tutorials-cheat-sheets/data-structures-and-algorithms/) section.
+Knowing about the fundamental data structures is just a baseline. As you continue to improve as a software developer, you will likely apply these data structures in conjunction to create even more complex/specialized data structures to suit your needs. The sky's the limit! If this is your first time covering these concepts, it might take some time for things to really sink in. In my opinion, the best thing you can do is implement the above data structures yourself in your preferred programming language. When you are comfortable, check out the [next](/tutorials/data-structures-and-algorithms/) section.

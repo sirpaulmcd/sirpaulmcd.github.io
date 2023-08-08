@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Creational Patterns
-permalink: /tutorials-cheat-sheets/design-patterns/creational-patterns
+permalink: /tutorials/design-patterns/creational-patterns
 parent: Design Patterns
 grand_parent: Tutorials and Cheat Sheets
 has_children: false

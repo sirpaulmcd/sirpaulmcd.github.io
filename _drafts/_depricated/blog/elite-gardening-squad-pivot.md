@@ -28,7 +28,7 @@ Here's a little demo teaser:
     <img src="/assets/images/onion-trail/oregon-trail-system/basic-prompts.gif" alt="basic-prompts.png"/>
 </p>
 
-One last thing. I'm still working through my [data structures and algorithms tutorial series](/tutorials-cheat-sheets/data-structures-and-algorithms/).
+One last thing. I'm still working through my [data structures and algorithms tutorial series](/tutorials/data-structures-and-algorithms/).
 I'm excited to release the data structures component because I think a lot of people will find it helpful (my future self included).
 Now that the holidays are out of the way, it'll be done fairly soon. 
 

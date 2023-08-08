@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Behavioural Patterns
-permalink: /tutorials-cheat-sheets/design-patterns/behavioural-patterns
+permalink: /tutorials/design-patterns/behavioural-patterns
 parent: Design Patterns
 grand_parent: Tutorials and Cheat Sheets
 has_children: false

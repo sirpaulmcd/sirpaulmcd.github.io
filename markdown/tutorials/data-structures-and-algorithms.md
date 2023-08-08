@@ -17,16 +17,16 @@ Software job interviews are incredibly challenging/technical when compared to ot
 If you are a software developer, you will need to refresh yourself on these concepts periodically throughout your career. Especially before a job interview. As such, I have structured this tutorial to accommodate first-time learners as well as experienced programmers. However, if you are learning these concepts for the first time, you will need to be familiar with the concepts of object oriented programming (OOP), recursion, and stack/heap memory.
 
 There are 5 distinct pillars to learning Data Structures and Algorithms. The links to each are included below:
-- [**Complexity and Big O Notation**](/tutorials-cheat-sheets/data-structures-and-algorithms/complexity-and-big-o-notation/)
+- [**Complexity and Big O Notation**](/tutorials/data-structures-and-algorithms/complexity-and-big-o-notation/)
   - Theory/techniques necessary to determine/compare the performance of data structures and algorithms. The first prerequisite to understanding data structures and algorithms is to have a decent understanding of time and space complexity in terms of Big O notation.
 
-- [**Searching Algorithms**](/tutorials-cheat-sheets/data-structures-and-algorithms/searching-algorithms/)
+- [**Searching Algorithms**](/tutorials/data-structures-and-algorithms/searching-algorithms/)
   - Algorithms used to search data structures efficiently. Since searching is a fundamental operation for data structures, these algorithms are a prerequisite.
 
-- [**Data Structures**](/tutorials-cheat-sheets/data-structures-and-algorithms/data-structures/)
+- [**Data Structures**](/tutorials/data-structures-and-algorithms/data-structures/)
   - Methods of organizing data in software. Each data structure has pros and cons that make them suitable for specific applications. To write optimal algorithms, you must know the corresponding optimal data structures. 
 
-- [**Sorting Algorithms**](/tutorials-cheat-sheets/data-structures-and-algorithms/sorting-algorithms/)
+- [**Sorting Algorithms**](/tutorials/data-structures-and-algorithms/sorting-algorithms/)
   - Algorithms used to sort data structures efficiently. Since sorting is an incredibly common process when developing algorithms, knowing the popular sorting algorithms and their relative advantages is an important skill to have. 
 
 - **Algorithm Design and Moving Forward (work in progress)** 

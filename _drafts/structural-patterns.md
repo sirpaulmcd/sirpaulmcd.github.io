@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Structural Patterns
-permalink: /tutorials-cheat-sheets/design-patterns/structural-patterns
+permalink: /tutorials/design-patterns/structural-patterns
 parent: Design Patterns
 grand_parent: Tutorials and Cheat Sheets
 has_children: false

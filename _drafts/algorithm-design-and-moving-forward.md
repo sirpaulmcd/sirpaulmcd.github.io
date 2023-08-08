@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Algorithm Design and Moving Forward
-permalink: /tutorials-cheat-sheets/data-structures-and-algorithms/algorithm-design-and-moving-forward/
+permalink: /tutorials/data-structures-and-algorithms/algorithm-design-and-moving-forward/
 parent: Data Structures and Algorithms
 grand_parent: Tutorials and Cheat Sheets
 has_children: false

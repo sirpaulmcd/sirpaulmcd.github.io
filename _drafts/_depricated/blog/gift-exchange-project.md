@@ -28,7 +28,7 @@ In other news, I've also been hard at work on my game Onion Trail. Recently, I'v
     <img src="/assets/images/onion-trail/entity-system/combustion.gif" alt="combustion status effect"/>
 </p>
 
-Lastly, I've put the final chapter of my [data structures and algorithms tutorial series](/tutorials-cheat-sheets/data-structures-and-algorithms/) "algorithm design and moving forward" on hold until I am more experienced/qualified to write about the topic.
+Lastly, I've put the final chapter of my [data structures and algorithms tutorial series](/tutorials/data-structures-and-algorithms/) "algorithm design and moving forward" on hold until I am more experienced/qualified to write about the topic.
 
 <hr>
 <span style="text-align: left"><a href="/blog/elite-gardening-squad-pivot">Previous Post</a></span>

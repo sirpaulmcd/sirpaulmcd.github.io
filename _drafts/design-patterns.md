@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Design Patterns
-permalink: /tutorials-cheat-sheets/design-patterns/
+permalink: /tutorials/design-patterns/
 parent: Tutorials and Cheat Sheets
 # grand_parent: Blog
 has_children: true

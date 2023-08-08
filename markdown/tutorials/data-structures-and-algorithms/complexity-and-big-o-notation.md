@@ -255,7 +255,7 @@ Be careful though. In the upcoming sections, you will see that recursive sorting
 
 ## Amortized Time Complexity
 
-[Amortized](https://medium.com/@satorusasozaki/amortized-time-in-the-time-complexity-of-an-algorithm-6dd9a5d38045) time complexity occurs when an algorithm has different time complexities depending on external conditions. The most common example of this the *insertion* operation of a dynamic array. When a dynamic array is under capacity, insertions have an `O(1)` time complexity because new values can be immediately added into the first open index. When a dynamic array is at capacity, it must expand its storage space by creating a new array and duplicating the values over. The additional computations result in an `O(n)` time complexity since `n` values of the original array are copied over to a new array. You will see this concept appear again in the [data structures](/tutorials-cheat-sheets/data-structures-and-algorithms/data-structures) section with my sample implementation of a dynamic array.
+[Amortized](https://medium.com/@satorusasozaki/amortized-time-in-the-time-complexity-of-an-algorithm-6dd9a5d38045) time complexity occurs when an algorithm has different time complexities depending on external conditions. The most common example of this the *insertion* operation of a dynamic array. When a dynamic array is under capacity, insertions have an `O(1)` time complexity because new values can be immediately added into the first open index. When a dynamic array is at capacity, it must expand its storage space by creating a new array and duplicating the values over. The additional computations result in an `O(n)` time complexity since `n` values of the original array are copied over to a new array. You will see this concept appear again in the [data structures](/tutorials/data-structures-and-algorithms/data-structures) section with my sample implementation of a dynamic array.
 
 ## Space Complexity
 
@@ -271,4 +271,4 @@ For example, if a function recursively calls itself multiple times, its executio
 
 # What next? 
 
-If this is your first time covering these concepts, the best thing you can do right now is practice. There are plenty of practice resources available for free online. Once you feel up to speed, start the [searching algorithms](/tutorials-cheat-sheets/data-structures-and-algorithms/searching-algorithms) section. 
+If this is your first time covering these concepts, the best thing you can do right now is practice. There are plenty of practice resources available for free online. Once you feel up to speed, start the [searching algorithms](/tutorials/data-structures-and-algorithms/searching-algorithms) section. 
