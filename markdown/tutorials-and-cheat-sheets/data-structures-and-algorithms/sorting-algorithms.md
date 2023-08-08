@@ -1,9 +1,9 @@
 ---
 layout: default
 title: Sorting Algorithms
-permalink: /tutorials-cheat-sheets/data-structures-and-algorithms/sorting-algorithms/
+permalink: /tutorials/data-structures-and-algorithms/sorting-algorithms/
 parent: Data Structures and Algorithms
-grand_parent: Tutorials and Cheat Sheets
+grand_parent: Tutorials
 has_children: false
 nav_order: 4
 nav_exclude: false

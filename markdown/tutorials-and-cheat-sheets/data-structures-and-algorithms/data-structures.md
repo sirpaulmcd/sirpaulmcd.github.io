@@ -1,9 +1,9 @@
 ---
 layout: default
 title: Data Structures
-permalink: /tutorials-cheat-sheets/data-structures-and-algorithms/data-structures/
+permalink: /tutorials/data-structures-and-algorithms/data-structures/
 parent: Data Structures and Algorithms
-grand_parent: Tutorials and Cheat Sheets
+grand_parent: Tutorials
 has_children: false
 nav_order: 3
 nav_exclude: false

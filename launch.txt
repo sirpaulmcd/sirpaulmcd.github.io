@@ -1,0 +1,7 @@
+1. Install ruby, jekyll, and bundler: https://jekyllrb.com/docs/installation/
+2. Restart
+3. Run `bundle update --bundler`
+4. Run `bundle update`
+5. Run `bundle install`
+6. Run `bundle exec jekyll serve`
+7. Open `localhost:4000`

@@ -1,9 +1,9 @@
 ---
 layout: default
 title: Complexity and Big O Notation
-permalink: /tutorials-cheat-sheets/data-structures-and-algorithms/complexity-and-big-o-notation/
+permalink: /tutorials/data-structures-and-algorithms/complexity-and-big-o-notation/
 parent: Data Structures and Algorithms
-grand_parent: Tutorials and Cheat Sheets
+grand_parent: Tutorials
 has_children: false
 nav_order: 1
 nav_exclude: false
