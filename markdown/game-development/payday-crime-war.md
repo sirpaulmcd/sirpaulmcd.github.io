@@ -15,7 +15,7 @@ has_toc: false
 
 <p align="center">
   <a href="https://www.youtube.com/watch?v=pQl-l2Fn25Y">
-    <img src="/assets/images/payday-crime-war/payday-crime-war-logo.gif" alt="payday crime way preview" width="600" />
+    <img src="/assets/images/payday-crime-war/payday-crime-war-logo.gif" alt="payday crime war preview" width="600" />
   </a>
   <br />
   <a href="https://www.youtube.com/watch?v=pQl-l2Fn25Y">Payday: Crime War Launch Trailer</a>
@@ -26,7 +26,7 @@ Payday: Crime War is a networked, mobile first-person shooter built using the Un
 I worked as an intermediate gameplay programmer on the project. Although, I was only an intermediate, the development team was relatively small so I was in charge of implementing many core systems/mechanics. Working on a small team meant that I did a little bit of everything. I experienced all stages of development from pre-production to live-ops.
 
 <p align="center">
-    <img src="/assets/images/payday-crime-war/payday-crime-war-interaction.gif" alt="payday crime way preview" width="600" />
+    <img src="/assets/images/payday-crime-war/payday-crime-war-interaction.gif" alt="inteaction preview" width="600" />
 </p>
 
 My main roles primarily had to do with player controls, player interactions, and the HUD. I implemented player controls bound for use with mobile screens, console controllers, and keyboard/mouse. I created level specific game mechanics/interactions for the various heists. For each mechanic, I introduced responsive visual/audio feedback to ensure a satisfying player experience.
@@ -42,7 +42,7 @@ My major contributions include:
 - **Auto fire:** Since the game was for mobile, a variety of helpful control options were made available to players. Auto fire was one of these options.
 
 <p align="center">
-    <img src="/assets/images/payday-crime-war/payday-crime-war-hud-customization.gif" alt="payday crime way preview" width="600" />
+    <img src="/assets/images/payday-crime-war/payday-crime-war-hud-customization.gif" alt="hud customization preview" width="600" />
 </p>
 
 I created designer facing tools for heist creation. I worked directly with designers to ensure that programmer created tools properly met their needs. I was the mediator between designers and programmers to ensure designers were aware of technical limitations and that programmers had their creative ideas/feedback heard.
